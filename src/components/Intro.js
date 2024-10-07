@@ -34,7 +34,7 @@ const Intro = () => {
   };
 
   const goToHome = () => {
-    navigate('/home'); // Navigate to /home
+    navigate('/tzahi/home'); // Navigate to /home
   };
 
   return (
