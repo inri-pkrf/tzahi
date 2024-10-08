@@ -8,10 +8,10 @@
   }
   
   .App-logo {
-    height: 15vmin; /* Adjust size as needed */
+    height: 15vmin;
     position: fixed;
-    top:2vh;
-    right:25vw
+    top: 2vh;
+    right: 21vw;
   }
   
   .right-logo-link {
@@ -31,8 +31,8 @@
   }
   
  .tzahi-logo{
-    height: 14vmin;
-    position: fixed;
-    top: 2vh;
-    right: 11vw;
+  height: 14vmin;
+  position: fixed;
+  top: 2vh;
+  right: 7vw;
  }

@@ -34,7 +34,7 @@
     right: 50%;
     transform: translateX(50%);
     width: 90vw;
-    margin-top: 27vh;
+    margin-top: 30vh;
     text-align: center;
 
 }
@@ -126,13 +126,15 @@
     position: absolute;
     height: 15vh;
     width: auto;
-    margin-top: 110vh;
+    margin-top: 114vh;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .white-div{
     position: absolute;
     width: 100vw;
-    height: 38vh;
+    height: 30vh;
     background-color: white;
     z-index: 7;
     margin-top: 105vh;
@@ -142,13 +144,14 @@
 .credits{
     font-family: 'Heebo';
     position: absolute;
-    margin-top: 198vh;
+    margin-top: 139vh;
     right: 50%;
     transform: translateX(50%);
     width: 90vw;
     font-size: 1em;
     font-style: italic;
     margin-bottom: 10vh;
+    text-align: center;
 }
 
 .tzahi-div{
@@ -156,7 +159,7 @@
     width: 100vw;
     height: 30vh;
     background-color: rgb(238, 238, 238);
-    margin-top: 241vh;
+    margin-top: 161vh;
     right: 50%;
     transform: translateX(50%);
     direction: rtl;
@@ -239,7 +242,22 @@
     transform: translateX(50%);
     color: rgb(86, 85, 85);
     font-weight: bold;
-    margin-top: 291vh;
+    margin-top: 194vh;
+    margin-bottom: 20vh;
     width: 90vw;
     font-size: 1.1em;
+    text-align: center;
 } 
+
+.footer{
+    position: absolute;
+    right: 50%;
+    height:10vh;
+    transform: translateX(50%);
+    background-color: rgba(86, 85, 85, 0);
+    font-weight: bold;
+    margin-top: 204vh;
+    margin-bottom: 20vh;
+    width: 90vw;
+    font-size: 1.1em;
+}

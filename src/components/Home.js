@@ -70,6 +70,7 @@ className='collage-logo'
    <p className='feedback'>יש הערות? תוספות? שינויים? 
 נשמח לשמוע איך אפשר להשתפר, דברו איתנו בקישור הבא
 </p>
+<div className="footer"></div>
     </div>
   );
 };
