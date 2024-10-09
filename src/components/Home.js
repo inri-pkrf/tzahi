@@ -1,9 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 
 import './Home.css';
 
+
+
+
 const Home = () => {
+  const navigate = useNavigate();
+
+  const goToEmergency = () => {
+    navigate('/tzahi/EmergencyRolls'); 
+  };
   return (
     <div className="homepage-container">
       <h1 className='home-title'>  ברוכים הבאים והבאות 
@@ -13,9 +22,8 @@ const Home = () => {
  יש לבחור מצב חירום ולאחר מכן תפקיד 
 על מנת לראות משימות של בעל תפקיד ודגשים
  </p>
- {/* להוסיף כאן שזה עובר לקומפוננטה חדשה */}
- <button className='home-button'>לבחירת מצב חירום ותפקיד 
- </button> 
+ <button className='home-button' onClick={goToEmergency}>לבחירת מצב חירום ותפקיד</button>
+
  <img
  src={`${process.env.PUBLIC_URL}/assets/media/greyArrow.png`}
  className="arrow"
