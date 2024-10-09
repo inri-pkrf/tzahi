@@ -13,7 +13,7 @@ function Header() {
         />
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
-        className="App-logo"
+        className="App-logo-one "
         alt="logo"
         onClick={() => navigate('/tzahi/home')} // ניווט לעמוד הבית
       />
