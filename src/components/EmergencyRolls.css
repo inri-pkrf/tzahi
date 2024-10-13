@@ -14,7 +14,7 @@
 
  .states{
     position:absolute;
-    margin-top: 20vh;
+    margin-top: 18vh;
     width:100vw;
     height:10vh;
     right:50%;
@@ -25,32 +25,57 @@
     position:absolute;
     right:4vw;
     top:7vh;
+    width:30vw;
+    height:20vh;
+    /* border: #4b4646 solid; */
  }
  .state2{
     position:absolute;
     right:50%;
 transform: translateX(50%);
 top:7vh;
+width:30vw;
+height:20vh;
+/* border: #4b4646 solid; */
+
+
+
 }
 
 
  .state3{
-    position:absolute;
-    right:72%;
-    top:8vh;
+    position: absolute;
+    right: 66%;
+    top: 7vh;
+    width: 30vw;
+    height: 20vh;
+    /* border: #4b4646 solid; */
+
 }
 
  .Fireicon{
+    position: absolute;
     width:auto;
-    height: 10vh;
+    margin-top: 5vh;
+    height: 6vh;
+    right: 50%;
+    transform: translateX(50%);
  }
  .tzahiicon{
-    width:auto;
-    height: 11vh;
+    width: auto;
+    margin-top: 5vh;
+    height: 7vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
  }
  .tasksicon{
+    position: absolute;
     width:auto;
-    height: 9vh;
+    margin-top: 6vh;
+    height: 5.5vh;
+    right: 50%;
+    transform: translateX(50%);
  }
 
  .title{
@@ -68,25 +93,51 @@ top:7vh;
  }
 
  hr.dotted {
-    border: none; /* Remove default border */
-    border-top: 3px dotted #4b4646; /* Keep the dotted style */
-    width: 12vh; /* Adjust width */
-    height: 0; /* Ensure height is zero for proper line */
+    border: none;
+    border-top: 3px dotted #4b4646;
+    width: 15vh;
+    height: 0;
     transform: rotate(90deg);
-    margin: 5vh 0;
-    /* Optional: add some spacing to the sides */
-    padding: 0; /* Remove padding to prevent solid appearance */
+    margin: 10vh 0;
+    padding: 0;
 }
 
 
 .hr1{
     position: absolute;
-    right:16vw;
-    top:8vh;
+    right: 18vw;
+    top: 8vh;
 }
 
 .hr2{
     position: absolute;
-    left:20vw;
+    left:17vw;
     top:8vh;
+}
+
+.stageNumber{
+    font-family: 'Heebo';
+    font-size: 0.8em;
+    position: absolute;
+    margin-bottom: 5%;
+    text-align: center;
+    right:50%;
+    top:0%;
+    transform: translateX(50%);
+}
+
+.numberThree{
+    position: absolute;
+    margin-top: 1vh;
+    margin-top: 1.5vh;
+
+}
+
+.stateTitle{
+    font-family: "Heebo";
+    font-weight: 700;
+    font-size: 1.3em;
+    text-align: center;
+    color: rgb(123 122 122);
+    margin-top: 12vh;
 }

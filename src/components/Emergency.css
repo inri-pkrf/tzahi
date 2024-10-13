@@ -1,0 +1,27 @@
+#emergency-container {
+    position: fixed;
+    z-index: 2000; 
+    text-align: center; /* Center the buttons horizontally */
+    top: 48%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%); /* Adjust positioning */
+    overflow: hidden; /* Remove scrollbars */
+    background-color: #eeeeee;
+    width: 100vw;
+    height:80vh;
+}
+
+.button {
+    width: 80vw; 
+    margin: 10px 0; 
+    padding: 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    color:white;
+    border-radius: 10px;
+    height:5vh;
+    border: none;
+    font-family: "Heebo";
+    font-weight: 600;
+    font-size: 1.4em;
+}

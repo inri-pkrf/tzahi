@@ -1,6 +1,7 @@
 const emergencyScenarios = [
     {
         id: 1,
+        color:"#ffa133",
         situation: `מעמ"ל`,
         description: "מצב של הכנה למלחמה או איומים ביטחוניים.",
         notes: [
@@ -87,6 +88,7 @@ const emergencyScenarios = [
       },
     {
       id: 2,
+      color:"#22b573",
       situation: "שגרה",
       description: "מצב רגיל שבו כל התהליכים מתנהלים כמתוכנן.",
       notes:[
@@ -151,6 +153,7 @@ const emergencyScenarios = [
    
     {
       id: 3,
+      color:"#e06666",
       situation: "מלחמה",
       description: "מצב חירום עקב התקפה צבאית.",
       notes: [
@@ -264,6 +267,7 @@ const emergencyScenarios = [
     },
     {
       id: 4,
+      color:"#e06666",
       situation: "תקיפת ישוב",
       description: "מצב חירום כאשר הישוב מותקף.",
       notes: [
@@ -349,6 +353,7 @@ const emergencyScenarios = [
     },
     {
         id: 5,
+        color:"#e06666",
         situation: "פינוי ישוב",
         description: "מצב חירום שבו יש צורך לפנות את הישוב.",
         notes: "ודא שהפינוי מתבצע בצורה מסודרת ובטוחה.",
@@ -358,6 +363,7 @@ const emergencyScenarios = [
 
       {
         id: 6,
+        color:"#e06666",
         situation: "קריסת מבנה",
         description: "מצב חירום כאשר מבנה מתמוטט.",
         notes: [
@@ -457,6 +463,7 @@ const emergencyScenarios = [
 
     {
       id: 7,
+      color:"#e06666",
       situation: "שריפה",
       description: "מצב חירום עקב שריפה בשטח.",
       notes: [
