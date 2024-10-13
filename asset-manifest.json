@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tzahi/static/css/main.0a504881.css",
-    "main.js": "/tzahi/static/js/main.a7aa99ae.js",
+    "main.css": "/tzahi/static/css/main.a1658c52.css",
+    "main.js": "/tzahi/static/js/main.3056745a.js",
     "static/js/453.78269ee8.chunk.js": "/tzahi/static/js/453.78269ee8.chunk.js",
     "static/media/Bg1.png": "/tzahi/static/media/Bg1.ac9f9c75b406e10ae608.png",
     "index.html": "/tzahi/index.html",
-    "main.0a504881.css.map": "/tzahi/static/css/main.0a504881.css.map",
-    "main.a7aa99ae.js.map": "/tzahi/static/js/main.a7aa99ae.js.map",
+    "main.a1658c52.css.map": "/tzahi/static/css/main.a1658c52.css.map",
+    "main.3056745a.js.map": "/tzahi/static/js/main.3056745a.js.map",
     "453.78269ee8.chunk.js.map": "/tzahi/static/js/453.78269ee8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a504881.css",
-    "static/js/main.a7aa99ae.js"
+    "static/css/main.a1658c52.css",
+    "static/js/main.3056745a.js"
   ]
 }
