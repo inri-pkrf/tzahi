@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import './EmergencyRolls.css';
 import Emergency from './Emergency'; // קומפוננטה של בחירת מצבי חירום
 import Roles from './Roles'; // קומפוננטה של הצגת תפקידים לאחר בחירת מצב חירום
+import Combined from './Combined'; // קומפוננטה של הצגת מידע לאחר בחירת תפקיד
 
 const EmergencyRolls = () => {
-  const [selectedScenario, setSelectedScenario] = useState(null);
+  const [selectedScenario, setSelectedScenario] = useState(null); // מצב חירום שנבחר
+  const [selectedRole, setSelectedRole] = useState(null); // תפקיד שנבחר
+
+  const handleRoleSelect = (role) => {
+    setSelectedRole(role); // שמירה של התפקיד שנבחר
+  };
 
   return (
     <div className='page-container'>
@@ -43,9 +49,14 @@ const EmergencyRolls = () => {
         </div>
       </div>
 
-      {selectedScenario ? (
-        <Roles selectedScenario={selectedScenario} />
+      {selectedRole ? (
+        // אם נבחר גם מצב חירום וגם תפקיד, עוברים ל-Combined
+        <Combined selectedScenario={selectedScenario} selectedRole={selectedRole} />
+      ) : selectedScenario ? (
+        // אם רק מצב חירום נבחר, מציגים את קומפוננטת Roles
+        <Roles selectedScenario={selectedScenario} onRoleSelect={handleRoleSelect} />
       ) : (
+        // אם אף מצב חירום לא נבחר, מציגים את קומפוננטת Emergency
         <Emergency onScenarioSelect={setSelectedScenario} />
       )}
     </div>

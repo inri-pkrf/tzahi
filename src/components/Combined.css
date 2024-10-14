@@ -1,0 +1,53 @@
+#combined-container {
+    position: ABSOLUTE;
+    z-index: 2000;
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    background-color: #eeeeee;
+    width: 100vw;
+    height: 100vh;
+    direction: rtl;
+
+}
+
+.combined-title{
+    font-family: "Karantina";
+    color: #eeeeee;
+    font-size: 3em;
+    padding: 1vh;
+    font-weight: 500;
+    margin-top: -3vh;
+    position: absolute;
+}
+
+.page-title{
+    font-family: "Heebo";
+    direction: rtl;
+    font-size: 1.5em;
+    color:#595959;
+    font-weight: 700;
+    width: 100vw;
+    margin-bottom: 5vh;
+
+}
+
+.background-situation{
+    font-family: "Heebo";
+    font-size: 1.7em;
+    color:black;
+    margin-top: 20vh;
+    text-align: right;
+    padding-right: 5%;
+
+}
+
+.situation-discription{
+    font-family: "Heebo";
+    padding-right: 5%;
+    font-size: 1.2em;
+    text-align: right;
+    color:black
+}
