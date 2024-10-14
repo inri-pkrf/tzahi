@@ -43,12 +43,9 @@ const EmergencyRolls = () => {
         </div>
       </div>
 
-      {/* כאן נבדוק האם נבחר מצב חירום */}
       {selectedScenario ? (
-        // אם נבחר מצב חירום, נציג את קומפוננטת Roles
         <Roles selectedScenario={selectedScenario} />
       ) : (
-        // אם לא נבחר מצב חירום, נמשיך להציג את קומפוננטת Emergency
         <Emergency onScenarioSelect={setSelectedScenario} />
       )}
     </div>

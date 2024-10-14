@@ -20,9 +20,16 @@
     cursor: pointer; 
     color:white;
     border-radius: 10px;
-    height:6vh;
+    height:6.5vh;
     border: none;
     font-family: "Heebo";
     font-weight: 600;
     font-size: 1.4em;
+    
+}
+
+.button-icon{
+    position: absolute;
+    height:4.2vh;
+    right:15%;
 }
