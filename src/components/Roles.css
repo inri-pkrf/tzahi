@@ -1,19 +1,20 @@
 #roles-container {
-    position: fixed;
-    z-index: 2000; 
-    text-align: center; /* Center the buttons horizontally */
-    top: 48%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%); /* Adjust positioning */
-    overflow: hidden; /* Remove scrollbars */
+    position: ABSOLUTE;
+    z-index: 2000;
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
     background-color: #eeeeee;
     width: 100vw;
-    height:80vh;
+    height: 60vh;
 }
 #buttons-container {
     position: relative;
+    top: -4vh;
     width: 100vw;
-    height: 35vh;
+    height: 37vh;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -22,11 +23,11 @@
   
   .role-button {
     position: absolute;
-    width: 120px; /* גודל רחב יותר */
-    height: 120px; /* גובה גבוה יותר */
+    width: 33vw; /* גודל רחב יותר */
+    height: 17vh; /* גובה גבוה יותר */
     color: white;
     text-align: center;
-    line-height: 120px; /* ממרכז את הטקסט בגובה */
+    line-height: 10vh; /* ממרכז את הטקסט בגובה */
     font-family: "Heebo";
     font-weight: 600;
     font-size: 1.2em; /* גודל גופן גדול יותר */
@@ -43,35 +44,31 @@
   
   /* Second button to the left of the center */
   .role-button:nth-child(2) {
-    top: 40%; /* Positioning the button below the center one */
-    left: 25%; /* Move it towards the left side */
-    transform: translateX(-50%);
+    top: 42%; /* Positioning the button below the center one */
+    left:8%;
   }
   
   /* Third button to the right of the center */
   .role-button:nth-child(3) {
-    top: 40%; /* Same height as the second button */
-    left: 75%; /* Move it towards the right side */
-    transform: translateX(-50%);
+    top: 42%; /* Same height as the second button */
+    right: 8%; /* Move it towards the right side */
   }
   
   /* Fourth button below the second */
   .role-button:nth-child(4) {
-    top: 80%; /* Positioning further down */
-    left: 25%; /* Left alignment */
-    transform: translateX(-50%);
+    top: 88%; /* Positioning further down */
+    left: 8%; /* Left alignment */
   }
   
   /* Fifth button below the third */
   .role-button:nth-child(5) {
-    top: 80%; /* Same height as the fourth button */
-    left: 75%; /* Right alignment */
-    transform: translateX(-50%);
+    top: 88%; /* Same height as the fourth button */
+    right: 8%; /* Right alignment */
   }
   
   /* Sixth button centered below all */
   .role-button:nth-child(6) {
-    top: 100%; /* Bottom alignment */
+    top: 110%; /* Bottom alignment */
     left: 50%;
     transform: translateX(-50%);
   }
