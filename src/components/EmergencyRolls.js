@@ -12,11 +12,15 @@ const EmergencyRolls = () => {
     setSelectedRole(role); // שמירה של התפקיד שנבחר
   };
 
+  const isEmergencyDisplayed = !selectedScenario && !selectedRole; // מצב להצגת Emergency
+  const isRolesDisplayed = selectedScenario && !selectedRole; // מצב להצגת Roles
+  const isCombinedDisplayed = selectedRole; // מצב להצגת Combined
+
   return (
     <div className='page-container'>
       <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י בכדי לצפות בסד"פ המתאים.</h1>
       <div className='states'>
-        <div className='state1'>
+        <div className={isEmergencyDisplayed ? 'state1-chosen' : 'state1 fade'}>
           <p className="stageNumber numberOne">שלב 1</p>
           <img
             className='Fireicon'
@@ -27,7 +31,7 @@ const EmergencyRolls = () => {
         </div>
         <hr className="dotted hr1" />
 
-        <div className='state2'>
+        <div className={isRolesDisplayed ? 'state2-chosen' : 'state2 fade'}>
           <p className="stageNumber numberTwo">שלב 2</p>
           <img
             className='tzahiicon'
@@ -38,7 +42,7 @@ const EmergencyRolls = () => {
         </div>
         <hr className="dotted hr2" />
 
-        <div className='state3'>
+        <div className={isCombinedDisplayed ? 'state3-chosen' : 'state3 fade'}>
           <p className="stageNumber numberThree">שלב 3</p>
           <img
             className='tasksicon'

@@ -23,36 +23,64 @@
     margin-bottom: 5vh;
  }
 
- .state1{
-    position:absolute;
-    right:4vw;
-    top:7vh;
-    width:30vw;
-    height:20vh;
-    /* border: #4b4646 solid; */
- }
+ .state1 {
+   position: absolute;
+    right: 0vw;
+    top: 9vh;
+    width: 33vw;
+    height: 20vh;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.state1-chosen {
+   position: absolute;
+   right: 0vw;
+   top: 9vh;
+   width: 30vw;
+   height: 22vh;
+   background-color: #eeeeee;
+}
+.state2-chosen {
+   position: absolute;
+   right: 50%;
+   transform: translateX(50%);
+   top: 9.5vh;
+   width: 33vw;
+   height: 22vh;
+   background-color: #eeeeee;
+}
+
+.state3-chosen{
+   position: absolute;
+   right: 70%;
+   top: 9vh;
+   width: 32vw;
+   height: 22vh;
+   background-color: #eeeeee;
+}
+
  .state2{
-    position:absolute;
-    right:50%;
-transform: translateX(50%);
-top:7vh;
-width:30vw;
-height:20vh;
-/* border: #4b4646 solid; */
-
-
-
+   position: absolute;
+   right: 50%;
+   transform: translateX(50%);
+   top: 9vh;
+   width: 33vw;
+   height: 20vh;
+   opacity: 0.5;
+   transition: opacity 0.3s ease;
 }
 
 
- .state3{
-    position: absolute;
-    right: 66%;
-    top: 7vh;
-    width: 30vw;
-    height: 20vh;
-    /* border: #4b4646 solid; */
 
+.state3 {
+   position: absolute;
+   right: 69%;
+   top: 9vh;
+   width: 30vw;
+   height: 20vh;
+   opacity: 0.5;
+   transition: opacity 0.3s ease;
 }
 
  .Fireicon{

@@ -38,23 +38,26 @@
     text-align: center;
 
 }
-
-.home-button{
-    background-color: rgb(247 179 124);
+.home-button {
+    background-color: #1bbfe5;
     border: none;
-    border-radius: 20px;
-    width: 69vw;
-    height: 6vh;
+    border-radius: 55px;
+    width: 75vw;
+    height: 10vh;
     position: absolute;
-    font-size: 1.3em;
-    font-family: "Heebo";
+    font-size: 2em;
+    font-family: "Karantina";
     font-weight: bold;
-    color: black;
+    color: #ffffff;
     padding: 1.5vw;
     right: 50%;
     transform: translateX(50%);
     margin-top: 45vh;
+    box-shadow: 9px 10px 20px #323030,   /* צל ראשי */
+                -3px -3px 5px rgba(255, 255, 255, 0.2); /* צל נוסף להבהרה */
 }
+
+
 
 .arrow{
     position: absolute;
@@ -219,7 +222,7 @@
 
 }
 
-.tzahi-button{
+.tzahi-button {
     border: none;
     border-radius: 30px;
     width: 69vw;
@@ -233,7 +236,9 @@
     right: 50%;
     transform: translateX(50%);
     margin-top: 18vh;
-    background-color: #1bbfe5;
+    background-color: rgb(123 122 122);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+
 }
 
 .feedback{
