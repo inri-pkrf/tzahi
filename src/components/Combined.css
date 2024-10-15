@@ -52,3 +52,77 @@
     text-align: right;
     color:black
 }
+
+.tasks-list {
+  list-style-type: none; /* מסיר את הסימונים המובנים של רשימה */
+  padding: 0; /* מסיר ריפוד */
+  margin: 0; /* מסיר רווחים */
+  text-align: right; /* ממקם את כל התוכן לימין */
+}
+
+.task-item {
+    display: flex; /* עושה פריסה גמישה */
+    align-items: center; /* מרכז את תיבת הסימון עם התיאור */
+    margin: 0.8vh; /* מרווח בין משימות */
+}
+
+.task-item input {
+  margin-right: 10px; /* מרווח בין תיבת הסימון לתיאור */
+}
+
+.task-description {
+  display: inline-block; /* עוזר למקם את התיאור בשורה */
+}
+
+
+
+.mine-checkbox {
+    width: 5vw; /* רוחב ה-checkbox */
+    height: 5vw; /* גובה ה-checkbox */
+    border: 2px solid black; /* גבול שחור */
+    border-radius: 0; /* לא מעוגל */
+    appearance: none; /* הסרת העיצוב הסטנדרטי */
+    cursor: pointer; /* מצביע על כך שניתן ללחוץ */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* צל */
+    margin-right: 3vw; /* רווח מוגדל בין ה-checkbox לטקסט */
+    position: relative; /* מיקום יחסי */
+}
+
+/* שינוי עיצוב ה-checkbox כאשר הוא מסומן */
+.mine-checkbox:checked {
+    background-color: black; /* צבע הרקע כאשר מסומן */
+    border-color: black; /* שינוי צבע הגבול כאשר מסומן */
+}
+
+/* הוספת סימן V כאשר ה-checkbox מסומן */
+.mine-checkbox:checked::before {
+    content: '✓'; /* סימן V */
+    position: absolute; /* מיקום מוחלט */
+    color: white; /* צבע הסימון */
+    left: 50%; /* מיקום שמאלה - במרכז */
+    top: 50%; /* מיקום למעלה - במרכז */
+    font-size: 2.5vw; /* גובה הסימון */
+    line-height: 0; /* מיקום הסימון בתוך ה-checkbox */
+    transform: translate(-50%, -50%); /* מיקום מרכזי */
+    font-weight: 700;
+    display: flex; /* עוזר למקם את התוכן במרכז */
+    justify-content: center; /* מיקום מרכזי */
+    align-items: center; /* יישור במרכז */
+}
+
+
+  
+  /* עיצוב רשימת המשימות */
+  .tasks-list {
+    list-style: none; /* הסרת נקודות מהרשימה */
+    padding: 0; /* הסרת רווח פנימי */
+    margin: 0; /* הסרת רווח חיצוני */
+  }
+  
+ .task-text{
+    display: inline-block; /* עוזר למקם את התיאור בשורה */
+    max-width: 70%; /* רוחב מקסימלי כדי למנוע מהטקסט לתפוס יותר מדי מקום */
+    overflow-wrap: break-word; /* מאפשר שbירה של מילים כאשר יש טקסט ארוך */
+    margin-right: 5vw; /* רווח נוסף בין ה-checkbox לטקסט */
+    font-size: 1em; /* גודל הפונט */
+ }
