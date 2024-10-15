@@ -1,15 +1,35 @@
 import React, { useState } from 'react';
-import "./Combined.css";
+import './Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
-  const [completedTasks, setCompletedTasks] = useState(
-    new Array(selectedRole.tasks.length).fill(false) 
-  );
+  // יצירת מצב שבו לכל שלב יש מערך של משימות שהושלמו
+  const initialCompletedTasks = selectedRole.tasksByPhases
+    ? Object.keys(selectedRole.tasksByPhases).reduce((acc, phase) => {
+        acc[phase] = new Array(selectedRole.tasksByPhases[phase].length).fill(false);
+        return acc;
+      }, {})
+    : {};
 
-  const handleCheckboxChange = (index) => {
-    const updatedCompletedTasks = [...completedTasks];
-    updatedCompletedTasks[index] = !updatedCompletedTasks[index]; 
+  const [completedTasks, setCompletedTasks] = useState(initialCompletedTasks);
+
+  const handleCheckboxChange = (phase, index) => {
+    const updatedCompletedTasks = {
+      ...completedTasks,
+      [phase]: [
+        ...completedTasks[phase].slice(0, index),
+        !completedTasks[phase][index], // עדכון הסטטוס של המשימה
+        ...completedTasks[phase].slice(index + 1),
+      ],
+    };
     setCompletedTasks(updatedCompletedTasks); // עדכן את המצב החדש
+  };
+
+  const handleClick = () => {
+    // צור את האירוע החדש
+    const event = new CustomEvent("emergencyback");
+    
+    // שדר את האירוע
+    window.dispatchEvent(event);
   };
 
   return (
@@ -22,21 +42,52 @@ const Combined = ({ selectedScenario, selectedRole }) => {
       <p className='situation-discription'>{selectedScenario.description}</p>
       <h1 className='tasks-title'>משימות בעל תפקיד</h1>
 
-      <ul className="tasks-list">
-        {selectedRole.tasks.map((task, index) => (
-          <li key={index} className="task-item">
-            <input 
-            className='mine-checkbox'
-              type="checkbox" 
-              checked={completedTasks[index]} 
-              onChange={() => handleCheckboxChange(index)} 
-            />
-            <span className='task-text'>{task}</span>
-          </li>
-        ))}
-      </ul>
+      {selectedRole.tasks ? (
+        // אם יש tasks ישירות
+        <ul className="tasks-list">
+          {selectedRole.tasks.map((task, index) => (
+            <li key={index} className="task-item">
+              <input 
+                className='mine-checkbox'
+                type="checkbox" 
+                checked={completedTasks[index]} 
+                onChange={() => handleCheckboxChange('default', index)} 
+              />
+              <span className='task-text'>{task}</span>
+            </li>
+          ))}
+        </ul>
+      ) : selectedRole.tasksByPhases ? (
+        // אם יש tasksByPhases
+        Object.entries(selectedRole.tasksByPhases).map(([phase, tasks], phaseIndex) => (
+          <div key={phaseIndex} className="phase-container">
+            <h2 className="sub-title">{phase}:</h2>
+            <ul className="tasks-list">
+              {tasks.map((task, index) => (
+                <li key={index} className="task-item">
+                  <input 
+                    className='mine-checkbox'
+                    type="checkbox" 
+                    checked={completedTasks[phase][index]} 
+                    onChange={() => handleCheckboxChange(phase, index)} 
+                  />
+                  <span className='task-text'>{task}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      ) : (
+        <p>לא נמצאו משימות.</p> // הודעה אם לא נמצאו משימות
+      )}
+
+      <a className='back-emergency' onClick={handleClick}>
+        חזרה לבחירת מצב חירום
+      </a>    
+      <div className='buffer'></div>
     </div>
   );
 };
 
 export default Combined;
+

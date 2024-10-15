@@ -1,25 +1,28 @@
 #combined-container {
-    position: ABSOLUTE;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
     z-index: 2000;
     text-align: center;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%);
-    overflow: hidden;
     background-color: #eeeeee;
     width: 100vw;
-    height: 100vh;
+    min-height: 110vh; /* גובה מינימלי */
     direction: rtl;
-
+    height: auto; /* הגובה מתאים לתוכן */
 }
+
 
 .combined-title{
     font-family: "Karantina";
     color: #eeeeee;
-    font-size: 3em;
+    font-size: 2.5em;
     padding: 1vh;
     font-weight: 500;
-    margin-top: -3vh;
+    margin-top: 10vh;
     position: absolute;
     width: 100vw;
 }
@@ -125,4 +128,38 @@
     overflow-wrap: break-word; /* מאפשר שbירה של מילים כאשר יש טקסט ארוך */
     margin-right: 5vw; /* רווח נוסף בין ה-checkbox לטקסט */
     font-size: 1em; /* גודל הפונט */
+ }
+
+ .tasks-title{
+    font-family: "Heebo";
+    font-size: 1.3em;
+    color: black;
+    margin-top: 6vh;
+    text-align: right;
+    padding-right: 5%;
+ }
+
+ .back-emergency{
+    text-decoration: underline;
+    font-family: "Heebo";
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: bold;
+    padding: 5vh;
+
+ }
+
+ .sub-title{
+    font-family: "Heebo";
+    font-size: 1em;
+    color: black;
+    margin-top: 6vh;
+    text-align: right;
+    padding-right: 5%;
+ }
+
+ .buffer{
+    width: 100vw;
+    height: 10vh;
+    background-color: #00000000;
  }

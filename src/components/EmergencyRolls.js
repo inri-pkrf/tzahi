@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './EmergencyRolls.css';
 import Emergency from './Emergency'; // קומפוננטה של בחירת מצבי חירום
 import Roles from './Roles'; // קומפוננטה של הצגת תפקידים לאחר בחירת מצב חירום
@@ -15,6 +15,22 @@ const EmergencyRolls = () => {
   const isEmergencyDisplayed = !selectedScenario && !selectedRole; // מצב להצגת Emergency
   const isRolesDisplayed = selectedScenario && !selectedRole; // מצב להצגת Roles
   const isCombinedDisplayed = selectedRole; // מצב להצגת Combined
+
+  useEffect(() => {
+    const handleEmergencyBack = () => {
+      // איפוס הערכים לבחירת מצב חירום מחדש
+      setSelectedScenario(null);
+      setSelectedRole(null);
+    };
+
+    // הוספת מאזין לאירוע
+    window.addEventListener("emergencyback", handleEmergencyBack);
+
+    // ניקוי המאזין כאשר הרכיב מתפרק
+    return () => {
+      window.removeEventListener("emergencyback", handleEmergencyBack);
+    };
+  }, []);
 
   return (
     <div className='page-container'>

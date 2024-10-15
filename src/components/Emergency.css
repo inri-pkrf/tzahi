@@ -2,14 +2,15 @@
     position: absolute;
     z-index: 2000;
     text-align: center;
-    top: 56%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%);
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #eeeeee;
     width: 100vw;
-    height: 70vh
+    height: 70vh;
+
 }
 
 .button {
