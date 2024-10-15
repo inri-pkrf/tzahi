@@ -26,7 +26,7 @@
  .state1 {
    position: absolute;
     right: 0vw;
-    top: 9vh;
+    top: 8vh;
     width: 33vw;
     height: 20vh;
     opacity: 0.5;
@@ -36,7 +36,7 @@
 .state1-chosen {
    position: absolute;
    right: 0vw;
-   top: 9vh;
+   top: 8vh;
    width: 30vw;
    height: 22vh;
    background-color: #eeeeee;
@@ -45,7 +45,7 @@
    position: absolute;
    right: 50%;
    transform: translateX(50%);
-   top: 9.5vh;
+   top: 8.5vh;
    width: 33vw;
    height: 22vh;
    background-color: #eeeeee;
@@ -54,7 +54,7 @@
 .state3-chosen{
    position: absolute;
    right: 70%;
-   top: 9vh;
+   top: 8vh;
    width: 32vw;
    height: 22vh;
    background-color: #eeeeee;
@@ -64,7 +64,7 @@
    position: absolute;
    right: 50%;
    transform: translateX(50%);
-   top: 9vh;
+   top: 8vh;
    width: 33vw;
    height: 20vh;
    opacity: 0.5;
@@ -76,7 +76,7 @@
 .state3 {
    position: absolute;
    right: 69%;
-   top: 9vh;
+   top: 8vh;
    width: 30vw;
    height: 20vh;
    opacity: 0.5;
