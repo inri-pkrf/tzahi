@@ -13,16 +13,21 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const [completedTasks, setCompletedTasks] = useState(initialCompletedTasks);
 
   const handleCheckboxChange = (phase, index) => {
+    // Ensure that completedTasks[phase] is initialized
+    const phaseTasks = completedTasks[phase] || [];
+    
     const updatedCompletedTasks = {
       ...completedTasks,
       [phase]: [
-        ...completedTasks[phase].slice(0, index),
-        !completedTasks[phase][index], // עדכון הסטטוס של המשימה
-        ...completedTasks[phase].slice(index + 1),
+        ...phaseTasks.slice(0, index),
+        !phaseTasks[index], // Update the task status
+        ...phaseTasks.slice(index + 1),
       ],
     };
-    setCompletedTasks(updatedCompletedTasks); // עדכן את המצב החדש
+    
+    setCompletedTasks(updatedCompletedTasks); // Update the state
   };
+  
 
   const handleClick = () => {
     // צור את האירוע החדש
