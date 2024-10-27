@@ -19,12 +19,28 @@
 .combined-title{
     font-family: "Karantina";
     color: #eeeeee;
-    font-size: 2.5em;
+    font-size: 3.2em;
     padding: 1vh;
     font-weight: 500;
     margin-top: 10vh;
     position: absolute;
     width: 100vw;
+    text-align: center;
+    right: 50%;
+    transform: translateX(50%);
+}
+.combined-role{
+    font-family: "Karantina";
+    color: #eeeeee;
+    font-size: 2.5em;
+    padding: 1vh;
+    font-weight: 500;
+    margin-top: 20vh;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .page-title{
@@ -162,4 +178,29 @@
     width: 100vw;
     height: 10vh;
     background-color: #00000000;
+ }
+
+ .navBtn{
+  height: 5vh;
+  width: auto;
+ }
+
+ .back{
+  right: 10vw;
+  margin-top: 22vh;
+  position: absolute;
+ }
+
+ .next{
+  position: absolute;
+  margin-top: 22vh;
+  rotate: 180deg;
+  left: 10vw;
+ }
+
+ .icon-sce{
+  position: absolute;
+  height: 8vh;
+  width: auto;
+  right: 25vw;
  }
