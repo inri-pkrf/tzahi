@@ -114,3 +114,48 @@
     justify-content: center;
     align-items: center;
   }
+
+  .next-btnev{
+    background-color: #1bbfe5;
+    border: none;
+    border-radius: 55px;
+    width: 62vw;
+    height: 6vh;
+    position: absolute;
+    font-size: 1.2em;
+    font-family: "Heebo";
+    font-weight: bold;
+    color: #ffffff;
+    padding: 1.5vw;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 59vh;
+  }
+
+  .scenrio-name{
+    position: absolute;
+    font-size: 1.7em;
+    font-family: 'HEEBO';
+    font-weight: bold;
+    color: #6a6f77;
+    margin-top: 11vh;
+    right: 50%;
+    transform: translateX(50%);
+
+}
+  
+  .scenrio-icon{
+    height: 6vh;
+    position: absolute;
+    margin-top: 0.1vh;
+    width: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .evacuation-dis{
+    font-size: 1.2em;
+    position: absolute;
+    direction: rtl;
+    margin-top: 25vh;
+    color: #656565;
+  }
