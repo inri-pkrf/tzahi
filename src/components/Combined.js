@@ -67,14 +67,15 @@ const Combined = ({ selectedScenario }) => {
   return (
     <div id="combined-container"> 
       <p className='page-title'>בחרת בסד"פ הבא:</p>
-      <h1 className="combined-title" style={{ backgroundColor: selectedScenario.color }}>
+      
+      <h1 className="combined-title" >
         {selectedScenario.situation}
-        <img
+      </h1>
+      <img
           className='icon-sce'
-          src={`${process.env.PUBLIC_URL}/assets/icons/icon${selectedScenario.id}.svg`}
+          src={`${process.env.PUBLIC_URL}/assets/iconsGrey/icon${selectedScenario.id}.svg`}
           alt={`${selectedScenario.situation} icon`} 
         />
-      </h1>
       <h1 className="combined-role" style={{ backgroundColor: selectedRole.color }}>
         תפקיד: {selectedRole.role}
       </h1>

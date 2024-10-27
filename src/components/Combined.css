@@ -17,17 +17,17 @@
 
 
 .combined-title{
-    font-family: "Karantina";
-    color: #eeeeee;
-    font-size: 3.2em;
-    padding: 1vh;
-    font-weight: 500;
-    margin-top: 10vh;
-    position: absolute;
-    width: 100vw;
-    text-align: center;
-    right: 50%;
-    transform: translateX(50%);
+  font-family: "Karantina";
+  color: #6a6f77;
+  font-size: 3.2em;
+  padding: 1vh;
+  font-weight: 500;
+  margin-top: 10vh;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  right: 50%;
+  transform: translateX(47%);
 }
 .combined-role{
     font-family: "Karantina";
@@ -44,13 +44,15 @@
 }
 
 .page-title{
+       margin-top: 5vh;
+    position: absolute;
     font-family: "Heebo";
     direction: rtl;
-    font-size: 1.5em;
-    color:#595959;
+    font-size: 1.2em;
+    color: #595959;
     font-weight: 700;
     width: 100vw;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 
 }
 
@@ -200,7 +202,9 @@
 
  .icon-sce{
   position: absolute;
-  height: 8vh;
-  width: auto;
-  right: 25vw;
- }
+    margin-top: 12vh;
+    height: 6vh;
+    width: auto;
+    right: 27vw;
+}
+ 
