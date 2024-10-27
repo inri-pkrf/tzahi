@@ -74,16 +74,7 @@
   }
   
 
-  #selected-scenerio{
-    position: absolute;
-    margin-top: 21vh;
-    height: 12vh;
-    width: 10vw;
-    right: 50%;
-    transform: translateX(50%);
-
-  }
-
+  
 
   .selected-icon{
     height: 6vh;
@@ -99,4 +90,27 @@
     text-align: center;
     margin-top: 1vh;
     font-weight: bold;
+  }
+  .evacution-dis{
+    font-family: "Heebo";
+    font-size: 1.2em;
+    color: #323030;
+  }
+
+  .scen-selected{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 23vh;
+  }
+
+  #evacuation{
+    position: relative;
+    top: -4vh;
+    width: 100vw;
+    height: 37vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

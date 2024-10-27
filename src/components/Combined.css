@@ -1,4 +1,4 @@
-#combined-container {
+#both-selected {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -208,3 +208,20 @@
     right: 27vw;
 }
  
+#evacution-selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 2000;
+  text-align: center;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #eeeeee;
+  width: 100vw;
+  min-height: 110vh; /* גובה מינימלי */
+  direction: rtl;
+  height: auto; /* הגובה מתאים לתוכן */
+}
+

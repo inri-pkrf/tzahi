@@ -1,32 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import './EmergencyRolls.css';
-import Emergency from './Emergency'; // קומפוננטה של בחירת מצבי חירום
-import Roles from './Roles'; // קומפוננטה של הצגת תפקידים לאחר בחירת מצב חירום
-import Combined from './Combined'; // קומפוננטה של הצגת מידע לאחר בחירת תפקיד
+import Emergency from './Emergency'; // Component for selecting emergency scenarios
+import Roles from './Roles'; // Component for displaying roles after selecting an emergency scenario
+import Combined from './Combined'; // Component for displaying information after selecting a role
 
 const EmergencyRolls = () => {
-  const [selectedScenario, setSelectedScenario] = useState(null); // מצב חירום שנבחר
-  const [selectedRole, setSelectedRole] = useState(null); // תפקיד שנבחר
+  const [selectedScenario, setSelectedScenario] = useState(null); // Selected emergency scenario
+  const [selectedRole, setSelectedRole] = useState(null); // Selected role
 
   const handleRoleSelect = (role) => {
-    setSelectedRole(role); // שמירה של התפקיד שנבחר
+    setSelectedRole(role); // Save the selected role
   };
 
-  const isEmergencyDisplayed = !selectedScenario && !selectedRole; // מצב להצגת Emergency
-  const isRolesDisplayed = selectedScenario && !selectedRole; // מצב להצגת Roles
-  const isCombinedDisplayed = selectedRole; // מצב להצגת Combined
+  // New function to handle evacuation scenario selection
+  const handleEvacuationClick = () => {
+    const evacuationScenario = { situation: "פינוי ישוב" }; // Create the evacuation scenario object
+    setSelectedScenario(evacuationScenario); // Set the selected scenario
+    setSelectedRole("evacuation"); // Set the selected role to evacuation
+  };
+
+  const isEmergencyDisplayed = !selectedScenario && !selectedRole; // Display Emergency selection
+  const isRolesDisplayed = selectedScenario && !selectedRole; // Display Roles selection
+  const isCombinedDisplayed = selectedRole && selectedScenario; // Display Combined if both scenario and role are selected
 
   useEffect(() => {
     const handleEmergencyBack = () => {
-      // איפוס הערכים לבחירת מצב חירום מחדש
       setSelectedScenario(null);
       setSelectedRole(null);
     };
 
-    // הוספת מאזין לאירוע
     window.addEventListener("emergencyback", handleEmergencyBack);
-
-    // ניקוי המאזין כאשר הרכיב מתפרק
     return () => {
       window.removeEventListener("emergencyback", handleEmergencyBack);
     };
@@ -69,15 +72,16 @@ const EmergencyRolls = () => {
         </div>
       </div>
 
-      {selectedRole ? (
-        // אם נבחר גם מצב חירום וגם תפקיד, עוברים ל-Combined
+      {isCombinedDisplayed ? (
         <Combined selectedScenario={selectedScenario} selectedRole={selectedRole} />
-      ) : selectedScenario ? (
-        // אם רק מצב חירום נבחר, מציגים את קומפוננטת Roles
-        <Roles selectedScenario={selectedScenario} onRoleSelect={handleRoleSelect} />
+      ) : isRolesDisplayed ? (
+        <Roles 
+          selectedScenario={selectedScenario} 
+          onRoleSelect={handleRoleSelect} 
+          onEvacuationClick={handleEvacuationClick} // Ensure this is passed if needed
+        />
       ) : (
-        // אם אף מצב חירום לא נבחר, מציגים את קומפוננטת Emergency
-        <Emergency onScenarioSelect={setSelectedScenario} />
+        <Emergency onScenarioSelect={setSelectedScenario} onEvacuationClick={handleEvacuationClick} />
       )}
     </div>
   );
