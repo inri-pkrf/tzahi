@@ -3,7 +3,10 @@ import './Evacuation.css';
 
 const Evacuation = ({ selectedScenario }) => {
   const [expandedCategory, setExpandedCategory] = useState(null);
-
+  const handleBackClick = () => {
+    const event = new CustomEvent("emergencyback");
+    window.dispatchEvent(event);
+  };
   // פונקציה לטיפול בלחיצה על כותרת הקטגוריה
   const handleToggle = (category) => {
     setExpandedCategory(expandedCategory === category ? null : category);
@@ -47,6 +50,10 @@ const Evacuation = ({ selectedScenario }) => {
       ) : (
         <p>אין מידע נוסף להצגה.</p> // הודעה אם אין טול טיפים
       )}
+      <a className='back-emergency' onClick={handleBackClick}>
+            חזרה לבחירת מצב חירום
+          </a>
+          <div className='buffer'></div>
     </div>
   );
 };
