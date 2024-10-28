@@ -1,0 +1,71 @@
+#evacuation-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    z-index: 2000;
+    text-align: center;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #eeeeee;
+    width: 100vw;
+    min-height: 110vh; /* גובה מינימלי */
+    direction: rtl;
+    height: auto; /* הגובה מתאים לתוכן */
+}
+
+.evacuation-title {
+    font-family: "Karantina";
+    color: #6a6f77;
+    font-size: 3.2em;
+    padding: 1vh;
+    font-weight: 500;
+    margin-top: 10vh;
+    position: relative; /* שינוי מ-absolute ל-relative */
+    width: 100%; /* השתנה מ-100vw ל-100% */
+    text-align: center;
+}
+
+.icon-evacuation {
+    position: absolute; /* שינוי מ-absolute ל-relative */
+    margin-top: 12vh; /* שנה לפי הצורך */
+    margin-right: 20vw;
+    height: 5vh;
+    width: auto;
+}
+
+.tooltip {
+    margin-right: 10vw;
+}
+
+.tooltip-title {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    direction: rtl;
+    font-family: 'heebo';
+    color:#6a6f77;
+    font-size: 1.5em;
+  
+}
+
+.chevron {
+    margin-right: 2vw;
+    transform: rotate(180deg);
+    transition: transform 0.3s eas
+}
+
+.chevron.expanded {
+    transform: rotate(90deg); /* סובב את המשולש */
+}
+
+.tooltip-content {
+    padding: 10px;
+    background-color: #f0f0f0; /* צבע רקע לטול טיפ */
+    border-radius: 5px; /* פינות מעוגלות */
+}
+
+ul {
+    padding-left: 20px; /* רווח בצד השמאלי של הרשימה */
+}

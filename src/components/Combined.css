@@ -183,29 +183,29 @@
  }
 
  .navBtn{
-  height: 5vh;
+  height: 4vh;
   width: auto;
  }
 
  .back{
   right: 10vw;
-  margin-top: 22vh;
+  margin-top: 21.8vh;
   position: absolute;
  }
 
  .next{
   position: absolute;
-  margin-top: 22vh;
+  margin-top: 21.8vh;
   rotate: 180deg;
   left: 10vw;
  }
 
  .icon-sce{
   position: absolute;
-    margin-top: 12vh;
-    height: 6vh;
-    width: auto;
-    right: 27vw;
+  margin-top: 13vh;
+  height: 5vh;
+  width: auto;
+  right: 21vw;
 }
  
 #evacution-selected {

@@ -1,27 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './EmergencyRolls.css';
-import Emergency from './Emergency'; // Component for selecting emergency scenarios
-import Roles from './Roles'; // Component for displaying roles after selecting an emergency scenario
-import Combined from './Combined'; // Component for displaying information after selecting a role
+import Emergency from './Emergency';
+import Roles from './Roles';
+import Combined from './Combined';
+import Evacuation from './Evacuation'; // ייבוא הקומפוננטה החדשה
 
 const EmergencyRolls = () => {
-  const [selectedScenario, setSelectedScenario] = useState(null); // Selected emergency scenario
-  const [selectedRole, setSelectedRole] = useState(null); // Selected role
+  const [selectedScenario, setSelectedScenario] = useState(null);
+  const [selectedRole, setSelectedRole] = useState(null);
 
   const handleRoleSelect = (role) => {
-    setSelectedRole(role); // Save the selected role
+    setSelectedRole(role);
   };
 
-  // New function to handle evacuation scenario selection
   const handleEvacuationClick = () => {
-    const evacuationScenario = { situation: "פינוי ישוב" }; // Create the evacuation scenario object
-    setSelectedScenario(evacuationScenario); // Set the selected scenario
-    setSelectedRole("evacuation"); // Set the selected role to evacuation
+    setSelectedRole("evacuation");
   };
-
-  const isEmergencyDisplayed = !selectedScenario && !selectedRole; // Display Emergency selection
-  const isRolesDisplayed = selectedScenario && !selectedRole; // Display Roles selection
-  const isCombinedDisplayed = selectedRole && selectedScenario; // Display Combined if both scenario and role are selected
+  const isEmergencyDisplayed = !selectedScenario && !selectedRole;
+  const isRolesDisplayed = selectedScenario && !selectedRole;
+  const isCombinedDisplayed = selectedRole && selectedScenario && selectedRole !== "evacuation";
+  const isEvacuationDisplayed = selectedRole === "evacuation"; // בדיקה אם זה פינוי
 
   useEffect(() => {
     const handleEmergencyBack = () => {
@@ -39,6 +37,7 @@ const EmergencyRolls = () => {
     <div className='page-container'>
       <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י בכדי לצפות בסד"פ המתאים.</h1>
       <div className='states'>
+        {/* Step indicators for each state */}
         <div className={isEmergencyDisplayed ? 'state1-chosen' : 'state1 fade'}>
           <p className="stageNumber numberOne">שלב 1</p>
           <img
@@ -61,7 +60,7 @@ const EmergencyRolls = () => {
         </div>
         <hr className="dotted hr2" />
 
-        <div className={isCombinedDisplayed ? 'state3-chosen' : 'state3 fade'}>
+        <div className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : 'state3 fade'}>
           <p className="stageNumber numberThree">שלב 3</p>
           <img
             className='tasksicon'
@@ -72,13 +71,15 @@ const EmergencyRolls = () => {
         </div>
       </div>
 
-      {isCombinedDisplayed ? (
+      {isEvacuationDisplayed ? (
+        <Evacuation selectedScenario={selectedScenario} />
+      ) : isCombinedDisplayed ? (
         <Combined selectedScenario={selectedScenario} selectedRole={selectedRole} />
       ) : isRolesDisplayed ? (
         <Roles 
           selectedScenario={selectedScenario} 
           onRoleSelect={handleRoleSelect} 
-          onEvacuationClick={handleEvacuationClick} // Ensure this is passed if needed
+          onEvacuationClick={handleEvacuationClick} 
         />
       ) : (
         <Emergency onScenarioSelect={setSelectedScenario} onEvacuationClick={handleEvacuationClick} />
