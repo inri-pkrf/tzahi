@@ -8,12 +8,26 @@
   }
   
   .App-logo {
-    height: 15vmin;
+    height: 8vh;
+    width: auto;
     position: fixed;
     top: 2vh;
     right: 5vw;
   }
-  
+
+.back-homeNav{
+  height: 8vh;
+  width:35vw;
+  top: 2vh;
+  right: 5vw;
+  position: fixed;
+  background-color: transparent;
+  border: none;
+
+
+}
+
+
   .right-logo-link {
     position: fixed;
     top: 10px;

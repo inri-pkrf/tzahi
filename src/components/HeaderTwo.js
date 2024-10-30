@@ -8,12 +8,22 @@ function Header() {
   return (
     <header className="header">
       <img   className='tzahi-white'  src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}  />
+     
+     
+     
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
         className="App-logo"
         alt="logo"
-        onClick={() => navigate('/tzahi/home')} 
+      
+        
       />
+      <button class="back-homeNav"   onClick={() => {
+          console.log("Navigating to /tzahi/home");
+          navigate('/tzahi/home');
+        }}></button>
+
+    
       
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/orange.png`}

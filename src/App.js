@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './components/Home';
-import HeaderOne from './components/HeaderOne';
 import HeaderTwo from './components/HeaderTwo';
 import Intro from './components/Intro';
 import EmergencyRolls from './components/EmergencyRolls';
