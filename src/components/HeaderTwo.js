@@ -18,7 +18,7 @@ function Header() {
       
         
       />
-      <button class="back-homeNav"   onClick={() => {
+      <button className="back-homeNav"   onClick={() => {
           console.log("Navigating to /tzahi/home");
           navigate('/tzahi/home');
         }}></button>

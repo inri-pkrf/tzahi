@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 import './Home.css';
 
-
-
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -27,7 +24,7 @@ const Home = () => {
 
 
 <div className='greeting-div'>
-  <hr class="dotted-line" />
+  <hr className="dotted-line" />
 
  <p className='greeting'>עזר זה מרכז סדרי פעולות לעבודת הצח"י בשעת חירום  ומתאפשר בזכות שיתוף פעולה
 </p>
@@ -59,7 +56,7 @@ src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
 className='collage-logo'
  />
  <p className='credits'>התוכן מתבסס על תיק צוות חירום וחוסן יישובי (צח"י) שהתפרסם על-ידי השירות לעבודה קהילתית במשרד העבודה הרווחה והשירותים החברתיים (2018) כתיבה ועריכה: משה ברנדר ואבי סנדר</p>
- <hr class="dotted-line2" />
+ <hr className="dotted-line2" />
 
  </div>
 
