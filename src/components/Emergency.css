@@ -9,8 +9,17 @@
     overflow-x: hidden;
     background-color: #eeeeee;
     width: 100vw;
-    height: 70vh;
+    height: 85vh;
 
+}
+.instruction{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100vw;
+    font-size: 1.2em;
+    font-family: "heebo";
+    margin-top: 5vh;
 }
 
 .button {
@@ -20,13 +29,19 @@
     font-size: 16px; 
     cursor: pointer; 
     color:white;
-    border-radius: 10px;
+    border-radius: 15px;
     height:6.5vh;
     border: none;
     font-family: "Heebo";
     font-weight: 600;
     font-size: 1.4em;
     
+}
+
+.buttons-sec{
+    position: absolute;
+    margin-top: 13vh;
+
 }
 
 .button-icon{

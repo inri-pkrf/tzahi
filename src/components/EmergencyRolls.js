@@ -47,9 +47,9 @@ const EmergencyRolls = () => {
           />
           <p className="stateTitle titleOne">בחירת <br /> מצב חירום</p>
         </div>
-        <hr className="dotted hr1" />
+        <hr className={isEmergencyDisplayed ? 'hr1-none' : 'dotted hr1'} />
 
-        <div className={isRolesDisplayed ? 'state2-chosen' : 'state2 fade'}>
+        <div className={isRolesDisplayed ? 'state2-chosen' : 'state2 '}>
           <p className="stageNumber numberTwo">שלב 2</p>
           <img
             className='tzahiicon'
@@ -58,10 +58,10 @@ const EmergencyRolls = () => {
           />
           <p className="stateTitle titleTwo">בחירת <br /> תפקיד</p>
         </div>
-        <hr className="dotted hr2" />
+        <hr className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'hr2-none' : 'dotted hr2'} />
 
-        <div className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : 'state3 fade'}>
-          <p className="stageNumber numberThree">שלב 3</p>
+        <div className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : 'state3 '}>
+          <p className="stageNumber numberThree"> קבלת סד"פ</p>
           <img
             className='tasksicon'
             src={`${process.env.PUBLIC_URL}/assets/media/tasksGrey.svg`}
