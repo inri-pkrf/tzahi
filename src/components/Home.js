@@ -15,8 +15,8 @@ const Home = () => {
   };
   return (
     <div className="homepage-container">
-      <h1 className='home-title'>  ברוכים הבאים והבאות 
-לעזר סד"פ לצח"י
+      <h1 className='home-title'>  ברוכים וברוכת הבאים <br></br>לעזר סד"פ לצח"י
+
  </h1>
  <p className="info1">
  יש לבחור מצב חירום ולאחר מכן תפקיד 
@@ -24,11 +24,11 @@ const Home = () => {
  </p>
  <button className='home-button' onClick={goToEmergency}>לבחירת מצב חירום ותפקיד</button>
 
- <img
- src={`${process.env.PUBLIC_URL}/assets/media/greyArrow.png`}
- className="arrow"
- id="arrow1"
- />
+
+
+<div className='greeting-div'>
+  <hr class="dotted-line" />
+
  <p className='greeting'>עזר זה מרכז סדרי פעולות לעבודת הצח"י בשעת חירום  ומתאפשר בזכות שיתוף פעולה
 </p>
 <img
@@ -59,8 +59,16 @@ src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
 className='collage-logo'
  />
  <p className='credits'>התוכן מתבסס על תיק צוות חירום וחוסן יישובי (צח"י) שהתפרסם על-ידי השירות לעבודה קהילתית במשרד העבודה הרווחה והשירותים החברתיים (2018) כתיבה ועריכה: משה ברנדר ואבי סנדר</p>
+ <hr class="dotted-line2" />
+
+ </div>
+
+   
+   
+   
+   
    <div className='tzahi-div'>
-    <div><p className='bold-text'>חדשים או חדשות בצח"י? </p><p className='regular-text'>זקוקים </p> 
+   <div><p className='bold-text'>חדשים או חדשות בצח"י? </p><p className='regular-text'>זקוקים </p> 
     
     <p className='regular-text2'>לרענון? הכנסו</p>
     <p className='underLine-text'> לשיעור הדיגיטלי לצח"י 
