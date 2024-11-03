@@ -44,11 +44,4 @@
     z-index: -1; 
   }
   
-  .tzahi-white{
-    position: fixed; 
-    top: 2.5vh;
-    left: 5vw;
-    width: 13vw; 
-    height: auto;
-    z-index: 10; 
-  }
+ 

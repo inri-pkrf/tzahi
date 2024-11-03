@@ -1,30 +1,37 @@
-import React, { useEffect, useState } from 'react'; // ייבוא נכון
-import { useNavigate } from 'react-router-dom'; // ייבוא useNavigate
-import './HeaderTwo.css'; 
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './HeaderTwo.css';
 
-function Header() {
-  const navigate = useNavigate(); // הגדרת הניווט
+function HeaderTwo() {
+  const navigate = useNavigate();
+
+  // פונקציה שמבצעת ניווט לעמוד ההמבורגר
+  const handleLogoClick = () => {
+    console.log('Logo clicked!');
+    navigate('/tzahi/hamburger'); // עדכן את הנתיב לנתיב המתאים לעמוד ההמבורגר
+  };
 
   return (
     <header className="header">
-      <img   className='tzahi-white'  src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}  />
-     
-     
-     
+      <img
+        className="tzahi-white"
+        src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
+        onClick={handleLogoClick} // קרא לפונקציית הניווט בלחיצה
+        style={{ cursor: 'pointer' }}
+      />
+      
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
         className="App-logo"
         alt="logo"
-      
-        
       />
-      <button className="back-homeNav"   onClick={() => {
-          console.log("Navigating to /tzahi/home");
-          navigate('/tzahi/home');
-        }}></button>
-
-    
       
+      <button
+        className="back-homeNav"
+        onClick={() => navigate('/tzahi/home')} // ניווט לעמוד הבית
+      >
+      </button>
+
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/orange.png`}
         alt="Decorative"
@@ -34,4 +41,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderTwo;
