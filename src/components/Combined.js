@@ -90,7 +90,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
 </div>
 
           <p className='situation-description'>{selectedScenario.description}</p>
-          <h1 className='tasks-title'>משימות בעל תפקיד</h1>
+          <h1 className='tasks-title'> משימות לפי תפקידים</h1>
           
           {Object.entries(tasks).map(([phase, phaseTasks], phaseIndex) => (
             <div key={phaseIndex} className="phase-container">

@@ -3,13 +3,31 @@ import './Evacuation.css';
 
 const Evacuation = ({ selectedScenario }) => {
   const [expandedCategory, setExpandedCategory] = useState(null);
+  const [checkedItems, setCheckedItems] = useState({}); // מצב לצ'ק בוקסים
+
   const handleBackClick = () => {
     const event = new CustomEvent("emergencyback");
     window.dispatchEvent(event);
   };
+
   // פונקציה לטיפול בלחיצה על כותרת הקטגוריה
   const handleToggle = (category) => {
     setExpandedCategory(expandedCategory === category ? null : category);
+  };
+
+  const handleCheckboxChange = (category, item) => {
+    setCheckedItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [category]: {
+        ...prevCheckedItems[category],
+        [item]: !prevCheckedItems[category]?.[item] // הפוך את מצב הצ'ק בוקס
+      }
+    }));
+  };
+
+  // פונקציה לבדוק אם כל הפריטים בקטגוריה נבחרו
+  const areAllItemsChecked = (category) => {
+    return selectedScenario.infos[category].every(item => checkedItems[category]?.[item]);
   };
 
   return (
@@ -28,21 +46,29 @@ const Evacuation = ({ selectedScenario }) => {
           {Object.entries(selectedScenario.infos).map(([category, items], index) => (
             <div key={index} className="tooltip">
               <h3 
-                className="tooltip-title" 
+                className={`tooltip-title ${areAllItemsChecked(category) ? 'title-checked' : ''}`} 
                 onClick={() => handleToggle(category)}
                 style={{ cursor: 'pointer' }}
               >
                 {category}
-
-                <img  src={`${process.env.PUBLIC_URL}/assets/media/nextGrey.png`}
-                className={`chevron ${expandedCategory === category ? 'expanded' : ''}`}
- />
+                <img  
+                  src={`${process.env.PUBLIC_URL}/assets/media/nextGrey.png`}
+                  className={`chevron ${expandedCategory === category ? 'expanded' : ''}`}
+                />
               </h3>
               {expandedCategory === category && (
                 <div className="tooltip-content">
-                  <ul>
+                  <ul className="tasks-list">
                     {items.map((item, itemIndex) => (
-                      <li key={itemIndex}>{item}</li>
+                      <li key={itemIndex} className="checkbox-item">
+                        <input 
+                          type="checkbox" 
+                          className="mine-checkbox" 
+                          checked={checkedItems[category]?.[item] || false} 
+                          onChange={() => handleCheckboxChange(category, item)} 
+                        />
+                        <span className="checkbox-text">{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -54,9 +80,9 @@ const Evacuation = ({ selectedScenario }) => {
         <p>אין מידע נוסף להצגה.</p> // הודעה אם אין טול טיפים
       )}
       <a className='back-emergency' onClick={handleBackClick}>
-            חזרה לבחירת מצב חירום
-          </a>
-          <div className='buffer'></div>
+        חזרה לבחירת מצב חירום
+      </a>
+      <div className='buffer'></div>
     </div>
   );
 };
