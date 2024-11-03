@@ -33,7 +33,10 @@ const Evacuation = ({ selectedScenario }) => {
                 style={{ cursor: 'pointer' }}
               >
                 {category}
-                <span className={`chevron ${expandedCategory === category ? 'expanded' : ''}`}>&#x25B6;</span>
+
+                <img  src={`${process.env.PUBLIC_URL}/assets/media/nextGrey.png`}
+                className={`chevron ${expandedCategory === category ? 'expanded' : ''}`}
+ />
               </h3>
               {expandedCategory === category && (
                 <div className="tooltip-content">

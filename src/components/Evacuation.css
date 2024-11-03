@@ -53,7 +53,8 @@
 .chevron {
     margin-right: 2vw;
     transform: rotate(180deg);
-    transition: transform 0.3s eas
+    height:4vh;
+    width: auto;
 }
 
 .chevron.expanded {

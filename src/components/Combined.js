@@ -6,6 +6,8 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(initialRoleIndex >= 0 ? initialRoleIndex : 0);
   const [completedTasks, setCompletedTasks] = useState({});
   const [hasMovedNext, setHasMovedNext] = useState(false);
+  const [showNotes, setShowNotes] = useState(false); 
+
 
   useEffect(() => {
     const currentRole = selectedScenario.roles[currentRoleIndex];
@@ -47,6 +49,10 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const currentRole = selectedScenario.roles[currentRoleIndex];
   const tasks = currentRole.tasksByPhases || { "כללי": currentRole.tasks || [] };
 
+  const toggleNotes = () => {
+    setShowNotes(prevShowNotes => !prevShowNotes);
+  };
+
   return (
     <div id="combined-container">
         <div id="both-selected">
@@ -60,21 +66,28 @@ const Combined = ({ selectedScenario, selectedRole }) => {
           <h1 className="combined-role" style={{ backgroundColor: currentRole.color }}>
             תפקיד: {currentRole.role || 'לא זוהה'}
           </h1>
-          
-          {hasMovedNext && (
-            <img 
-              className='navBtn back' 
-              src={`${process.env.PUBLIC_URL}/assets/media/next.png`} 
-              onClick={handlePreviousRole} 
-              alt="Previous Role"
-            />
-          )}
-          <img 
-            className='navBtn next' 
-            src={`${process.env.PUBLIC_URL}/assets/media/next.png`} 
-            onClick={handleNextRole} 
-            alt="Next Role"
-          />
+          <div className="navigation-buttons">
+  {hasMovedNext && (
+    <div className="nav-button-container">
+      <img 
+        className='navBtn back' 
+        src={`${process.env.PUBLIC_URL}/assets/media/next.png`} 
+        onClick={handlePreviousRole} 
+        alt="Previous Role"
+      />
+      <p className="nav-button-text back-txt">תפקיד קודם</p> {/* Text for Previous Role */}
+    </div>
+  )}
+  <div className="nav-button-container">
+    <img 
+      className='navBtn next' 
+      src={`${process.env.PUBLIC_URL}/assets/media/next.png`} 
+      onClick={handleNextRole} 
+      alt="Next Role"
+    />
+    <p className="nav-button-text next-txt">תפקיד הבא</p> {/* Text for Next Role */}
+  </div>
+</div>
 
           <p className='situation-description'>{selectedScenario.description}</p>
           <h1 className='tasks-title'>משימות בעל תפקיד</h1>
@@ -97,6 +110,21 @@ const Combined = ({ selectedScenario, selectedRole }) => {
               </ul>
             </div>
           ))}
+          <div className="noted">
+          <h2 className="notes-title" onClick={toggleNotes} style={{ cursor: 'pointer' }}>
+דגשים             
+              <img src={`${process.env.PUBLIC_URL}/assets/media/nextBlack.png`} 
+               className={`arrow ${showNotes ? 'down next-black' : 'right next-black'}`}
+              />
+          </h2>
+          {showNotes && (
+            <ul className="notes-list">
+              {selectedScenario.notes.map((note, index) => (
+                <li key={index} className="note-item">{note}</li>
+              ))}
+            </ul>
+          )}
+        </div>
           <a className='back-emergency' onClick={handleBackClick}>
             חזרה לבחירת מצב חירום
           </a>
