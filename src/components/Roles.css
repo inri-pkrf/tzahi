@@ -11,20 +11,22 @@
     height: 60vh;
 }
 #buttons-container {
-    position: relative;
-    top: -4vh;
-    width: 100vw;
-    height: 37vh;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  top: -4vh;
+  width: 100vw;
+  height: 37vh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50%;
+  transform: translateX(50%);
   }
   
   .role-button {
     position: absolute;
-    width: 33vw; /* גודל רחב יותר */
-    height: 17vh; /* גובה גבוה יותר */
+    width: 36vmin; /* גודל רחב יותר */
+    height: 17vmax; /* גובה גבוה יותר */
     color: white;
     text-align: center;
     line-height: 10vh; /* ממרכז את הטקסט בגובה */
@@ -45,25 +47,25 @@
   /* Second button to the left of the center */
   .role-button:nth-child(2) {
     top: 42%; /* Positioning the button below the center one */
-    left:8%;
+    left:4%;
   }
   
   /* Third button to the right of the center */
   .role-button:nth-child(3) {
     top: 42%; /* Same height as the second button */
-    right: 8%; /* Move it towards the right side */
+    right: 4%; /* Move it towards the right side */
   }
   
   /* Fourth button below the second */
   .role-button:nth-child(4) {
     top: 89%; /* Positioning further down */
-    left: 8%; /* Left alignment */
+    left: 4%; /* Left alignment */
   }
   
   /* Fifth button below the third */
   .role-button:nth-child(5) {
     top: 89%; /* Same height as the fourth button */
-    right: 8%; /* Right alignment */
+    right: 4%; /* Right alignment */
   }
   
   /* Sixth button centered below all */
@@ -78,6 +80,9 @@
 
   .selected-icon{
     height: 6vh;
+    right: 50%;
+    position: absolute;
+    transform: translateX(50%);
   }
 
   .selected-name{
@@ -88,7 +93,7 @@
     right: 50%;
     transform: translateX(50%);
     text-align: center;
-    margin-top: 1vh;
+    margin-top: 6vh;
     font-weight: bold;
   }
   .evacution-dis{

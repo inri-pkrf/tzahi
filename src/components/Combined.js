@@ -76,7 +76,6 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             alt="Next Role"
           />
 
-          <h1 className='background-situation'>רקע למצב:</h1>
           <p className='situation-description'>{selectedScenario.description}</p>
           <h1 className='tasks-title'>משימות בעל תפקיד</h1>
           

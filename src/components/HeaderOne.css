@@ -1,0 +1,38 @@
+.header {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    height: 11vh;
+    z-index: 10000;
+    background-color: white; 
+  }
+  
+  .App-logo-one {
+    height: 15vmin;
+    position: fixed;
+    top: 2vh;
+    right: 21vw;
+  }
+  
+  .right-logo-link {
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Positioning the icon to the left */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .decorative-photo {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 42vw; 
+    height: auto;
+    z-index: -1; 
+  }
+  
+ .tzahi-logo{
+  height: 14vmin;
+  position: fixed;
+  top: 2vh;
+  right: 7vw;
+ }

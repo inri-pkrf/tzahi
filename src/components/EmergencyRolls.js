@@ -3,7 +3,7 @@ import './EmergencyRolls.css';
 import Emergency from './Emergency';
 import Roles from './Roles';
 import Combined from './Combined';
-import Evacuation from './Evacuation'; // ייבוא הקומפוננטה החדשה
+import Evacuation from './Evacuation';
 
 const EmergencyRolls = () => {
   const [selectedScenario, setSelectedScenario] = useState(null);
@@ -13,13 +13,21 @@ const EmergencyRolls = () => {
     setSelectedRole(role);
   };
 
+  const handleBackEvent = () => {
+    setSelectedScenario(null);
+    setSelectedRole(null);
+    const event = new CustomEvent("emergencyback");
+    window.dispatchEvent(event);
+  };
+
   const handleEvacuationClick = () => {
     setSelectedRole("evacuation");
   };
+
   const isEmergencyDisplayed = !selectedScenario && !selectedRole;
   const isRolesDisplayed = selectedScenario && !selectedRole;
   const isCombinedDisplayed = selectedRole && selectedScenario && selectedRole !== "evacuation";
-  const isEvacuationDisplayed = selectedRole === "evacuation"; // בדיקה אם זה פינוי
+  const isEvacuationDisplayed = selectedRole === "evacuation";
 
   useEffect(() => {
     const handleEmergencyBack = () => {
@@ -35,21 +43,21 @@ const EmergencyRolls = () => {
 
   return (
     <div className='page-container'>
-      <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י בכדי לצפות בסד"פ המתאים.</h1>
+      <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י בכדי לצפות בסד"פ המתאים</h1>
       <div className='states'>
-        {/* Step indicators for each state */}
         <div className={isEmergencyDisplayed ? 'state1-chosen' : 'state1 fade'}>
           <p className="stageNumber numberOne">שלב 1</p>
           <img
             className='Fireicon'
             src={`${process.env.PUBLIC_URL}/assets/media/fire.svg`}
             alt="Fire icon"
+            onClick={handleBackEvent} // Assuming this should trigger the back event
           />
           <p className="stateTitle titleOne">בחירת <br /> מצב חירום</p>
         </div>
         <hr className={isEmergencyDisplayed ? 'hr1-none' : 'dotted hr1'} />
 
-        <div className={isRolesDisplayed ? 'state2-chosen' : 'state2 '}>
+        <div className={isRolesDisplayed ? 'state2-chosen' : 'state2'}>
           <p className="stageNumber numberTwo">שלב 2</p>
           <img
             className='tzahiicon'
@@ -60,7 +68,7 @@ const EmergencyRolls = () => {
         </div>
         <hr className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'hr2-none' : 'dotted hr2'} />
 
-        <div className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : 'state3 '}>
+        <div className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : 'state3'}>
           <p className="stageNumber numberThree"> קבלת סד"פ</p>
           <img
             className='tasksicon'

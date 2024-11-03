@@ -30,17 +30,17 @@
   transform: translateX(47%);
 }
 .combined-role{
-    font-family: "Karantina";
-    color: #eeeeee;
-    font-size: 2.5em;
-    padding: 1vh;
-    font-weight: 500;
-    margin-top: 20vh;
-    position: absolute;
-    width: 100vw;
-    text-align: center;
-    right: 50%;
-    transform: translateX(50%);
+  font-family: "Karantina";
+  color: #eeeeee;
+  font-size: 2.5em;
+  padding: 1vh;
+  font-weight: 500;
+  margin-top: 38vh;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .page-title{
@@ -56,22 +56,17 @@
 
 }
 
-.background-situation{
-    font-family: "Heebo";
-    font-size: 1.7em;
-    color:black;
-    margin-top: 20vh;
-    text-align: right;
-    padding-right: 5%;
 
-}
 
 .situation-discription{
-    font-family: "Heebo";
-    padding-right: 5%;
-    font-size: 1.2em;
-    text-align: right;
-    color:black
+  position: absolute;
+  text-align: center;
+  font-family: "Heebo";
+  right: 50%;
+  transform: translateX(50%);
+  width: 100vw;
+  font-size: 1.2em;
+  margin-top: 18vh;
 }
 
 .tasks-list {
@@ -149,13 +144,19 @@
  }
 
  .tasks-title{
-    font-family: "Heebo";
-    font-size: 1.3em;
-    color: black;
-    margin-top: 6vh;
-    text-align: right;
-    padding-right: 5%;
+  font-family: "Heebo";
+  font-size: 1.5em;
+  color: black;
+  margin-top: 13vh;
+  text-align: right;
+  padding-right: 5%;
  }
+
+.situation-description{
+  position:absolute;
+
+}
+
 
  .back-emergency{
     text-decoration: underline;
@@ -188,16 +189,17 @@
  }
 
  .back{
-  right: 10vw;
-  margin-top: 21.8vh;
+  right: 4vw;
+  margin-top: 39.8vh;
   position: absolute;
  }
 
  .next{
   position: absolute;
-  margin-top: 21.8vh;
+  margin-top: 39.8vh;
   rotate: 180deg;
-  left: 10vw;
+  left: 4vw;
+
  }
 
  .icon-sce{
