@@ -93,7 +93,7 @@
  }
  .tzahiicon{
    width: auto;
-   margin-top: 6vh;
+   margin-top: 5vh;
    height: 6vh;
    position: absolute;
    right: 50%;
@@ -135,7 +135,7 @@
 
 .hr1{
    position: absolute;
-   right: 16vw;
+   right: 15vw;
    top: 8vh;
 }
 
@@ -144,9 +144,9 @@
 }
 
 .hr2{
-    position: absolute;
-    left:17vw;
-    top:8vh;
+   position: absolute;
+   left: 14vmin;
+   top: 8vh;
 }
 
 .hr2-none{
@@ -155,14 +155,17 @@
 
 
 .stageNumber{
-    font-family: 'Heebo';
-    font-size: 0.8em;
-    position: absolute;
-    margin-bottom: 5%;
-    text-align: center;
-    right:50%;
-    top:0%;
-    transform: translateX(50%);
+   font-family: 'Heebo';
+font-size: 0.8em;
+position: absolute;
+margin-bottom: 5%;
+text-align: center;
+right: 50%;
+top: 0%;
+transform: translateX(50%);
+white-space: nowrap; /* Prevent text from wrapping */
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .numberThree{

@@ -56,19 +56,19 @@
   
   /* Fourth button below the second */
   .role-button:nth-child(4) {
-    top: 88%; /* Positioning further down */
+    top: 89%; /* Positioning further down */
     left: 8%; /* Left alignment */
   }
   
   /* Fifth button below the third */
   .role-button:nth-child(5) {
-    top: 88%; /* Same height as the fourth button */
+    top: 89%; /* Same height as the fourth button */
     right: 8%; /* Right alignment */
   }
   
   /* Sixth button centered below all */
   .role-button:nth-child(6) {
-    top: 111%; /* Bottom alignment */
+    top: 112%; /* Bottom alignment */
     left: 50%;
     transform: translateX(-50%);
   }
