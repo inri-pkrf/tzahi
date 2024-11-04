@@ -1,15 +1,18 @@
 .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #175a85;
-    z-index: 10000; /* Ensure it appears above the header */
-    text-align: right;
-    padding-top: 2vh;
-    overflow: scroll;
-  }
+  position: fixed;
+  top: 0;
+  left: -100%; /* מחוץ למסך בהתחלה */
+  width: 100%;
+  height: 100%;
+  background-color: #175a85;
+  z-index: 10000; /* כדי להבטיח שההתפריט מופיע מעל כל דבר אחר */
+  text-align: right;
+  padding-top: 2vh;
+  overflow-y: auto; /* מאפשר גלילה אם התוכן גדול מדי */
+  transition: left 0.5s ease; /* אנימציה חלקה */
+}
+
+
   
   .menu-title {
     font-size: 8vw;

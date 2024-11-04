@@ -17,7 +17,7 @@ function App() {
                 <Route path="/tzahi/home" element={<Home className="home" />} />
                 <Route path="/tzahi/EmergencyRolls" element={<EmergencyRolls />} />
                 <Route path="/tzahi/EmergencyRolls/:scenarioId" element={<EmergencyRolls />} />
-                <Route path="/tzahi/hamburger" element={<HamburgerMenu />} /> {/* הוסף את הנתיב לעמוד ההמבורגר */}
+                <Route path="/tzahi/hamburger" element={<HamburgerMenu className="hamburger" />} /> {/* הוסף את הנתיב לעמוד ההמבורגר */}
             </Routes>
         </div>
     );
