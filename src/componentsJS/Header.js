@@ -2,13 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../componentsCss/Header.css';
 
-function HeaderTwo() {
+function Header() {
   const navigate = useNavigate();
 
-  // פונקציה שמבצעת ניווט לעמוד ההמבורגר
   const handleLogoClick = () => {
     console.log('Logo clicked!');
-    navigate('/tzahi/hamburger'); // עדכן את הנתיב לנתיב המתאים לעמוד ההמבורגר
+    navigate('/tzahi/hamburger'); 
   };
 
   return (
@@ -41,4 +40,4 @@ function HeaderTwo() {
   );
 }
 
-export default HeaderTwo;
+export default Header;

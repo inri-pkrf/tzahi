@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import Home from './componentsJS/Home';
-import HeaderTwo from './componentsJS/Header';
+import Header from './componentsJS/Header';
 import Intro from './componentsJS/Intro';
 import HamburgerMenu from './componentsJS/Hamburger'; 
 import EmergencyRolls from './componentsJS/EmergencyRolls';
@@ -10,7 +10,7 @@ import EmergencyRolls from './componentsJS/EmergencyRolls';
 function App() {
     return (
         <div className="App">
-            <HeaderTwo className="header-fixed" />
+            <Header className="header-fixed" />
             <Routes>
                 <Route path="/" element={<Navigate to="/tzahi" />} />
                 <Route path="/tzahi" element={<Intro />} />
