@@ -4,8 +4,8 @@ import './App.css';
 import Home from './componentsJS/Home';
 import HeaderTwo from './componentsJS/Header';
 import Intro from './componentsJS/Intro';
+import HamburgerMenu from './componentsJS/Hamburger'; 
 import EmergencyRolls from './componentsJS/EmergencyRolls';
-import HamburgerMenu from './componentsJS/Hamburger'; // ייבא את קומפוננטת ההמבורגר
 
 function App() {
     return (
