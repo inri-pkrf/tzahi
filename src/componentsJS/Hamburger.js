@@ -3,16 +3,16 @@ import { useNavigate } from 'react-router-dom'; // ייבוא useNavigate
 import '../componentsCss/Hamburger.css';
 
 function Hamburger() {
-  const navigate = useNavigate(); // יצירת אובייקט ניווט
+  const navigate = useNavigate(); 
 
-  // פונקציה שמבצעת ניווט לנתיב המבוקש
+
   const handleItemClick = (path) => {
-    navigate(path); // ניווט לכתובת המתאימה
+    navigate(path); 
   };
 
-  // פונקציה לסגירה וניווט אחורה
+
   const handleClose = () => {
-    navigate(-1); // חזור לעמוד הקודם בהיסטוריה
+    navigate(-1); 
   };
 
   return (
@@ -30,7 +30,7 @@ function Hamburger() {
         onClick={handleClose} // הוסף את onClick שמבצע חזרה אחורה
       />
       <ul className="menu-list">
-        <li onClick={() => handleItemClick('/tzahi')}>עמוד הבית</li>
+        <li onClick={() => handleItemClick('/tzahi/home')}>עמוד הבית</li>
         <div className='lineMenu'></div>
         <li onClick={() => handleItemClick('/tzahi/EmergencyRolls')}>בחירת סד"פ</li>
         <div className='lineMenu'></div>
