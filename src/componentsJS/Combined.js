@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Combined.css';
+import '../componentsCss/Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
   const initialRoleIndex = selectedScenario.roles.findIndex(role => role.role === selectedRole.role);

@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import HeaderTwo from './components/HeaderTwo';
-import Intro from './components/Intro';
-import EmergencyRolls from './components/EmergencyRolls';
-import HamburgerMenu from './components/Hamburger'; // ייבא את קומפוננטת ההמבורגר
+import Home from './componentsJS/Home';
+import HeaderTwo from './componentsJS/Header';
+import Intro from './componentsJS/Intro';
+import EmergencyRolls from './componentsJS/EmergencyRolls';
+import HamburgerMenu from './componentsJS/Hamburger'; // ייבא את קומפוננטת ההמבורגר
 
 function App() {
     return (

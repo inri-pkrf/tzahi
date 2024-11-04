@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../data/data';
-import "./Emergency.css"
+import "../componentsCss/Emergency.css"
 
 const Emergency = ({ onScenarioSelect }) => {
   return (

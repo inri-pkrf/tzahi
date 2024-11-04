@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Evacuation.css';
+import '../componentsCss/Evacuation.css';
 
 const Evacuation = ({ selectedScenario }) => {
   const [expandedCategory, setExpandedCategory] = useState(null);

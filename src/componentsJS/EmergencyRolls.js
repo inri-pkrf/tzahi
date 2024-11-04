@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './EmergencyRolls.css';
+import '../componentsCss/EmergencyRolls.css';
 import Emergency from './Emergency';
 import Roles from './Roles';
 import Combined from './Combined';

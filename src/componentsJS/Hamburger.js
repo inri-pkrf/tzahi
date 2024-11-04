@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // ייבוא useNavigate
-import './Hamburger.css';
+import '../componentsCss/Hamburger.css';
 
 function Hamburger() {
   const navigate = useNavigate(); // יצירת אובייקט ניווט
