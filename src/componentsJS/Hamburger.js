@@ -1,37 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../componentsCss/Hamburger.css';
 
 function Hamburger() {
   const navigate = useNavigate(); 
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
-  // פונקציה לסגירת התפריט
-  const handleClose = () => {
-    navigate(-1); // חוזר לעמוד הקודם
-  };
-
-  // שימוש ב-useEffect לבדוק את מיקום הניווט
+  // Effect to control the menu open state based on the current path
   useEffect(() => {
-    const menuElement = document.querySelector('.menu'); // שמור על האלמנט
     if (location.pathname === '/tzahi/hamburger') {
-      if (menuElement) { // בדוק אם האלמנט קיים
-        menuElement.classList.add('open'); // הוסף את הקלאס 'open' כדי לפתוח את התפריט
-      }
+      setIsOpen(true); 
+    } else {
+      setIsOpen(false); 
     }
-
-    // ניקוי הקלאס 'open' כאשר יוצאים מהעמוד
-    return () => {
-      if (menuElement) { // בדוק שוב אם האלמנט קיים
-        menuElement.classList.remove('open');
-      }
-    };
   }, [location]);
 
-  // פונקציה לניווט לפריטים בתפריט
+  const handleClose = () => {
+    setIsOpen(false);
+    navigate(-1); 
+  };
 
   return (
-    <div className="menu">
+    <div className={`menu ${isOpen ? 'open' : ''}`}>
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
         alt="Decorative"
@@ -42,7 +33,7 @@ function Hamburger() {
         src={`${process.env.PUBLIC_URL}/assets/media/closeBtn.png`}
         alt="Close"
         className="closeBtn"
-        onClick={()=>  navigate(-1)} // הוסף את onClick לסגירת התפריט
+        onClick={handleClose}
       />
       <ul className="menu-list">
         <li onClick={() => navigate('/tzahi/home')}>עמוד הבית</li>

@@ -1,18 +1,21 @@
 .menu {
   position: fixed;
   top: 0;
-  left: -100%; /* מחוץ למסך בהתחלה */
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #175a85;
-  z-index: 10000; /* כדי להבטיח שההתפריט מופיע מעל כל דבר אחר */
+  z-index: 10000;
   text-align: right;
   padding-top: 2vh;
-  overflow-y: auto; /* מאפשר גלילה אם התוכן גדול מדי */
-  transition: left 0.5s ease; /* אנימציה חלקה */
+  overflow-y: auto; /* Allows scrolling if content is too large */
+  transform: translateX(-100%); /* Menu is hidden off-screen */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
 
-
+.menu.open {
+  transform: translateX(0); /* Menu slides in */
+}
   
   .menu-title {
     font-size: 8vw;
@@ -64,9 +67,13 @@
     left: 2vw;
     width: 15%;
     height: auto;
-  }
-  
-  
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.menu.open .closeBtn {
+    opacity: 1; /* Fully visible when the menu is open */
+}
   
   .menu-list li.active {
     background-color: white;
