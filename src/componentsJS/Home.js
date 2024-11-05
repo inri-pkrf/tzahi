@@ -10,6 +10,11 @@ const Home = () => {
   const goToEmergency = () => {
     navigate('/tzahi/EmergencyRolls'); 
   };
+  const goToCredits = () => {
+    console.log("Navigating to Credits");
+
+    navigate('/tzahi/Credits'); 
+  };
   return (
     <div className="homepage-container">
       <h1 className='home-title'>  ברוכים הבאים והבאות   <br></br>לעזר סד"פ לצח"י
@@ -91,6 +96,9 @@ className='collage-logo'
             בקישור הבא
           </a>
 </p>
+  <a className="linkCredits" onClick={goToCredits}>
+  @קרדיטים
+</a>
 <div className="footer"></div>
     </div>
   );

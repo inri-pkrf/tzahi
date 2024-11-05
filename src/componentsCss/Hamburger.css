@@ -122,3 +122,13 @@
     height: auto;
     z-index: 10; 
   }
+
+  .linkCreditsWhite{
+    position: absolute;
+    text-align: right;
+    direction: rtl;
+    transform: translateX(50%);
+    right: 50%;
+    text-decoration: underline;
+    margin-top: 13vh;
+  }

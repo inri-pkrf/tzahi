@@ -57,6 +57,9 @@ function Hamburger() {
           >
             בקישור הבא
           </a>
+            <a className="linkCreditsWhite" onClick={() => navigate('/tzahi/Credits')}>
+  @קרדיטים
+</a>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
  .homepage-container {
-   position: fixed;
+    position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -275,7 +275,7 @@ hr.dotted-line2{
     transform: translateX(50%);
     background-color: rgba(86, 85, 85, 0);
     font-weight: bold;
-    margin-top: 236vh;
+    margin-top: 238vh;
     margin-bottom: 22vh;
     width: 90vw;
     font-size: 1.1em;
@@ -284,4 +284,19 @@ hr.dotted-line2{
 
 #linkMenuGrey{
     color:rgb(86, 85, 85);
+}
+
+.linkCredits{
+    position: absolute;
+    margin-top: 240vh;
+    text-decoration: underline;
+    font-family: "Heebo";
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 1.2em;
+    text-align: center;
+    color: #525253;
+    direction: rtl;
+    width: 100vw;
+    z-index: 100;
 }
