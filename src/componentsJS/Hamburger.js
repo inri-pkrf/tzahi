@@ -40,8 +40,10 @@ function Hamburger() {
         <div className='lineMenu'></div>
         <li onClick={() => navigate('/tzahi/EmergencyRolls')}>בחירת סד"פ</li>
         <div className='lineMenu'></div>
-        <li onClick={() => navigate('/tzahi/digitalLesson')}>שיעור דיגיטלי לצח"י</li>
-        <div className='lineMenu'></div>
+        <li onClick={() => window.open('https://sites.google.com/view/inri-tzahi/home', '_blank')}>
+           שיעור דיגיטלי לצח"י
+        </li>        
+      <div className='lineMenu'></div>
       </ul>
       <div className='mashov-menu'>
         <div className='mashovTextMenu'>
@@ -49,7 +51,7 @@ function Hamburger() {
           <br /> 
           <a 
             id='linkMenu' 
-            href="https://docs.google.com/forms/d/e/1FAIpQLScvCPjvm6G7IIXdtoeNmcF2COJ3D7xkTfP4n0xaS0T-nRpkPA/viewform?usp=sf_link" 
+            href="https://docs.google.com/forms/d/e/1FAIpQLScrH0xIU_TVN4wRSC5Cq8LkvU8dzyWMbqCc4Uduv3ygyYEWMw/viewform?usp=sf_link" 
             target="_blank" 
             rel="noopener noreferrer"
           >

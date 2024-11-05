@@ -79,8 +79,17 @@ className='collage-logo'
   לשיעור הדיגיטלי
 </button>
    </div>
-   <p className='feedback'>יש הערות? תוספות? שינויים? 
-נשמח לשמוע איך אפשר להשתפר, דברו איתנו בקישור הבא
+   <p className='feedback' >
+    <br /> יש הערות? תוספות? שינוים?נשמח לשמוע איף אפשר להשתפר דברו איתנו
+          <br /> 
+          <a 
+            id='linkMenuGrey' 
+            href="https://docs.google.com/forms/d/e/1FAIpQLScrH0xIU_TVN4wRSC5Cq8LkvU8dzyWMbqCc4Uduv3ygyYEWMw/viewform?usp=sf_link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            בקישור הבא
+          </a>
 </p>
 <div className="footer"></div>
     </div>
