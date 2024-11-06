@@ -4,7 +4,6 @@ import Emergency from './Emergency';
 import Roles from './Roles';
 import Combined from './Combined';
 import Evacuation from './Evacuation';
-
 const EmergencyRolls = () => {
   const [selectedScenario, setSelectedScenario] = useState(null);
   const [selectedRole, setSelectedRole] = useState(null);
@@ -14,10 +13,11 @@ const EmergencyRolls = () => {
   };
 
   const handleBackEvent = () => {
-    setSelectedScenario(null);
-    setSelectedRole(null);
-    const event = new CustomEvent("emergencyback");
-    window.dispatchEvent(event);
+    if (selectedRole) {
+      setSelectedRole(null);  // אם יש תפקיד נבחר, מחזירים את הסטייט לקודם
+    } else {
+      setSelectedScenario(null);  // אם אין תפקיד נבחר, מחזירים את הסצנריו
+    }
   };
 
   const handleEvacuationClick = () => {
@@ -45,36 +45,32 @@ const EmergencyRolls = () => {
     <div className='page-container'>
       <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י בכדי לצפות בסד"פ המתאים</h1>
       <div className='states'>
-        <div className={isEmergencyDisplayed ? 'state1-chosen' : 'state1 fade'}>
+        <div
+          className={isEmergencyDisplayed ? 'state1-chosen' : selectedScenario ? 'state1 state-back' : 'state1 '}
+          onClick={() => setSelectedScenario(null)} // מאפיינת מצב חירום
+        >
           <p className="stageNumber numberOne">שלב 1</p>
-          <img
-            className='Fireicon'
-            src={`${process.env.PUBLIC_URL}/assets/media/fire.svg`}
-            alt="Fire icon"
-            onClick={handleBackEvent} // Assuming this should trigger the back event
-          />
+          <img className='Fireicon' src={`${process.env.PUBLIC_URL}/assets/media/fire.svg`} alt="Fire icon" />
           <p className="stateTitle titleOne">בחירת <br /> מצב חירום</p>
         </div>
         <hr className={isEmergencyDisplayed ? 'hr1-none' : 'dotted hr1'} />
-
-        <div className={isRolesDisplayed ? 'state2-chosen' : 'state2'}>
+        
+        <div
+        //לתקן עיצובית
+          className={isRolesDisplayed ? 'state2-chosen' : selectedScenario && !selectedRole ? 'state2 fade' : 'state2 state-back'}
+          onClick={() => setSelectedRole(null)} // מאפיינת תפקיד
+        >
           <p className="stageNumber numberTwo">שלב 2</p>
-          <img
-            className='tzahiicon'
-            src={`${process.env.PUBLIC_URL}/assets/media/tzahiGrey.svg`}
-            alt="Tzahi icon"
-          />
+          <img className='tzahiicon' src={`${process.env.PUBLIC_URL}/assets/media/tzahiGrey.svg`} alt="Tzahi icon" />
           <p className="stateTitle titleTwo">בחירת <br /> תפקיד</p>
         </div>
         <hr className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'hr2-none' : 'dotted hr2'} />
-
-        <div className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : 'state3'}>
+        
+        <div
+          className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : selectedRole ? 'state3 state-back' : 'state3 fade'}
+        >
           <p className="stageNumber numberThree"> קבלת סד"פ</p>
-          <img
-            className='tasksicon'
-            src={`${process.env.PUBLIC_URL}/assets/media/tasksGrey.svg`}
-            alt="Tasks icon"
-          />
+          <img className='tasksicon' src={`${process.env.PUBLIC_URL}/assets/media/tasksGrey.svg`} alt="Tasks icon" />
           <p className="stateTitle titleThree">משימות ודגשים</p>
         </div>
       </div>
@@ -84,10 +80,10 @@ const EmergencyRolls = () => {
       ) : isCombinedDisplayed ? (
         <Combined selectedScenario={selectedScenario} selectedRole={selectedRole} />
       ) : isRolesDisplayed ? (
-        <Roles 
-          selectedScenario={selectedScenario} 
-          onRoleSelect={handleRoleSelect} 
-          onEvacuationClick={handleEvacuationClick} 
+        <Roles
+          selectedScenario={selectedScenario}
+          onRoleSelect={handleRoleSelect}
+          onEvacuationClick={handleEvacuationClick}
         />
       ) : (
         <Emergency onScenarioSelect={setSelectedScenario} onEvacuationClick={handleEvacuationClick} />
