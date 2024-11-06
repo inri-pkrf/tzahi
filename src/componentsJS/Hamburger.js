@@ -6,29 +6,23 @@ function Hamburger() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
 
   // Effect to control the menu open state based on the current path
   useEffect(() => {
     if (location.pathname === '/tzahi/hamburger') {
       setIsOpen(true);
-      setIsClosing(false); // Reset closing animation
     } else {
       setIsOpen(false);
     }
   }, [location]);
 
   const handleClose = () => {
-    setIsClosing(true); // Trigger the closing animation
-    setTimeout(() => {
-      setIsOpen(false); // Close the menu after the animation
-      setIsClosing(false);
-      navigate(-1); // Navigate back
-    }, 500); // Match the duration of your CSS transition
+    setIsOpen(false); // Close the menu immediately
+    navigate(-1); // Navigate back immediately
   };
 
   return (
-    <div className={`menu ${isOpen ? 'open' : ''} ${isClosing ? 'close' : ''}`}>
+    <div className={`menu ${isOpen ? 'open' : ''}`}>
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
         alt="Decorative"
