@@ -6,7 +6,6 @@ function Header() {
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
-    console.log('Logo clicked!');
     navigate('/tzahi/hamburger'); 
   };
 
