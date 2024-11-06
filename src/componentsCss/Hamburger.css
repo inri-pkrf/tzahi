@@ -16,6 +16,9 @@
 .menu.open {
   transform: translateX(0);
 }
+.menu.close {
+  transform: translateX(-100%); 
+}
   
   .menu-title {
     font-size: 8vw;
@@ -130,5 +133,5 @@
     transform: translateX(50%);
     right: 50%;
     text-decoration: underline;
-    margin-top: 13vh;
+    margin-top: 12vh;
   }

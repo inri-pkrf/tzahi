@@ -233,10 +233,11 @@ position: absolute;
 
  .icon-sce{
   position: absolute;
-  margin-top: 13vh;
+  margin-top: 12.5vh;
   height: 5vh;
   width: auto;
-  right: 29vw;
+  right: 28vw;
+  padding-left: 5vw;
 }
  
 #evacution-selected {
@@ -292,4 +293,12 @@ position: absolute;
 .next-black{
   height:4vh;
   width:auto;
+}
+
+.checked-title::before{
+  content: '✓';
+  color: rgb(34, 181, 115);
+}
+.checked-title{
+  color: rgb(34, 181, 115);
 }
