@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 2000;
     text-align: center;
-    top: 63%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%);
     overflow-y: scroll;
@@ -16,10 +16,11 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    width: 100vw;
+    width: 85vw;
     font-size: 1.2em;
     font-family: "heebo";
-    margin-top: 5vh;
+    margin-top: 7vh;
+
 }
 
 .button {
@@ -40,7 +41,7 @@
 
 .buttons-sec{
     position: absolute;
-    margin-top: 13vh;
+    margin-top: 17vh;
 
 }
 

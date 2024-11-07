@@ -74,7 +74,8 @@
     right: 50%;
     transform: translateX(50%);
     width: 90vw;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-family: 'HEEBO';
     text-align: center;
     margin-top: 5vh;
 }

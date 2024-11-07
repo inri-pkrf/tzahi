@@ -28,7 +28,7 @@
     right: 0vw;
     top: 8vh;
     width: 33vw;
-    height: 29vh;
+    height: 26vh;
   
 }
 .fade{
@@ -43,7 +43,7 @@
    right: 0vw;
    top: 8vh;
    width: 33vw;
-   height: 29vh;
+   height: 26vh;
    background-color: #d1d1d1;
 }
 .state2-chosen {
@@ -52,7 +52,7 @@
    transform: translateX(50%);
    top: 8.5vh;
    width: 33vw;
-   height: 29vh;
+   height: 26vh;
    background-color: #d1d1d1;
 }
 
@@ -61,7 +61,7 @@
    right: 68%;
    top: 8vh;
    width: 34vw;
-   height: 29vh;
+   height: 26vh;
    background-color: #d1d1d1;
 }
 
@@ -71,7 +71,7 @@
    transform: translateX(50%);
    top: 8vh;
    width: 33vw;
-   height: 29vh;
+   height: 26vh;
   
 }
 
@@ -82,13 +82,13 @@
    right: 69%;
    top: 8vh;
    width: 30vw;
-   height: 29vh;
+   height: 26vh;
 }
 
 .state-back{
    opacity: none;
    width: 30vw;
-   height: 29vh;
+   height: 26vh;
    background-color: #f4f3f3;
 }
 
