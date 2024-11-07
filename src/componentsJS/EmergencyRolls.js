@@ -4,9 +4,15 @@ import Emergency from './Emergency';
 import Roles from './Roles';
 import Combined from './Combined';
 import Evacuation from './Evacuation';
+
 const EmergencyRolls = () => {
   const [selectedScenario, setSelectedScenario] = useState(null);
   const [selectedRole, setSelectedRole] = useState(null);
+
+  const handleScenarioSelect = (scenario) => {
+    setSelectedScenario(scenario);
+    setSelectedRole(null); // Clear selected role when a new scenario is selected
+  };
 
   const handleRoleSelect = (role) => {
     setSelectedRole(role);
@@ -14,9 +20,9 @@ const EmergencyRolls = () => {
 
   const handleBackEvent = () => {
     if (selectedRole) {
-      setSelectedRole(null);  // אם יש תפקיד נבחר, מחזירים את הסטייט לקודם
+      setSelectedRole(null); // אם יש תפקיד נבחר, מחזירים את הסטייט לקודם
     } else {
-      setSelectedScenario(null);  // אם אין תפקיד נבחר, מחזירים את הסצנריו
+      setSelectedScenario(null); // אם אין תפקיד נבחר, מחזירים את הסצנריו
     }
   };
 
@@ -47,7 +53,7 @@ const EmergencyRolls = () => {
       <div className='states'>
         <div
           className={isEmergencyDisplayed ? 'state1-chosen' : selectedScenario ? 'state1 state-back' : 'state1 '}
-          onClick={() => setSelectedScenario(null)} // מאפיינת מצב חירום
+          onClick={() => handleScenarioSelect(null)} // מאפיינת מצב חירום
         >
           <p className="stageNumber numberOne">שלב 1</p>
           <img className='Fireicon' src={`${process.env.PUBLIC_URL}/assets/media/fire.svg`} alt="Fire icon" />
@@ -56,7 +62,6 @@ const EmergencyRolls = () => {
         <hr className={isEmergencyDisplayed ? 'hr1-none' : 'dotted hr1'} />
         
         <div
-        //לתקן עיצובית
           className={isRolesDisplayed ? 'state2-chosen' : !selectedScenario && !selectedRole ? 'state2 fade' : 'state2 state-back'}
           onClick={() => setSelectedRole(null)} // מאפיינת תפקיד
         >
@@ -86,7 +91,7 @@ const EmergencyRolls = () => {
           onEvacuationClick={handleEvacuationClick}
         />
       ) : (
-        <Emergency onScenarioSelect={setSelectedScenario} onEvacuationClick={handleEvacuationClick} />
+        <Emergency onScenarioSelect={handleScenarioSelect} onEvacuationClick={handleEvacuationClick} />
       )}
     </div>
   );
