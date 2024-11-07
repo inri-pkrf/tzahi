@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../componentsCss/Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
+  // Determine the initial role index based on the selected role
   const initialRoleIndex = selectedScenario.roles.findIndex(
     (role) => role.role === selectedRole.role
   );
@@ -12,6 +13,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const [hasMovedNext, setHasMovedNext] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
 
+  // Set up the initial tasks state when the component mounts or the role changes
   useEffect(() => {
     const currentRole = selectedScenario.roles[currentRoleIndex];
     const tasks = currentRole.tasksByPhases || { "כללי": currentRole.tasks || [] };
@@ -22,6 +24,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
     setCompletedTasks(initialTasks);
   }, [currentRoleIndex, selectedScenario]);
 
+  // Handle checkbox changes for each task
   const handleCheckboxChange = (phase, index) => {
     const phaseTasks = completedTasks[phase] || [];
     const updatedCompletedTasks = {
@@ -35,21 +38,25 @@ const Combined = ({ selectedScenario, selectedRole }) => {
     setCompletedTasks(updatedCompletedTasks);
   };
 
+  // Check if all tasks in a phase are completed
   const areAllTasksCompleted = (phase) => {
     return completedTasks[phase] && completedTasks[phase].every((task) => task);
   };
 
+  // Move to the next role
   const handleNextRole = () => {
     setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % selectedScenario.roles.length);
     setHasMovedNext(true);
   };
 
+  // Move to the previous role
   const handlePreviousRole = () => {
     setCurrentRoleIndex(
       (prevIndex) => (prevIndex - 1 + selectedScenario.roles.length) % selectedScenario.roles.length
     );
   };
 
+  // Trigger a custom event to go back to the emergency selection
   const handleBackClick = () => {
     const event = new CustomEvent("emergencyback");
     window.dispatchEvent(event);
@@ -58,6 +65,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const currentRole = selectedScenario.roles[currentRoleIndex];
   const tasks = currentRole.tasksByPhases || { "כללי": currentRole.tasks || [] };
 
+  // Toggle the visibility of the notes
   const toggleNotes = () => {
     setShowNotes((prevShowNotes) => !prevShowNotes);
   };
@@ -114,7 +122,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
                   <input
                     className="mine-checkbox"
                     type="checkbox"
-                    checked={completedTasks[phase] ? completedTasks[phase][index] : false}
+                    checked={completedTasks[phase] ? completedTasks[phase][index] || false : false}
                     onChange={() => handleCheckboxChange(phase, index)}
                   />
                   <span className="task-text">{task}</span>

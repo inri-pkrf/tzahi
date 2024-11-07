@@ -57,7 +57,7 @@ const EmergencyRolls = () => {
         
         <div
         //לתקן עיצובית
-          className={isRolesDisplayed ? 'state2-chosen' : selectedScenario && !selectedRole ? 'state2 fade' : 'state2 state-back'}
+          className={isRolesDisplayed ? 'state2-chosen' : !selectedScenario && !selectedRole ? 'state2 fade' : 'state2 state-back'}
           onClick={() => setSelectedRole(null)} // מאפיינת תפקיד
         >
           <p className="stageNumber numberTwo">שלב 2</p>

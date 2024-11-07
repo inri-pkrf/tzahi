@@ -44,7 +44,7 @@
    top: 8vh;
    width: 33vw;
    height: 29vh;
-   background-color: #eeeeee;
+   background-color: #d1d1d1;
 }
 .state2-chosen {
    position: absolute;
@@ -53,7 +53,7 @@
    top: 8.5vh;
    width: 33vw;
    height: 29vh;
-   background-color: #eeeeee;
+   background-color: #d1d1d1;
 }
 
 .state3-chosen{
@@ -62,7 +62,7 @@
    top: 8vh;
    width: 34vw;
    height: 29vh;
-   background-color: #eeeeee;
+   background-color: #d1d1d1;
 }
 
  .state2{
@@ -89,6 +89,7 @@
    opacity: none;
    width: 30vw;
    height: 29vh;
+   background-color: #f4f3f3;
 }
 
  .Fireicon{
@@ -133,17 +134,17 @@
  hr.dotted {
    border: none;
    border-top: 3px dotted #4b4646;
-   width: 19vh;
+   width: 27vh;
    height: 0;
    transform: rotate(90deg);
-   margin: 10vh 0;
+   margin: 14vh 0;
    padding: 0;
 }
 
 
 .hr1{
    position: absolute;
-   right: 15vw;
+   right: 8vw;
    top: 8vh;
 }
 
@@ -153,7 +154,7 @@
 
 .hr2{
    position: absolute;
-   left: 14vmin;
+   left: 8vmin;
    top: 8vh;
 }
 
@@ -188,6 +189,6 @@ text-overflow: ellipsis;
     font-weight: 700;
     font-size: 1.3em;
     text-align: center;
-    color: rgb(123 122 122);
+    color: rgb(88 88 88);;
     margin-top: 12vh;
 }

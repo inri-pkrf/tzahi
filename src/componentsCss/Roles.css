@@ -6,7 +6,7 @@
     left: 50%;
     transform: translate(-50%);
     overflow: hidden;
-    background-color: #eeeeee;
+    background-color:#d1d1d1;
     width: 100vw;
     height: 60vh;
 }

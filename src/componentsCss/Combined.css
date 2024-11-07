@@ -8,7 +8,7 @@
     top: 63%;
     left: 50%;
     transform: translate(-50%);
-    background-color: #eeeeee;
+    background-color:#d1d1d1;
     width: 100vw;
     min-height: 110vh; /* גובה מינימלי */
     direction: rtl;
@@ -20,14 +20,13 @@
   font-family: "Karantina";
   color: #6a6f77;
   font-size: 3.2em;
-  padding: 1vh;
   font-weight: 500;
-  margin-top: 10vh;
+  margin-top: 15vh;
   position: absolute;
   width: 100vw;
   text-align: center;
   right: 50%;
-  transform: translateX(47%);
+  transform: translateX(50%);
 }
 .combined-role{
   font-family: "Karantina";
@@ -35,7 +34,7 @@
   font-size: 2.5em;
   padding: 1vh;
   font-weight: 500;
-  margin-top: 25vh;
+  margin-top: 31vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -160,7 +159,7 @@
   transform: translateX(50%);
   width: 100vw;
   font-size: 1.2em;
-  margin-top: 18vh;
+  margin-top: 23vh;
 }
 
 
@@ -208,7 +207,7 @@
  .navigation-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 26vh; /* Adjust margin as needed */
+  margin-top: 32vh;
   z-index: 1000;
 }
 
@@ -233,10 +232,11 @@ position: absolute;
 
  .icon-sce{
   position: absolute;
-  margin-top: 12.5vh;
+  margin-top: 10.5vh;
   height: 5vh;
   width: auto;
-  right: 28vw;
+  transform: translateX(50%);
+  right: 50%;
   padding-left: 5vw;
 }
  
@@ -291,8 +291,9 @@ position: absolute;
 }
 
 .next-black{
-  height:4vh;
-  width:auto;
+  height: 4vh;
+  padding: 2vw;
+  width: auto;
 }
 
 .checked-title::before{
