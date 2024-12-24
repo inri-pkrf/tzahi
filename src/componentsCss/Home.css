@@ -13,7 +13,7 @@ position: fixed;
 
 
 
-
+@media screen and (max-width: 768px) {
 .home-title{
     font-family: "karantina";
     font-size: 3.5em;
@@ -300,4 +300,303 @@ hr.dotted-line2{
     direction: rtl;
     width: 100vw;
     z-index: 100;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px)  {
+}
+
+
+@media screen and (min-width: 1025px) {
+    .home-title{
+        font-family: "karantina";
+        font-size: 8em;
+        font-weight: 400;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90vw;
+        margin-top: 13vh;
+        text-align: center;
+    
+    }
+    
+    .info1{
+        font-family: "Heebo";
+        font-size: 2.3em;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        width: 70vw;
+        margin-top: 43vh;
+        text-align: center;
+    
+    }
+    .home-button {
+        background-color: #1bbfe5;
+        border: none;
+        border-radius: 55px;
+        width: 35vw;
+        height: 10vh;
+        position: absolute;
+        font-size: 3em;
+        font-family: "Karantina";
+        font-weight: bold;
+        color: #ffffff;
+        padding: 1.5vw;
+        right: 50%;
+        transform: translateX(50%);
+        margin-top: 58vh;
+        box-shadow: 9px 10px 20px #323030, -3px -3px 5px rgba(255, 255, 255, 0.2);
+    }
+    .home-button:hover {
+        background-color: #1492ae;
+        cursor: pointer;
+       
+    }
+    
+    
+    
+    
+    .greeting-div{
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        width:100vw;
+        margin-top: 78vh;
+        height:90vh;
+    }
+    
+    .greeting{
+        position: absolute;
+        color: black;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90vw;
+        font-size: 2.1em;
+        font-family: 'HEEBO';
+        text-align: center;
+        margin-top: 5vh;
+    }
+    
+    .tzahi-text{
+        position: absolute;
+        height: 25vh;
+        width: auto;
+        margin-top: 17vh;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    
+    
+    .socity-logo{
+        position: absolute;
+        height:10vh;
+        width: auto;
+        right:7vw;
+        margin-top: 43vh;
+    }
+    
+    .pakar-logo{
+        position: absolute;
+        height: 10vh;
+        width: auto;
+        right: 49vw;
+        margin-top: 43vh;
+    }
+    .pakar-grey{
+        position: absolute;
+        height:10vh;
+        width: auto;
+        right:63vw;
+        margin-top: 43vh;
+    }
+    
+    .comunity-logo{
+        position: absolute;
+        height:10vh;
+        width: auto;
+        right:76vw;
+        margin-top: 43vh;
+    }
+    
+    .collage-logo{
+        position: absolute;
+        height: 15vh;
+        width: auto;
+        margin-top: 50vh;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .white-div{
+        position: absolute;
+        width: 100vw;
+        height: 30vh;
+        background-color: rgba(255, 255, 255, 0.925);
+        z-index: 7;
+        margin-top: 43vh;
+        opacity: 0.7;
+    }
+    
+    .credits{
+        font-family: 'Heebo';
+        position: absolute;
+        margin-top: 139vh;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90vw;
+        font-size: 2em;
+        margin-top: 72vh;
+        text-align: center;
+    }
+    
+    .tzahi-div{
+        position: absolute;
+        width: 100vw;
+        height: 30vh;
+        background-color: rgb(238, 238, 238);
+        margin-top: 185vh;
+        right: 50%;
+        transform: translateX(50%);
+        direction: rtl;
+        font-family: "Heebo";
+    }
+    .bold-text{
+        position: absolute;
+        text-align: right;
+        right: 16vw;
+        font-weight: bold;
+        color: rgb(86, 85, 85);
+        font-size: 1.1em;
+    }
+    
+    .regular-text{
+        position: absolute;
+        text-align: center;
+        right: 67vw;
+        font-size: 1.1em;
+        color: rgb(86, 85, 85);
+    
+    
+    
+    }
+    
+    .regular-text2{
+        position: absolute;
+        text-align: right;
+        right: 15vw;
+        padding-top: 6vw;
+        font-size: 1.1em;
+        color: rgb(86, 85, 85);
+    
+    }
+    .regular-text3{
+        position: absolute;
+        text-align: center;
+        padding-top: 13vw;
+        font-size: 1.1em;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100vw;
+        color: rgb(86, 85, 85);
+    
+    
+    }
+    
+    .underLine-text{
+        position: absolute;
+        text-align:center;
+        right: 43vw;
+        padding-top: 6vw;
+        text-decoration: underline;
+        font-size: 1.1em;
+        color: rgb(86, 85, 85);
+    
+    
+    }
+    
+    hr.dotted-line{
+        border-top: 3px dotted #6d6d6d;
+        position: absolute;
+        margin-top: 1vh;
+        right: 50%;
+        transform: translateX(50%);
+        width: 84vw;
+    
+    }
+    hr.dotted-line2{
+        border-top: 3px dotted #6d6d6d;
+        position: absolute;
+        margin-top: 95vh;
+        right: 50%;
+        transform: translateX(50%);
+        width: 84vw;
+    
+    }
+    
+    .tzahi-button {
+        border: none;
+        border-radius: 30px;
+        width: 69vw;
+        height: 8vh;
+        position: absolute;
+        font-size: 1.3em;
+        font-family: "Heebo";
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        padding: 1.5vw;
+        right: 50%;
+        transform: translateX(50%);
+        margin-top: 18vh;
+        background-color: rgb(123 122 122);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    
+    }
+    
+    .feedback{
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        color: rgb(86, 85, 85);
+        margin-top: 219vh;
+        margin-bottom: 20vh;
+        width: 93vw;
+        font-size: 1.3em;
+        text-align: center;
+    } 
+    
+    .footer{
+        position: absolute;
+        right: 50%;
+        height: 10vh;
+        transform: translateX(50%);
+        background-color: rgba(86, 85, 85, 0);
+        font-weight: bold;
+        margin-top: 238vh;
+        margin-bottom: 22vh;
+        width: 90vw;
+        font-size: 1.1em;
+    }
+    
+    
+    #linkMenuGrey{
+        color:rgb(86, 85, 85);
+    }
+    
+    .linkCredits{
+        position: absolute;
+        margin-top: 240vh;
+        text-decoration: underline;
+        font-family: "Heebo";
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 1.2em;
+        text-align: center;
+        color: #525253;
+        direction: rtl;
+        width: 100vw;
+        z-index: 100;
+    }
 }

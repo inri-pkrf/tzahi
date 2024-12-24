@@ -7,6 +7,9 @@
     background-color: white; 
   }
   
+
+
+ @media screen and (max-width: 768px) {
   .App-logo {
     height: 8vh;
     width: auto;
@@ -43,5 +46,46 @@
     height: auto;
     z-index: -1; 
   }
+
+ }
+
   
- 
+  @media screen and (min-width: 1025px) {
+    .App-logo {
+      height: 8vh;
+      width: auto;
+      position: fixed;
+      top: 3vh;
+      right: 5vw;
+    }
+  
+  .back-homeNav{
+    height: 8vh;
+    width:35vw;
+    top: 3vh;
+    right: 5vw;
+    position: fixed;
+    background-color: transparent;
+    border: none; 
+  }
+  .back-homeNav:hover{
+   cursor: pointer;
+  }
+  
+  
+    .right-logo-link {
+      position: fixed;
+      top: 10px;
+      left: 5px; /* Positioning the icon to the left */
+      cursor: pointer; /* Change cursor to pointer */
+    }
+    
+    .decorative-photo {
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 20vw; 
+      height: auto;
+      z-index: -1; 
+    }
+  }
