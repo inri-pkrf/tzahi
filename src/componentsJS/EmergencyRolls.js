@@ -55,7 +55,6 @@ const EmergencyRolls = () => {
           className={isEmergencyDisplayed ? 'state1-chosen' : selectedScenario ? 'state1 state-back' : 'state1 '}
           onClick={() => handleScenarioSelect(null)} // מאפיינת מצב חירום
         >
-          <p className="stageNumber numberOne">שלב 1</p>
           <img className='Fireicon' src={`${process.env.PUBLIC_URL}/assets/media/fire.svg`} alt="Fire icon" />
           <p className="stateTitle titleOne">בחירת <br /> מצב חירום</p>
         </div>
@@ -65,7 +64,6 @@ const EmergencyRolls = () => {
           className={isRolesDisplayed ? 'state2-chosen' : !selectedScenario && !selectedRole ? 'state2 fade' : 'state2 state-back'}
           onClick={() => setSelectedRole(null)} // מאפיינת תפקיד
         >
-          <p className="stageNumber numberTwo">שלב 2</p>
           <img className='tzahiicon' src={`${process.env.PUBLIC_URL}/assets/media/tzahiGrey.svg`} alt="Tzahi icon" />
           <p className="stateTitle titleTwo">בחירת <br /> תפקיד</p>
         </div>
@@ -74,7 +72,6 @@ const EmergencyRolls = () => {
         <div
           className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : selectedRole ? 'state3 state-back' : 'state3 fade'}
         >
-          <p className="stageNumber numberThree"> קבלת סד"פ</p>
           <img className='tasksicon' src={`${process.env.PUBLIC_URL}/assets/media/tasksGrey.svg`} alt="Tasks icon" />
           <p className="stateTitle titleThree">משימות ודגשים</p>
         </div>
