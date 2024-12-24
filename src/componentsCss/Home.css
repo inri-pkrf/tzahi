@@ -149,7 +149,6 @@ position: fixed;
     transform: translateX(50%);
     width: 90vw;
     font-size: 1em;
-    font-style: italic;
     margin-top: 70vh;
     text-align: center;
 }
@@ -252,7 +251,7 @@ hr.dotted-line2{
     right: 50%;
     transform: translateX(50%);
     margin-top: 18vh;
-    background-color: rgb(123 122 122);
+    background-color: rgb(56 179 140);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 
 }
@@ -328,15 +327,15 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         width: 70vw;
-        margin-top: 43vh;
+        margin-top: 48vh;
         text-align: center;
     
     }
     .home-button {
-        background-color: #1bbfe5;
+        background-color: #18a8c8;
         border: none;
         border-radius: 55px;
-        width: 35vw;
+        width: 30vw;
         height: 10vh;
         position: absolute;
         font-size: 3em;
@@ -346,11 +345,11 @@ hr.dotted-line2{
         padding: 1.5vw;
         right: 50%;
         transform: translateX(50%);
-        margin-top: 58vh;
+        margin-top: 63vh;
         box-shadow: 9px 10px 20px #323030, -3px -3px 5px rgba(255, 255, 255, 0.2);
     }
     .home-button:hover {
-        background-color: #1492ae;
+        background-color: #107288;
         cursor: pointer;
        
     }
@@ -469,14 +468,14 @@ hr.dotted-line2{
         right: 16vw;
         font-weight: bold;
         color: rgb(86, 85, 85);
-        font-size: 1.1em;
+        font-size: 2em;
     }
     
     .regular-text{
         position: absolute;
         text-align: center;
-        right: 67vw;
-        font-size: 1.1em;
+        right: 40vw;
+        font-size: 2em;
         color: rgb(86, 85, 85);
     
     
@@ -486,17 +485,16 @@ hr.dotted-line2{
     .regular-text2{
         position: absolute;
         text-align: right;
-        right: 15vw;
-        padding-top: 6vw;
-        font-size: 1.1em;
+        right: 47vw;
+        font-size: 2em;
         color: rgb(86, 85, 85);
     
     }
     .regular-text3{
         position: absolute;
         text-align: center;
-        padding-top: 13vw;
-        font-size: 1.1em;
+        padding-top: 6vh;
+        font-size: 2em;
         right: 50%;
         transform: translateX(50%);
         width: 100vw;
@@ -508,10 +506,8 @@ hr.dotted-line2{
     .underLine-text{
         position: absolute;
         text-align:center;
-        right: 43vw;
-        padding-top: 6vw;
-        text-decoration: underline;
-        font-size: 1.1em;
+        right: 60vw;
+        font-size: 2em;
         color: rgb(86, 85, 85);
     
     
@@ -539,20 +535,23 @@ hr.dotted-line2{
     .tzahi-button {
         border: none;
         border-radius: 30px;
-        width: 69vw;
+        width: 25vw;
         height: 8vh;
         position: absolute;
-        font-size: 1.3em;
+        font-size: 2.3em;
         font-family: "Heebo";
         font-weight: bold;
         color: rgb(255, 255, 255);
-        padding: 1.5vw;
+        padding: 0.8vw;
         right: 50%;
         transform: translateX(50%);
         margin-top: 18vh;
-        background-color: rgb(123 122 122);
+        background-color: rgb(56 179 140);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
-    
+    }
+    .tzahi-button:hover {
+        background-color: rgb(42, 135, 105);
+        cursor: pointer;
     }
     
     .feedback{
@@ -563,7 +562,7 @@ hr.dotted-line2{
         margin-top: 219vh;
         margin-bottom: 20vh;
         width: 93vw;
-        font-size: 1.3em;
+        font-size: 1.5em;
         text-align: center;
     } 
     
@@ -577,7 +576,7 @@ hr.dotted-line2{
         margin-top: 238vh;
         margin-bottom: 22vh;
         width: 90vw;
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
     
     
@@ -598,5 +597,10 @@ hr.dotted-line2{
         direction: rtl;
         width: 100vw;
         z-index: 100;
+    }
+    .linkCredits:hover{
+        cursor: pointer;
+        color: #1e1e69;
+    
     }
 }

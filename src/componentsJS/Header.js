@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../componentsCss/Header.css';
+import Hamburger from '../componentsJS/Hamburger'; 
 
 function Header() {
   const navigate = useNavigate();
@@ -11,12 +12,13 @@ function Header() {
 
   return (
     <header className="header">
-      <img
+      {/* <img
         className="tzahi-white"
         src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
         onClick={handleLogoClick} // קרא לפונקציית הניווט בלחיצה
         style={{ cursor: 'pointer' }}
-      />
+      /> */}
+      <Hamburger/>
       
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}

@@ -8,17 +8,20 @@
   z-index: 10000;
   text-align: right;
   padding-top: 2vh;
-  overflow-y: auto; 
-  transform: translateX(-100%); 
-  transition: transform 0.4s ease-in-out; 
+  overflow-y: auto;
+  transform: translateX(-100%); /* התפריט מוסתר מההתחלה */
+  transition: transform 0.4s ease-in-out; /* מעבר חלק */
 }
 
 .menu.open {
-  transform: translateX(0);
+  transform: translateX(0); /* הזזת התפריט למקומו */
 }
+
+
 .menu.close {
-  transform: translateX(-100%); 
+  transform: translateX(-100%); /* החזרת התפריט לצד שמאל */
 }
+
 @media screen and (max-width: 768px) {
 
   .menu-title {
@@ -66,15 +69,22 @@
   #lineMenuLast{
     margin-top: -7vh;
   }
+  .tzahi-white {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 15%;
+    height: auto; 
+    z-index: 100000;
+}
   
   .closeBtn {
-    position: fixed;
+    position: absolute;
     top: 2vh;
     left: 2vw;
     width: 15%;
     height: auto;
-    opacity: 0; 
-    transition: opacity 1.5s ease-in-out; 
+    z-index: 100000;
 }
 
 .menu.open .closeBtn {
@@ -143,10 +153,9 @@
     color: white;
     margin-bottom: 5vh;
     margin-top: 19vh;
-    margin-right: 4vw;
     text-align: center;
     padding: 5vw;
-    font-size: 3em;
+    font-size: 5em;
     font-family: "Karantina";
   }
   
@@ -158,8 +167,8 @@
   
   .menu-list {
     list-style-type: none;
+    margin-top: -9vh;
     padding: 0;
-    margin-top: 2vh;
   }
   
   .menu-list li {
@@ -167,13 +176,18 @@
     margin-bottom: 3vh;
     padding: 1.5vh 0;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 2em;
     font-family: "Heebo";
   }
+  .menu-list li:hover {
+    color:rgb(65, 236, 248);
+    cursor: pointer;
+  }
+
   
   .lineMenu{
     border-bottom: 0.2vh solid white;
-    width: 86vw;
+    width: 66vw;
     position: absolute;
     right: 50%;
     transform: translateX(50%);
@@ -184,14 +198,25 @@
     margin-top: -7vh;
   }
   
-  .closeBtn {
-    position: fixed;
+  .tzahi-white {
+    position: absolute;
     top: 2vh;
     left: 2vw;
     width: 15%;
+    height: auto; 
+    z-index: 100000;
+}
+  
+  .closeBtn {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 10%;
     height: auto;
-    opacity: 0; 
-    transition: opacity 1.5s ease-in-out; 
+    z-index: 100000;
+}
+.closeBtn:hover {
+  cursor: pointer;
 }
 
 .menu.open .closeBtn {
@@ -206,7 +231,7 @@
   
   .mashov-menu{
     font-family: 'Heebo', sans-serif;
-    font-size: 4vw;
+    font-size: 1.5vw;
     color: white;
     text-align: center;
     position: absolute;
@@ -227,7 +252,7 @@
     color: white;
   }
   .whiteLogoHam{
-    width: 30%;
+    width: 10%;
     height: auto;
     position: absolute;
     top: 7vh;
