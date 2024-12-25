@@ -31,7 +31,7 @@
     right: 0vw;
     top: 8vh;
     width: 33vw;
-    height: 26vh;
+    height: 20vh;
   
 }
 .fade{
@@ -46,7 +46,7 @@
    right: 0vw;
    top: 8vh;
    width: 33vw;
-   height: 26vh;
+   height: 20vh;
    background-color: #e6e2e2;
 }
 .state2-chosen {
@@ -55,7 +55,7 @@
    transform: translateX(50%);
    top: 8.5vh;
    width: 33vw;
-   height: 26vh;
+   height: 20vh;
    background-color: #e6e2e2;
 }
 
@@ -64,7 +64,7 @@
    right: 68%;
    top: 8vh;
    width: 34vw;
-   height: 26vh;
+   height: 20vh;
    background-color: #e6e2e2;
 }
 
@@ -74,7 +74,7 @@
    transform: translateX(50%);
    top: 8vh;
    width: 33vw;
-   height: 26vh;
+   height: 20vh;
   
 }
 
@@ -85,27 +85,27 @@
    right: 69%;
    top: 8vh;
    width: 30vw;
-   height: 26vh;
+   height: 20vh;
 }
 
 .state-back{
    opacity: none;
    width: 30vw;
-   height: 26vh;
+   height: 20vh;
    background-color: #f4f3f3;
 }
 
  .Fireicon{
     position: absolute;
     width:auto;
-    margin-top: 5vh;
+    margin-top: 3vh;
     height: 6vh;
     right: 50%;
     transform: translateX(50%);
  }
  .tzahiicon{
    width: auto;
-   margin-top: 5vh;
+   margin-top: 3vh;
    height: 6vh;
    position: absolute;
    right: 50%;
@@ -114,7 +114,7 @@
  .tasksicon{
     position: absolute;
     width:auto;
-    margin-top: 6vh;
+    margin-top: 4vh;
     height: 5.5vh;
     right: 50%;
     transform: translateX(50%);
@@ -166,26 +166,6 @@
 }
 
 
-.stageNumber{
-   font-family: 'Heebo';
-font-size: 0.8em;
-position: absolute;
-margin-bottom: 5%;
-text-align: center;
-right: 50%;
-top: 0%;
-transform: translateX(50%);
-white-space: nowrap; /* Prevent text from wrapping */
-overflow: hidden;
-text-overflow: ellipsis;
-}
-
-.numberThree{
-    position: absolute;
-    margin-top: 1vh;
-    margin-top: 1.5vh;
-
-}
 
 .stateTitle{
     font-family: "Heebo";
@@ -193,7 +173,7 @@ text-overflow: ellipsis;
     font-size: 1.3em;
     text-align: center;
     color: rgb(88 88 88);;
-    margin-top: 12vh;
+    margin-top: 8.5vh;
 }
 
 

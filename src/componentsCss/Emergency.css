@@ -5,15 +5,21 @@
     position: absolute;
     z-index: 2000;
     text-align: center;
-    top: 60%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%);
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     background-color: #e6e2e2;
     width: 100vw;
-    height: 85vh;
+    height: 130vh;
 
+}
+.margin{
+    position: absolute;
+    bottom:-15%;
+    width:100vw;
+    height:5vh
 }
 .instruction{
     position: absolute;

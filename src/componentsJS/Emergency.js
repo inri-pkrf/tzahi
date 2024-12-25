@@ -20,6 +20,7 @@ const Emergency = ({ onScenarioSelect }) => {
         </button>
       ))}
       </div>
+      <div className='margin'></div>
     </div>
   );
 };
