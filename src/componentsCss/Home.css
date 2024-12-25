@@ -322,7 +322,7 @@ hr.dotted-line2{
     
     .info1{
         font-family: "Heebo";
-        font-size: 2.3em;
+        font-size: 2em;
         position: absolute;
         right: 50%;
         transform: translateX(50%);
@@ -335,10 +335,10 @@ hr.dotted-line2{
         background-color: #18a8c8;
         border: none;
         border-radius: 55px;
-        width: 30vw;
+        width: 25vw;
         height: 10vh;
         position: absolute;
-        font-size: 3em;
+        font-size: 2.4em;
         font-family: "Karantina";
         font-weight: bold;
         color: #ffffff;
@@ -372,7 +372,7 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         width: 90vw;
-        font-size: 2.1em;
+        font-size: 2em;
         font-family: 'HEEBO';
         text-align: center;
         margin-top: 5vh;
@@ -380,7 +380,7 @@ hr.dotted-line2{
     
     .tzahi-text{
         position: absolute;
-        height: 25vh;
+        height: 20vh;
         width: auto;
         margin-top: 17vh;
         right: 50%;
@@ -393,7 +393,7 @@ hr.dotted-line2{
         position: absolute;
         height:10vh;
         width: auto;
-        right:7vw;
+        right:15vw;
         margin-top: 43vh;
     }
     
@@ -401,14 +401,14 @@ hr.dotted-line2{
         position: absolute;
         height: 10vh;
         width: auto;
-        right: 49vw;
+        right: 39vw;
         margin-top: 43vh;
     }
     .pakar-grey{
         position: absolute;
         height:10vh;
         width: auto;
-        right:63vw;
+        right:49vw;
         margin-top: 43vh;
     }
     
@@ -416,16 +416,16 @@ hr.dotted-line2{
         position: absolute;
         height:10vh;
         width: auto;
-        right:76vw;
+        right:59vw;
         margin-top: 43vh;
     }
     
     .collage-logo{
         position: absolute;
-        height: 15vh;
+        height: 10vh;
         width: auto;
-        margin-top: 50vh;
-        right: 50%;
+        margin-top: 43vh;
+        right:79vw;
         transform: translateX(50%);
     }
     
@@ -445,8 +445,8 @@ hr.dotted-line2{
         margin-top: 139vh;
         right: 50%;
         transform: translateX(50%);
-        width: 90vw;
-        font-size: 2em;
+        width: 80vw;
+        font-size: 1.7em;
         margin-top: 72vh;
         text-align: center;
     }
@@ -514,7 +514,7 @@ hr.dotted-line2{
     }
     
     hr.dotted-line{
-        border-top: 3px dotted #6d6d6d;
+        border-top: 4px dotted #6d6d6d;
         position: absolute;
         margin-top: 1vh;
         right: 50%;
@@ -523,7 +523,7 @@ hr.dotted-line2{
     
     }
     hr.dotted-line2{
-        border-top: 3px dotted #6d6d6d;
+        border-top: 4px dotted #6d6d6d;
         position: absolute;
         margin-top: 95vh;
         right: 50%;

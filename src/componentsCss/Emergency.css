@@ -1,3 +1,6 @@
+
+@media screen and (max-width: 768px) {
+
 #emergency-container {
     position: absolute;
     z-index: 2000;
@@ -50,3 +53,86 @@
     height:4.2vh;
     right:15%;
 }
+}
+
+ 
+@media screen and (min-width: 769px) and (max-width: 1024px)  {
+}
+
+
+@media screen and (min-width: 1025px) {
+    #emergency-container {
+        position: absolute;
+        z-index: 2000;
+        text-align: center;
+        top: 25.5%;
+        left: 0%;
+        overflow: hidden;
+        background-color: #e6e2e2;
+        width: 84vw;
+        height: 85vh;
+    
+    }
+    .instruction{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 85vw;
+        font-size: 2em;
+        font-family: "heebo";
+        margin-top: 7vh;
+    
+    }
+    .buttons-sec {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* שתי עמודות */
+        gap: 20px; /* רווח בין הכפתורים */
+        justify-content: center; /* ממרכז את התוכן */
+        align-items: center; /* ממרכז את התוכן אנכית */
+        width: 80%; /* התאמה לגודל רצוי */
+        margin: 0 auto; /* מרכז את המכלול */
+        position: absolute;
+        left:10%;
+        margin-top: 15vh;
+    }
+    
+    .button {
+        width: 100%; /* מתאים לרוחב העמודה */
+        height: 9vh;
+        padding: 10px;
+        font-size: 1.4em;
+        font-family: "Heebo";
+        font-weight: 600;
+        color: white;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        position: relative; /* מאפשר מיקום יחסי עבור האייקון */
+    }
+    .button:hover {
+        cursor: pointer;
+        filter: brightness(0.9); /* 80% מהבהירות המקורית */
+    }
+    .button-icon {
+        position: absolute;
+        height: 4.2vh;
+        right: 10%; /* מתאים את מיקום האייקון בתוך הכפתור */
+        top: 50%; /* ממרכז את האייקון אנכית */
+        transform: translateY(-50%); /* מוודא שהאייקון במרכז האנכי */
+    }
+    
+    /* עיצוב הכפתור האחרון */
+    .button:last-child {
+        grid-column: 1; /* הכפתור יהיה בעמודה הראשונה */
+        justify-self: center; /* ממורכז בתוך העמודה */
+        right: 0%;
+        transform: translateX(50%); /* מוודא שהאייקון במרכז האנכי */
+
+    }
+    
+    
+    
+    
+ 
+}
+   
