@@ -71,12 +71,12 @@
         position: absolute;
         z-index: 2000;
         text-align: center;
-        top: 25.5%;
+        top: 18.5%;
         left: 0%;
         overflow: hidden;
         background-color: #e6e2e2;
         width: 84vw;
-        height: 85vh;
+        height: 120vh;
     
     }
     .instruction{
@@ -86,7 +86,7 @@
         width: 85vw;
         font-size: 2em;
         font-family: "heebo";
-        margin-top: 7vh;
+        margin-top: 3vh;
     
     }
     .buttons-sec {
@@ -99,7 +99,7 @@
         margin: 0 auto; /* מרכז את המכלול */
         position: absolute;
         left:10%;
-        margin-top: 15vh;
+        margin-top: 10vh;
     }
     
     .button {

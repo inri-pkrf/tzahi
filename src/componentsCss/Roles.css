@@ -92,9 +92,10 @@
   .selected-name{
     font-family: "Heebo";
     color: #727272;
-    font-size: 1.4em;
+    font-size: 1.3em;
     position: absolute;
     right: 50%;
+    width: 33vw;
     transform: translateX(50%);
     text-align: center;
     margin-top: 6vh;
@@ -179,7 +180,7 @@
     position: ABSOLUTE;
     z-index: 2000;
     text-align: center;
-    top: 25.5%;
+    top: 18.5%;
     left: 0%;
     overflow: hidden;
     background-color: #e6e2e2;
