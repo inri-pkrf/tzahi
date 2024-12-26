@@ -145,7 +145,7 @@ const emergencyScenarios = [
           role: "הנהלת היישוב",
           id:6,
           tasks: ["עדכון רשימות אנשים אחת לחצי שנה"],
-          color:"#8B8B8B"
+          color:"#934e2b"
 
         },
       ]
@@ -524,7 +524,7 @@ const emergencyScenarios = [
               ]
 
             },
-            color: "#8B8B8B"
+            color: "#934e2b"
           }
         ],
        
@@ -1042,7 +1042,7 @@ const emergencyScenarios = [
 
       ]
         },
-      color: "#EA4335"
+      color: "#934e2b"
     }
   ],
     },
@@ -1178,7 +1178,7 @@ const emergencyScenarios = [
          "בקרת נזמים וטיפול בהם, היערכות לאירועים דומים תוך זמן קצר"
       ]
         },
-      color: "#EA4335"
+      color: "#934e2b"
     }
   ],
       

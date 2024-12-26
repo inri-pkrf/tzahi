@@ -44,7 +44,7 @@
     border: none;
     font-family: "Heebo";
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.3em;
     
 }
 
@@ -106,7 +106,7 @@
         width: 100%; /* מתאים לרוחב העמודה */
         height: 9vh;
         padding: 10px;
-        font-size: 1.4em;
+        font-size: 2em;
         font-family: "Heebo";
         font-weight: 600;
         color: white;
@@ -121,7 +121,7 @@
     }
     .button-icon {
         position: absolute;
-        height: 4.2vh;
+        height: 5vh;
         right: 10%; /* מתאים את מיקום האייקון בתוך הכפתור */
         top: 50%; /* ממרכז את האייקון אנכית */
         transform: translateY(-50%); /* מוודא שהאייקון במרכז האנכי */
