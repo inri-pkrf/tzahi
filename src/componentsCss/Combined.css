@@ -314,21 +314,15 @@ position: absolute;
 
 @media screen and (min-width: 1025px) {
   #both-selected {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     position: absolute;
     z-index: 2000;
     text-align: center;
-    top: 18%;
+    top: 18.5%;
     left: 0%;
+    overflow: hidden;
     background-color: #e6e2e2;
     width: 84vw;
-    min-height: 110vh; /* גובה מינימלי */
-    max-height: 100vh; /* גובה מרבי שיתאם למסך */
-    overflow-y: auto; /* אפשר גלילה אנכית */
-    overflow-x: hidden; /* לא לאפשר גלילה אופקית */
-    height: auto; /* הגובה מתואם לתוכן */
+    height: 180vh;
 }
 
 
