@@ -79,10 +79,10 @@ const Evacuation = ({ selectedScenario }) => {
       ) : (
         <p>אין מידע נוסף להצגה.</p> // הודעה אם אין טול טיפים
       )}
-      <a className='back-emergency' onClick={handleBackClick}>
+      <a className='back-emergency-ev' onClick={handleBackClick}>
         חזרה לבחירת מצב חירום
       </a>
-      <div className='buffer'></div>
+      <div className='buffer-ev'></div>
     </div>
   );
 };

@@ -189,7 +189,7 @@
 }
 #buttons-container {
   position: relative;
-  margin-top: 8vh;
+  margin-top: 22vh;
   width: 80vw;
   height: 37vh;
   border-radius: 50%;
@@ -222,7 +222,7 @@
   /* Second button to the left of the center */
   .role-button:nth-child(2) {
     top: 55%; /* Positioning the button below the center one */
-    left:30%;
+    left:32%;
   }
   
   /* Third button to the right of the center */
@@ -233,8 +233,8 @@
   
   /* Fourth button below the second */
   .role-button:nth-child(4) {
-    top: 100%; /* Positioning further down */
-    left:12%;
+    top: 55%;
+    left: 1%;
   }
   
   /* Fifth button below the third */
@@ -245,8 +245,8 @@
   
   /* Sixth button centered below all */
   .role-button:nth-child(6) {
-    top: 100%; /* Bottom alignment */
-    left: 48%;
+    top: 9%;
+    left: 17%;
   }
   
   .role-button:hover {
@@ -257,21 +257,23 @@
 
   .selected-icon{
     position: absolute;
-    height: 6vh;
-    left:30vw;
+    height: 8vh;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: -1vh;
     position: absolute;
   }
 
   .selected-name{
-    font-family: "Heebo";
+    font-family: "Karantina";
     color: #727272;
-    font-size: 3em;
+    font-size: 7em;
     position: absolute;
+    width: 70vw;
     right: 50%;
     transform: translateX(50%);
     text-align: center;
-    margin-top: -2vh;
-    font-weight: bold;
+    margin-top: 5vh;
   }
   .evacution-dis{
     font-family: "Heebo";
@@ -302,44 +304,49 @@
     background-color: #1bbfe5;
     border: none;
     border-radius: 55px;
-    width: 62vw;
+    width: 40vw;
     height: 6vh;
     position: absolute;
-    font-size: 1.2em;
+    font-size: 2em;
     font-family: "Heebo";
     font-weight: bold;
     color: #ffffff;
-    padding: 1.5vw;
     right: 50%;
-    transform: translateX(50%);
+    transform: translateX(40%);
     margin-top: 59vh;
+    cursor: pointer;
   }
+  .next-btnev:hover{
+    background-color: #179cb9;
+
+  }
+  
 
   .scenrio-name{
     position: absolute;
-    font-size: 1.7em;
+    font-size: 2em;
     font-family: 'HEEBO';
     font-weight: bold;
     color: #6a6f77;
-    margin-top: 11vh;
+    margin-top: 16vh;
     right: 50%;
-    transform: translateX(50%);
 
 }
   
   .scenrio-icon{
-    height: 6vh;
+    height: 15vh;
     position: absolute;
     margin-top: 0.1vh;
     width: auto;
     right: 50%;
-    transform: translateX(50%);
   }
   .evacuation-dis{
-    font-size: 1.2em;
+    font-size: 1.5em;
     position: absolute;
     direction: rtl;
-    margin-top: 25vh;
+    margin-top: 30vh;
     color: #656565;
+    right: 50%;
+    transform: translateX(40%);
   }
 }

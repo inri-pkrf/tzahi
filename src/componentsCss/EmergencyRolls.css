@@ -228,32 +228,33 @@
    right: 1vw;
    top: 8vh;
    width: 15vw;
-   height: 13vw;
+   height: 15vw;
    background-color: #e6e2e2;
 }
 .state2-chosen {
    position: absolute;
    right: 1vw;
-   top: 32vh;
+   top: 33vh;
    width: 15vw;
-   height: 13vw;;
+   height: 15vw;;
    background-color: #e6e2e2;
 }
 
 .state3-chosen{
    position: absolute;
    right: 1vw;
-   top: 57vh;
+   top: 59vh;
    width: 15vw;
+   height:15vw;
    background-color: #e6e2e2;
 }
 
  .state2{
    position: absolute;
    right: 1vw;
-   top: 32vh;
+   top: 34vh;
    width: 15vw;
-   height: 13vw;;
+   height: 15vw;;
   
 }
 

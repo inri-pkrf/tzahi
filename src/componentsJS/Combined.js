@@ -74,12 +74,15 @@ const Combined = ({ selectedScenario, selectedRole }) => {
     <div id="combined-container">
       <div id="both-selected">
         <p className="page-title">בחרת בסד"פ הבא:</p>
+        <p className="situation-description">{selectedScenario.description}</p>
+        <div className='scenerio-chose'>
         <h1 className="combined-title">{selectedScenario.situation}</h1>
         <img
           className="icon-sce"
           src={`${process.env.PUBLIC_URL}/assets/iconsGrey/icon${selectedScenario.id}.svg`}
           alt={`${selectedScenario.situation} icon`}
         />
+        </div>
         <h1 className="combined-role" style={{ backgroundColor: currentRole.color }}>
           תפקיד: {currentRole.role || 'לא זוהה'}
         </h1>
@@ -106,7 +109,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
           </div>
         </div>
 
-        <p className="situation-description">{selectedScenario.description}</p>
+      
         <h1 className="tasks-title"> משימות לפי תפקידים</h1>
 
         {Object.entries(tasks).map(([phase, phaseTasks], phaseIndex) => (
@@ -152,6 +155,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
               ))}
             </ul>
           )}
+        
         </div>
         <a className="back-emergency" onClick={handleBackClick}>
           חזרה לבחירת מצב חירום

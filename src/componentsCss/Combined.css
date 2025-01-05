@@ -322,7 +322,7 @@ position: absolute;
     overflow: hidden;
     background-color: #e6e2e2;
     width: 84vw;
-    height: 180vh;
+    min-height: 200vh;
 }
 
 
@@ -330,9 +330,9 @@ position: absolute;
 .combined-title{
   font-family: "Karantina";
   color: #6a6f77;
-  font-size: 6em;
+  font-size: 5.5em;
   font-weight: 500;
-  margin-top: 3vh;
+  margin-top: 7vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -342,24 +342,25 @@ position: absolute;
 .combined-role{
   font-family: "Karantina";
   color: #eeeeee;
-  font-size: 2.5em;
+  font-size: 5em;
   padding: 1vh;
   font-weight: 500;
-  margin-top: 31vh;
+  margin-top: 30vh;
   position: absolute;
   width: 100vw;
   text-align: center;
   right: 50%;
-  height: 7vh;
+  height: 10vh;
   transform: translateX(50%);
 }
 
 .page-title{
-    margin-top: 5vh;
+    margin-top: 3vh;
     position: absolute;
     font-family: "Heebo";
     direction: rtl;
-    right: -33vw;
+    right:50%;
+    transform: translateX(50%);
     font-size: 2em;
     color: #595959;
     font-weight: 700;
@@ -367,147 +368,39 @@ position: absolute;
     margin-bottom: 4vh;
 
 }
-
-
-
-.situation-discription{
-    font-family: "Heebo";
-    padding-right: 5%;
-    font-size: 1.2em;
-    text-align: right;
-    color:black
-}
-
-.tasks-list {
-  list-style-type: none; /* מסיר את הסימונים המובנים של רשימה */
-  padding: 0; /* מסיר ריפוד */
-  margin: 0; /* מסיר רווחים */
-  text-align: right; /* ממקם את כל התוכן לימין */
-}
-
-.task-item {
-    display: flex; /* עושה פריסה גמישה */
-    align-items: center; /* מרכז את תיבת הסימון עם התיאור */
-    margin: 0.8vh; /* מרווח בין משימות */
-}
-
-.task-item input {
-  margin-right: 10px; /* מרווח בין תיבת הסימון לתיאור */
-}
-
-.task-description {
-  display: inline-block; /* עוזר למקם את התיאור בשורה */
-}
-
-
-
-.mine-checkbox {
-    width: 5vw; /* רוחב ה-checkbox */
-    height: 5vw; /* גובה ה-checkbox */
-    border: 2px solid black; /* גבול שחור */
-    border-radius: 0; /* לא מעוגל */
-    appearance: none; /* הסרת העיצוב הסטנדרטי */
-    cursor: pointer; /* מצביע על כך שניתן ללחוץ */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* צל */
-    margin-right: 3vw; /* רווח מוגדל בין ה-checkbox לטקסט */
-    position: relative; /* מיקום יחסי */
-}
-
-/* שינוי עיצוב ה-checkbox כאשר הוא מסומן */
-.mine-checkbox:checked {
-    background-color: black; /* צבע הרקע כאשר מסומן */
-    border-color: black; /* שינוי צבע הגבול כאשר מסומן */
-}
-
-/* הוספת סימן V כאשר ה-checkbox מסומן */
-.mine-checkbox:checked::before {
-    content: '✓'; /* סימן V */
-    position: absolute; /* מיקום מוחלט */
-    color: white; /* צבע הסימון */
-    left: 50%; /* מיקום שמאלה - במרכז */
-    top: 50%; /* מיקום למעלה - במרכז */
-    font-size: 2.5vw; /* גובה הסימון */
-    line-height: 0; /* מיקום הסימון בתוך ה-checkbox */
-    transform: translate(-50%, -50%); /* מיקום מרכזי */
-    font-weight: 700;
-    display: flex; /* עוזר למקם את התוכן במרכז */
-    justify-content: center; /* מיקום מרכזי */
-    align-items: center; /* יישור במרכז */
-}
-
-
-  
-  /* עיצוב רשימת המשימות */
-  .tasks-list {
-    list-style: none; /* הסרת נקודות מהרשימה */
-    padding: 0; /* הסרת רווח פנימי */
-    margin: 0; /* הסרת רווח חיצוני */
-  }
-  
- .task-text{
-  display: inline-block;
-  max-width: 80%;
-  overflow-wrap: break-word;
-  margin-right: 5vw;
-  font-size: 1.2em;
- }
-
- .tasks-title{
-  font-family: "Heebo";
-  font-size: 1.5em;
-  color: black;
-  margin-top: 18vh;
-  text-align: right;
-  padding-right: 5%;
-  margin-bottom: -2vh;
-
- }
-
-.situation-description{
+.scenerio-chose {
+  height: 18vh;
+  width: 40vh; /* שווה לגובה כדי לשמור על פרופורציות עגולות */
   position: absolute;
-  text-align: center;
-  font-family: "Heebo";
   right: 50%;
+  margin-top: 7vh;
   transform: translateX(50%);
-  width: 100vw;
-  font-size: 1.2em;
-  margin-top: 23vh;
 }
 
 
- .back-emergency{
-    text-decoration: underline;
-    font-family: "Heebo";
-    font-size: 1.3em;
-    text-align: center;
-    font-weight: bold;
-    padding: 5vh;
-
- }
-
- .sub-title{
-  font-family: "Heebo";
-  font-size: 1.3em;
-  color: black;
-  margin-top: 6vh;
-  text-align: right;
-  padding-right: 5%;
- }
-
- .buffer{
-    width: 100vw;
-    height: 10vh;
-    background-color: #00000000;
- }
-
- .navBtn{
-  height: 4vh;
+.icon-sce{
+  position: absolute;
+  margin-top: 1vh;
+  height: 7vh;
   width: auto;
+  transform: translateX(50%);
+  right: 50%;
+}
+
+
+.navBtn{
+  height: 6vh;
+  width: auto;
+ }
+ .navBtn:hover{
+  height: 7vh;
+  width: auto;
+  cursor: pointer;
  }
 
  .back{
   position: absolute;
-  right: 6vw;
+  right: 9vw;
  }
 
  .next{
@@ -524,34 +417,147 @@ position: absolute;
 }
 
 .nav-button-container {
-  text-align: center; /* Center the text under the button */
+  text-align: center; 
 }
 
 .nav-button-text {
 position: absolute; 
- margin-top:5vh; 
+ margin-top:7vh; 
  color: white;
-  font-size:0.7em; 
+  font-size:1em; 
+  font-weight: bold;
 }
 .next-txt{
   position: absolute; 
-  left: 2vw;
+  left: 4vw;
 }
 .back-txt{
   position: absolute; 
-  right: 2vw;
+  right: 9vw;
 }
 
- .icon-sce{
-  position: absolute;
-  margin-top: 5vh;
-  height: 8vh;
-  width: auto;
-  transform: translateX(50%);
-  right: 40%;
-  padding-left: 5vw;
-}
+
  
+
+.tasks-list {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  text-align: right; 
+  direction: rtl; 
+}
+
+.task-item {
+  display: flex; /* עושה פריסה גמישה */
+  align-items: start; /* מרכז את תיבת הסימון עם התיאור */
+  margin: 0.8vh; /* מרווח בין משימות */
+}
+
+.task-item input {
+  margin-left: 10px; /* מרווח בין תיבת הסימון לתיאור */
+}
+
+.task-description {
+  display: inline-block; /* עוזר למקם את התיאור בשורה */
+}
+
+.mine-checkbox {
+  width: 2vw;
+  height: 2vw;
+  border: 2px solid black;
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-right: 0vw;
+  position: relative;
+  padding: 7px;
+}
+
+/* שינוי עיצוב ה-checkbox כאשר הוא מסומן */
+.mine-checkbox:checked {
+  background-color: black; /* צבע הרקע כאשר מסומן */
+  border-color: black; /* שינוי צבע הגבול כאשר מסומן */
+}
+
+/* הוספת סימן V כאשר ה-checkbox מסומן */
+.mine-checkbox:checked::before {
+  content: '✓'; /* סימן V */
+  position: absolute; /* מיקום מוחלט */
+  color: white; /* צבע הסימון */
+  left: 50%; /* מיקום שמאלה - במרכז */
+  top: 50%; /* מיקום למעלה - במרכז */
+  font-size: 2vw; /* גובה הסימון */
+  line-height: 0; /* מיקום הסימון בתוך ה-checkbox */
+  transform: translate(-50%, -50%); /* מיקום מרכזי */
+  font-weight: 700;
+  display: flex; /* עוזר למקם את התוכן במרכז */
+  justify-content: center; /* מיקום מרכזי */
+  align-items: center; /* יישור במרכז */
+}
+
+
+
+  
+  /* עיצוב רשימת המשימות */
+  .tasks-list {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+  }
+  
+ .task-text{
+  display: inline-block;
+  max-width: 80%;
+  overflow-wrap: break-word;
+  margin-right: 5vw;
+  text-align: right;
+  direction: rtl;
+  font-size: 1.5em;
+ }
+
+ .tasks-title{
+  font-family: "Heebo";
+  font-size: 2em;
+  color: black;
+  margin-top: 18vh;
+  direction: rtl;
+  text-align: right;
+  padding-right: 5%;
+  margin-bottom: -2vh;
+
+ }
+
+.situation-description{
+  position: absolute;
+  text-align: center;
+  font-family: "Heebo";
+  right: 50%;
+  transform: translateX(50%);
+  width: 100vw;
+  font-size: 2em;
+  margin-top: 25vh;
+  direction: rtl;
+}
+
+
+
+ .sub-title{
+  font-family: "Heebo";
+  font-size: 2em;
+  color: black;
+  margin-top: 6vh;
+  text-align: right;
+  direction: rtl;
+  padding-right: 5%;
+ }
+
+ .buffer{
+    width: 100vw;
+    height: 10vh;
+    background-color: #00000000;
+ }
+
 #evacution-selected {
   display: flex;
   flex-direction: column;
@@ -569,51 +575,84 @@ position: absolute;
   height: auto; /* הגובה מתאים לתוכן */
 }
 
+/* מיקום כללי של הקופסה */
 .noted {
-  margin-top: 20px;
+  position: absolute;
+  right: 5vw;
+  z-index: 10000;
+  direction: rtl; 
 }
 
+/* עיצוב הכותרת */
 .notes-title {
+  margin-top: 5vh;
+  position: absolute;
+  font-size: 2em;
   display: flex;
-  align-items: center;
-  padding-right:5vw;
-  font-family:"Heebo" ;
+  align-items: center; /* יישור למרכז אנכי */
+  justify-content: flex-end; /* יישור לימין */
+  font-family: "Heebo", sans-serif;
+  direction: rtl; /* תמיכה בכיוון מימין לשמאל */
 }
 
+/* עיצוב החץ */
 .arrow {
-  margin-left: 5px; /* Space between title and arrow */
+  margin-right: 5px; /* רווח בין הכותרת לחץ */
   transition: transform 0.3s ease;
 }
 
 .arrow.down {
-  transform: rotate(90deg); /* Rotate for down arrow */
+  transform: rotate(90deg); /* סיבוב חץ מטה */
 }
 
 .arrow.right {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* חץ ימינה */
 }
 
+/* רשימת הערות */
 .notes-list {
-  list-style-type:circle;
-  margin-top: 10px;
-  padding-left: 20px;
-  text-align: right;
-  font-size: 1.2em;
-  font-family: "Heebo";
+  list-style-type: circle; /* עיצוב עיגולים */
+  margin-top: 20vh;
+  padding-right: 20px; /* יישור פנימי מימין */
+  text-align: right; /* יישור טקסט לימין */
+  font-size: 1.5em;
+  font-family: "Heebo", sans-serif;
+  direction: rtl; /* כיוון מימין לשמאל */
 }
 
-.next-black{
+/* עיצוב כפתור "הבא" */
+.next-black {
   height: 4vh;
   padding: 2vw;
   width: auto;
+  text-align: center; /* מרכז הכיתוב בתוך הכפתור */
+  direction: rtl; /* תמיכה בכיוון מימין לשמאל */
 }
 
-.checked-title::before{
+
+.checked-title::before {
   content: '✓';
   color: rgb(34, 181, 115);
 }
-.checked-title{
+
+.checked-title {
   color: rgb(34, 181, 115);
 }
+
+.back-emergency {
+  text-decoration: underline;
+  font-family: "Heebo";
+  font-size: 2em;
+  text-align: left;
+  font-weight: bold;
+  position: absolute;
+  left: 5vw;
+  margin-top: 7vh;
+  cursor: pointer;
+}
+
+
+
+
 
 }
