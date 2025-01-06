@@ -155,11 +155,11 @@ const Combined = ({ selectedScenario, selectedRole }) => {
               ))}
             </ul>
           )}
-        
-        </div>
-        <a className="back-emergency" onClick={handleBackClick}>
+         <a className="back-emergency" onClick={handleBackClick}>
           חזרה לבחירת מצב חירום
         </a>
+        </div>
+       
         <div className="buffer"></div>
       </div>
     </div>

@@ -135,37 +135,6 @@
     direction: rtl;
  }
 
- hr.dotted {
-   border: none;
-   border-top: 3px dotted #4b4646;
-   width: 27vh;
-   height: 0;
-   transform: rotate(90deg);
-   margin: 14vh 0;
-   padding: 0;
-}
-
-
-.hr1{
-   position: absolute;
-   right: 8vw;
-   top: 8vh;
-}
-
-.hr1-none{
-   display: none;
-}
-
-.hr2{
-   position: absolute;
-   left: 8vmin;
-   top: 8vh;
-}
-
-.hr2-none{
-   display: none;
-}
-
 
 
 .stateTitle{
@@ -182,10 +151,6 @@
 
  
 @media screen and (min-width: 769px) and (max-width: 1024px)  {
-}
-
-
-@media screen and (min-width: 1025px) {
    .page-container {
       position: fixed;
      top: 0;
@@ -213,7 +178,7 @@
     right: 1vw;
     top: 8vh;
     width: 15vw;
-    height: 13vw;;
+    height: 15vw;;
   
 }
 
@@ -235,7 +200,7 @@
 .state2-chosen {
    position: absolute;
    right: 1vw;
-   top: 33vh;
+   top: 35vh;
    width: 15vw;
    height: 15vw;;
    background-color: #e6e2e2;
@@ -244,7 +209,7 @@
 .state3-chosen{
    position: absolute;
    right: 1vw;
-   top: 59vh;
+   top: 63vh;
    width: 15vw;
    height:15vw;
    background-color: #e6e2e2;
@@ -253,7 +218,7 @@
  .state2{
    position: absolute;
    right: 1vw;
-   top: 34vh;
+   top: 35vh;
    width: 15vw;
    height: 15vw;;
   
@@ -264,15 +229,15 @@
 .state3 {
    position: absolute;
    right: 1vw;
-   top: 57vh;
+   top: 63vh;
    width: 15vw;
-   height: 13vw;;
+   height: 19vw;;
 }
 
 .state-back{
    opacity: none;
    width: 15vw;
-   height: 13vw;;
+   height: 19vh;
    background-color: #f4f3f3;
 }
 .state-back:hover{
@@ -349,6 +314,155 @@
 .hr2-none{
    display: none;
 }
+
+
+
+.stateTitle{
+    font-family: "Heebo";
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(88 88 88);;
+    margin-top: 14vh;
+}
+}
+
+
+@media screen and (min-width: 1025px) {
+   .page-container {
+      position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 120%;
+     background-color: #ffffff;
+     z-index: 2000; /* Ensure it appears above the header */
+     text-align: right;
+     padding-top: 2vh;
+     overflow-y:scroll;
+     overflow-x:hidden;
+   }
+
+ .states{
+   position: fixed;
+   margin-top: 12.5vh;
+   height: 100vh;
+   right: 0%;
+   margin-bottom: 5vh;
+ }
+
+ .state1 {
+   position: absolute;
+    right: 1vw;
+    top: 8vh;
+    width: 15vw;
+    height: 13vw;;
+  
+}
+
+.fade{
+   opacity: 0.2;
+   width: 20vw;
+   height: 33vh;
+   background-color: #ffffff;
+}
+
+.state1-chosen {
+   position: absolute;
+   right: 1vw;
+   top: 8vh;
+   width: 15vw;
+   height: 15vw;
+   background-color: #e6e2e2;
+}
+.state2-chosen {
+   position: absolute;
+   right: 1vw;
+   top: 35vh;
+   width: 15vw;
+   height: 15vw;;
+   background-color: #e6e2e2;
+}
+
+.state3-chosen{
+   position: absolute;
+   right: 1vw;
+   top: 63vh;
+   width: 15vw;
+   height:15vw;
+   background-color: #e6e2e2;
+}
+
+ .state2{
+   position: absolute;
+   right: 1vw;
+   top: 35vh;
+   width: 15vw;
+   height: 15vw;;
+  
+}
+
+
+
+.state3 {
+   position: absolute;
+   right: 1vw;
+   top: 63vh;
+   width: 15vw;
+   height: 13vw;;
+}
+
+.state-back{
+   opacity: none;
+   width: 15vw;
+   height: 13vw;;
+   background-color: #f4f3f3;
+}
+.state-back:hover{
+   cursor: pointer;
+   background-color: #dedddd;
+
+}
+
+ .Fireicon{
+    position: absolute;
+    width:auto;
+    margin-top: 2vh;
+    height: 10vh;
+    right: 50%;
+    transform: translateX(50%);
+ }
+ .tzahiicon{
+   width: auto;
+   margin-top: 2vh;
+   height: 10vh;
+   position: absolute;
+   right: 50%;
+   transform: translateX(50%);
+ }
+ .tasksicon{
+    position: absolute;
+    width:auto;
+    margin-top: 3vh;
+    height: 9.5vh;
+    right: 50%;
+    transform: translateX(50%);
+ }
+
+ .title{
+    font-family: 'karantina';
+    color: black;
+    position: absolute;
+    margin-top: 12vh;
+    text-align: center;
+    width: 91vw;
+    right: 50%;
+    transform: translateX(50%);
+    font-weight: 400;
+    font-size: 4em;
+    direction: rtl;
+ }
+
 
 
 

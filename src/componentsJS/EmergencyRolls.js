@@ -58,7 +58,6 @@ const EmergencyRolls = () => {
           <img className='Fireicon' src={`${process.env.PUBLIC_URL}/assets/media/fire.svg`} alt="Fire icon" />
           <p className="stateTitle titleOne">בחירת <br /> מצב חירום</p>
         </div>
-        <hr className={isEmergencyDisplayed ? 'hr1-none' : 'dotted hr1'} />
         
         <div
           className={isRolesDisplayed ? 'state2-chosen' : !selectedScenario && !selectedRole ? 'state2 fade' : 'state2 state-back'}
@@ -66,9 +65,7 @@ const EmergencyRolls = () => {
         >
           <img className='tzahiicon' src={`${process.env.PUBLIC_URL}/assets/media/tzahiGrey.svg`} alt="Tzahi icon" />
           <p className="stateTitle titleTwo">בחירת <br /> תפקיד</p>
-        </div>
-        <hr className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'hr2-none' : 'dotted hr2'} />
-        
+        </div>        
         <div
           className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : selectedRole ? 'state3 state-back' : 'state3 fade'}
         >
