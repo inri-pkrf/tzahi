@@ -5,14 +5,14 @@
     position: absolute;
     z-index: 2000;
     text-align: center;
-    top: 54%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%);
     overflow-y: hidden;
     overflow-x: hidden;
     background-color: #e6e2e2;
     width: 100vw;
-    height: 130vh;
+    height: 120vh;
 
 }
 .margin{
