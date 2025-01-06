@@ -3,9 +3,9 @@
 
 #emergency-container {
     position: absolute;
-    z-index: 2000;
+    z-index: 1000;
     text-align: center;
-    top: 64%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%);
     overflow-y: hidden;
