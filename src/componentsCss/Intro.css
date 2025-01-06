@@ -153,7 +153,7 @@
   transform: translateX(50%);
   bottom: 18vh;
   animation: bounce2 2s ease infinite;
-  height: 13vh;
+  height: 8vh;
   width: auto;
   /* top: 77vh; */
 }
