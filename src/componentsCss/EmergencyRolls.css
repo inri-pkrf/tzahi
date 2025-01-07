@@ -23,7 +23,8 @@
    height: 10vh;
    right: 50%;
    transform: translateX(50%);
-   margin-bottom: 5vh;
+   margin-bottom: 5vh; 
+
 
  }
 
@@ -349,6 +350,7 @@
    height: 100vh;
    right: 0%;
    margin-bottom: 5vh;
+ 
  }
 
  .state1 {
@@ -356,15 +358,18 @@
     right: 1vw;
     top: 8vh;
     width: 15vw;
-    height: 13vw;;
+    height: 13vw;
+    border: red 3px solid;
   
 }
 
 .fade{
    opacity: 0.2;
-   width: 20vw;
-   height: 33vh;
+   width: 15vw;
+   height: 13vw;
    background-color: #ffffff;
+   border: red 3px solid;
+
 }
 
 .state1-chosen {
@@ -372,33 +377,41 @@
    right: 1vw;
    top: 8vh;
    width: 15vw;
-   height: 15vw;
+   height: 25vh;
    background-color: #e6e2e2;
+   border: red 3px solid;
+
 }
 .state2-chosen {
    position: absolute;
    right: 1vw;
-   top: 35vh;
+   top: 34.5vh;
    width: 15vw;
-   height: 15vw;;
+   height: 25vh;
    background-color: #e6e2e2;
+   border: rgb(47, 0, 255) 3px solid;
+
 }
 
 .state3-chosen{
    position: absolute;
    right: 1vw;
-   top: 63vh;
+   top: 61vh;
    width: 15vw;
-   height:15vw;
+   height: 25vh;
    background-color: #e6e2e2;
+   border: red 3px solid;
+
 }
 
  .state2{
    position: absolute;
    right: 1vw;
-   top: 35vh;
+   top: 34.5vh;
    width: 15vw;
-   height: 15vw;;
+   height: 25vh;
+   border: rgb(81, 0, 255) 3px solid;
+
   
 }
 
@@ -407,7 +420,7 @@
 .state3 {
    position: absolute;
    right: 1vw;
-   top: 63vh;
+   top: 61vh;
    width: 15vw;
    height: 13vw;;
 }
