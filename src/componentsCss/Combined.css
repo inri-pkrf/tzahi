@@ -178,7 +178,7 @@
   font-family: "Heebo";
   font-size: 1.3em;
   color: black;
-  margin-top: 6vh;
+  margin-top: 3vh;
   text-align: right;
   padding-right: 5%;
  }
@@ -259,7 +259,7 @@ position: absolute;
 }
 
 .noted {
-  margin-top: 20px;
+  margin-top: 10vh;
 }
 
 .notes-title {
@@ -504,7 +504,7 @@ position: absolute;
   .tasks-list {
     list-style: none;
     padding: 0; 
-    margin: 0; 
+    margin-top: -10vh; 
   }
   
  .task-text{
@@ -521,11 +521,10 @@ position: absolute;
   font-family: "Heebo";
   font-size: 2em;
   color: black;
-  margin-top: 18vh;
+  margin-top: 10vh;
   direction: rtl;
   text-align: right;
   padding-right: 5%;
-  margin-bottom: -2vh;
 
  }
 
@@ -543,15 +542,15 @@ position: absolute;
 
 
 
- .sub-title{
+.sub-title {
   font-family: "Heebo";
   font-size: 2em;
   color: black;
-  margin-top: 6vh;
+  margin-top: 4vh;
   text-align: right;
   direction: rtl;
   padding-right: 5%;
- }
+}
 
  .buffer{
     width: 100vw;
@@ -580,13 +579,14 @@ position: absolute;
 .noted {
   position: relative; /* שינינו מ-absolute כדי לשמור על הסדר */
   right: 5vw;
+  margin-top: 10vh;
   z-index: 10000;
   direction: rtl; 
 }
 
 /* עיצוב הכותרת */
 .notes-title {
-  margin-top: 5vh;
+  margin-top: 2vh;
   font-size: 2em;
   display: flex;
   align-items: center; /* יישור למרכז אנכי */
@@ -641,14 +641,14 @@ position: absolute;
   font-size: 2em; /* גודל פונט */
   text-align: center; /* יישור טקסט במרכז */
   font-weight: bold;
-  margin-top: 4vh; /* רווח עליון */
+  margin-top: 5vh; /* רווח עליון */
   position: relative; /* שימוש במיקום יחסי */
   display: block; /* שינוי לאלמנט בלוק כדי להבטיח שהוא יתפוס שורה שלמה */
   margin-left: auto; /* מרכז עם Auto */
   margin-right: auto; /* מרכז עם Auto */
   width: fit-content; /* התאמת רוחב לטקסט */
   cursor: pointer;
-  right:-8vw;
+  right:-20vw;
 }
 
 

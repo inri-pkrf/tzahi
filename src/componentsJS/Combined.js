@@ -63,7 +63,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   };
 
   const currentRole = selectedScenario.roles[currentRoleIndex];
-  const tasks = currentRole.tasksByPhases || { "כללי": currentRole.tasks || [] };
+  const tasks = currentRole.tasksByPhases || { "משימות": currentRole.tasks || [] };//to erase the כללי 
 
   // Toggle the visibility of the notes
   const toggleNotes = () => {
@@ -108,9 +108,31 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             <p className="nav-button-text next-txt">תפקיד הבא</p>
           </div>
         </div>
+        <div className="noted">
+          <h2
+            className="notes-title"
+            onClick={toggleNotes}
+            style={{ cursor: 'pointer' }}
+          >
+            דגשים
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/media/nextBlack.png`}
+              className={`arrow ${showNotes ? 'down next-black' : 'right next-black'}`}
+            />
+          </h2>
+          {showNotes && (
+            <ul className="notes-list">
+              {selectedScenario.notes.map((note, index) => (
+                <li key={index} className="note-item">
+                  {note}
+                </li>
+              ))}
+            </ul>
+          )}
+     
+        </div>
 
       
-        <h1 className="tasks-title"> משימות לפי תפקידים</h1>
 
         {Object.entries(tasks).map(([phase, phaseTasks], phaseIndex) => (
           <div key={phaseIndex} className="phase-container">
@@ -134,33 +156,13 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             </ul>
           </div>
         ))}
-        <div className="noted">
-          <h2
-            className="notes-title"
-            onClick={toggleNotes}
-            style={{ cursor: 'pointer' }}
-          >
-            דגשים
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/media/nextBlack.png`}
-              className={`arrow ${showNotes ? 'down next-black' : 'right next-black'}`}
-            />
-          </h2>
-          {showNotes && (
-            <ul className="notes-list">
-              {selectedScenario.notes.map((note, index) => (
-                <li key={index} className="note-item">
-                  {note}
-                </li>
-              ))}
-            </ul>
-          )}
-         <a className="back-emergency" onClick={handleBackClick}>
+      
+       
+        <div className="buffer">
+        <a className="back-emergency" onClick={handleBackClick}>
           חזרה לבחירת מצב חירום
         </a>
         </div>
-       
-        <div className="buffer"></div>
       </div>
     </div>
   );
