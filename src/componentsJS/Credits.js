@@ -11,7 +11,7 @@ const Credits = () => {
   return (
     <div className="credits-container">
     <img
-    src={`${process.env.PUBLIC_URL}/assets/media/closeGrey.png`}
+    src={`${process.env.PUBLIC_URL}/assets/media/closeBlack.png`}
     alt="Close"
     className="closeAll"
     onClick={closeCredits}
@@ -22,10 +22,15 @@ const Credits = () => {
         תודה לכל מי שתרם להפקת הממשק הזה:
       </p>
       <ul className="credits-list">
-        <li> מפתחת ראשית: אביטל גמבורג מפ"ל</li>
-        <li>צוות פל"א: עלמה יובל,אביטל גמבורג</li>
-        <li>יועצים: תמר בוסתן</li>
-      </ul>
+      <li>
+        <span style={{ textDecoration: "underline" }}>מפתחת ראשית</span>: אביטל גמבורג
+      </li>
+      <li>
+        <span style={{ textDecoration: "underline" }}>צוות פל"א</span>: אביטל גמבורג,עלמה יובל
+      </li>
+      <li>
+        <span style={{ textDecoration: "underline" }}>יועצים:</span> תמר בוסתן,אופיר גבסו
+      </li>      </ul>
     </div>
     </div>
   );

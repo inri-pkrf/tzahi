@@ -201,8 +201,8 @@
   
   .role-button {
     position: absolute;
-    width: 28vmin; /* גודל רחב יותר */
-    height: 13vmax; /* גובה גבוה יותר */
+    width: 15vw; /* גודל רחב יותר */
+    height: 15vw; /* גובה גבוה יותר */
     color: white;
     text-align: center;
     line-height: 10vh; /* ממרכז את הטקסט בגובה */

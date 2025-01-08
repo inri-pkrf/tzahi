@@ -232,7 +232,7 @@
    right: 1vw;
    top: 63vh;
    width: 15vw;
-   height: 19vw;;
+   height: 16vw;;
 }
 
 .state-back{
@@ -358,8 +358,7 @@
     right: 1vw;
     top: 8vh;
     width: 15vw;
-    height: 13vw;
-    border: red 3px solid;
+    height: 15vw;
   
 }
 
@@ -368,7 +367,6 @@
    width: 15vw;
    height: 13vw;
    background-color: #ffffff;
-   border: red 3px solid;
 
 }
 
@@ -379,7 +377,6 @@
    width: 15vw;
    height: 25vh;
    background-color: #e6e2e2;
-   border: red 3px solid;
 
 }
 .state2-chosen {
@@ -389,7 +386,6 @@
    width: 15vw;
    height: 25vh;
    background-color: #e6e2e2;
-   border: rgb(47, 0, 255) 3px solid;
 
 }
 
@@ -400,7 +396,6 @@
    width: 15vw;
    height: 25vh;
    background-color: #e6e2e2;
-   border: red 3px solid;
 
 }
 
@@ -410,7 +405,6 @@
    top: 34.5vh;
    width: 15vw;
    height: 25vh;
-   border: rgb(81, 0, 255) 3px solid;
 
   
 }
@@ -422,19 +416,21 @@
    right: 1vw;
    top: 61vh;
    width: 15vw;
-   height: 13vw;;
+   height: 16vw;;
 }
 
 .state-back{
    opacity: none;
    width: 15vw;
-   height: 13vw;;
+   height: 16vw;;
    background-color: #f4f3f3;
 }
 .state-back:hover{
    cursor: pointer;
    background-color: #dedddd;
-
+}
+.state-back:active{
+   background-color: #989898;
 }
 
  .Fireicon{
