@@ -255,6 +255,24 @@
   object-fit: contain; /* מתאים את הוידיאו למסך מבלי לחתוך אותו */
 }
 
+.skip {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  background-color: transparent;
+  font-family: 'Assistant', sans-serif;
+  font-size: 3em;
+  color: black;
+  z-index: 9999999;
+  border: none;
+  font-weight: bolder;
+}
+.skip:hover {
+ cursor: pointer;
+ font-size: 3.5em;
+
+}
+
 }
 
 

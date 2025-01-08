@@ -183,6 +183,8 @@
   .menu-list li:hover {
     color:rgb(65, 236, 248);
     cursor: pointer;
+    font-weight: bolder;
+
   }
 
   
@@ -415,5 +417,11 @@
     right: 50%;
     text-decoration: underline;
     margin-top: 10vh;
+  }
+  .menu-list li:hover {
+    color:rgb(65, 236, 248);
+    cursor: pointer;
+    font-weight: bolder;
+
   }
 }
