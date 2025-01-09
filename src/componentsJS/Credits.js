@@ -30,7 +30,10 @@ const Credits = () => {
       </li>
       <li>
         <span style={{ textDecoration: "underline" }}>יועצים:</span> תמר בוסתן,אופיר גבסו
-      </li>      </ul>
+      </li> 
+      <li>
+        <span style={{ textDecoration: "underline" }}>עריכת וידיאו:</span> ליעוז רוזנר
+      </li>     </ul>
     </div>
     </div>
   );
