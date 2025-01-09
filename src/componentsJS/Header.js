@@ -6,10 +6,6 @@ import Hamburger from '../componentsJS/Hamburger';
 function Header() {
   const navigate = useNavigate();
 
-  const handleLogoClick = () => {
-    navigate('/tzahi/hamburger'); 
-  };
-
   return (
     <header className="header">
       <Hamburger/>
@@ -21,7 +17,7 @@ function Header() {
       
       <button
         className="back-homeNav"
-        onClick={() => navigate('/tzahi/home')} // ניווט לעמוד הבית
+        onClick={() => navigate('/tzahi/home')} 
       >
       </button>
 
