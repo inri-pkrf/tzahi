@@ -3,14 +3,14 @@ import '../componentsCss/Evacuation.css';
 
 const Evacuation = ({ selectedScenario }) => {
   const [expandedCategory, setExpandedCategory] = useState(null);
-  const [checkedItems, setCheckedItems] = useState({}); // מצב לצ'ק בוקסים
+  const [checkedItems, setCheckedItems] = useState({}); 
 
   const handleBackClick = () => {
     const event = new CustomEvent("emergencyback");
     window.dispatchEvent(event);
   };
 
-  // פונקציה לטיפול בלחיצה על כותרת הקטגוריה
+ 
   const handleToggle = (category) => {
     setExpandedCategory(expandedCategory === category ? null : category);
   };
@@ -20,12 +20,11 @@ const Evacuation = ({ selectedScenario }) => {
       ...prevCheckedItems,
       [category]: {
         ...prevCheckedItems[category],
-        [item]: !prevCheckedItems[category]?.[item] // הפוך את מצב הצ'ק בוקס
+        [item]: !prevCheckedItems[category]?.[item] 
       }
     }));
   };
 
-  // פונקציה לבדוק אם כל הפריטים בקטגוריה נבחרו
   const areAllItemsChecked = (category) => {
     return selectedScenario.infos[category].every(item => checkedItems[category]?.[item]);
   };
@@ -40,7 +39,6 @@ const Evacuation = ({ selectedScenario }) => {
         alt={`${selectedScenario.situation} icon`} 
       />
       
-      {/* בדיקה אם infos קיים והוא אובייקט */}
       {typeof selectedScenario.infos === 'object' && Object.keys(selectedScenario.infos).length > 0 ? (
         <div className="tooltips-container">
           {Object.entries(selectedScenario.infos).map(([category, items], index) => (
@@ -77,7 +75,7 @@ const Evacuation = ({ selectedScenario }) => {
           ))}
         </div>
       ) : (
-        <p>אין מידע נוסף להצגה.</p> // הודעה אם אין טול טיפים
+        <p>אין מידע נוסף להצגה.</p> 
       )}
       <a className='back-emergency-ev' onClick={handleBackClick}>
         חזרה לבחירת מצב חירום

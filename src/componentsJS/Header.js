@@ -12,14 +12,7 @@ function Header() {
 
   return (
     <header className="header">
-      {/* <img
-        className="tzahi-white"
-        src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
-        onClick={handleLogoClick} // קרא לפונקציית הניווט בלחיצה
-        style={{ cursor: 'pointer' }}
-      /> */}
       <Hamburger/>
-      
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
         className="App-logo"
