@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../componentsCss/Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
+  // Initialize the navigate hook
+  const navigate = useNavigate();
+
   // Determine the initial role index based on the selected role
   const initialRoleIndex = selectedScenario.roles.findIndex(
     (role) => role.role === selectedRole.role
@@ -63,11 +67,28 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   };
 
   const currentRole = selectedScenario.roles[currentRoleIndex];
-  const tasks = currentRole.tasksByPhases || { "משימות": currentRole.tasks || [] };//to erase the כללי 
+  const tasks = currentRole.tasksByPhases || { "משימות": currentRole.tasks || [] };
 
   // Toggle the visibility of the notes
   const toggleNotes = () => {
     setShowNotes((prevShowNotes) => !prevShowNotes);
+  };
+
+  // Conditionally render the "הודעות נצורות" button
+  const renderMessagesButton = () => {
+    if (currentRole.role === "מידע לציבור" && currentRole.messages) {
+      return (
+        <div className="messages-button-container">
+          <button 
+            className="messages-button" 
+            onClick={() => navigate('/tzahi/Messages')}
+          >
+            הודעות נצורות
+          </button>
+        </div>
+      );
+    }
+    return null;
   };
 
   return (
@@ -76,16 +97,19 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         <p className="page-title">בחרת בסד"פ הבא:</p>
         <p className="situation-description">{selectedScenario.description}</p>
         <div className='scenerio-chose'>
-        <h1 className="combined-title">{selectedScenario.situation}</h1>
-        <img
-          className="icon-sce"
-          src={`${process.env.PUBLIC_URL}/assets/iconsGrey/icon${selectedScenario.id}.svg`}
-          alt={`${selectedScenario.situation} icon`}
-        />
+          <h1 className="combined-title">{selectedScenario.situation}</h1>
+          <img
+            className="icon-sce"
+            src={`${process.env.PUBLIC_URL}/assets/iconsGrey/icon${selectedScenario.id}.svg`}
+            alt={`${selectedScenario.situation} icon`}
+          />
         </div>
         <h1 className="combined-role" style={{ backgroundColor: currentRole.color }}>
           תפקיד: {currentRole.role || 'לא זוהה'}
         </h1>
+
+        {renderMessagesButton()} {/* Render the button here */}
+
         <div className="navigation-buttons">
           {hasMovedNext && (
             <div className="nav-button-container">
@@ -129,10 +153,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
               ))}
             </ul>
           )}
-     
         </div>
-
-      
 
         {Object.entries(tasks).map(([phase, phaseTasks], phaseIndex) => (
           <div key={phaseIndex} className="phase-container">
@@ -156,12 +177,11 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             </ul>
           </div>
         ))}
-      
-       
+
         <div className="buffer">
-        <a className="back-emergency" onClick={handleBackClick}>
-          חזרה לבחירת מצב חירום
-        </a>
+          <a className="back-emergency" onClick={handleBackClick}>
+            חזרה לבחירת מצב חירום
+          </a>
         </div>
       </div>
     </div>
