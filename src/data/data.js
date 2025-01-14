@@ -203,7 +203,7 @@ const emergencyScenarios = [
                   "עבודה משותפת עם כל הצח\"י ליצירת מענה משלים קהילתי"
                 ]
               },
-              color: "#8B8B8B"
+              color: "#934e2b"
             }
           ],
     },
@@ -475,7 +475,7 @@ const emergencyScenarios = [
               ]
 
             },
-            color: "#934e2b"
+               color: "#934e2b"
           }
         ],
        
