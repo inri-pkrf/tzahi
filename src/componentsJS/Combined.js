@@ -20,9 +20,9 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   // Set up the initial tasks state when the component mounts or the role changes
   useEffect(() => {
     const currentRole = selectedScenario.roles[currentRoleIndex];
-    const tasks = currentRole.tasksByPhases || { "כללי": currentRole.tasks || [] };
-    const initialTasks = Object.keys(tasks).reduce((acc, phase) => {
-      acc[phase] = new Array(tasks[phase].length).fill(false);
+    const tasksByPhases = currentRole.tasksByPhases || {};
+    const initialTasks = Object.keys(tasksByPhases).reduce((acc, phase) => {
+      acc[phase] = new Array(tasksByPhases[phase].length).fill(false);
       return acc;
     }, {});
     setCompletedTasks(initialTasks);
@@ -67,28 +67,11 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   };
 
   const currentRole = selectedScenario.roles[currentRoleIndex];
-  const tasks = currentRole.tasksByPhases || { "משימות": currentRole.tasks || [] };
+  const tasksByPhases = currentRole.tasksByPhases || {};
 
   // Toggle the visibility of the notes
   const toggleNotes = () => {
     setShowNotes((prevShowNotes) => !prevShowNotes);
-  };
-
-  // Conditionally render the "הודעות נצורות" button
-  const renderMessagesButton = () => {
-    if (currentRole.role === "מידע לציבור" && currentRole.messages) {
-      return (
-        <div className="messages-button-container">
-          <button 
-            className="messages-button" 
-            onClick={() => navigate('/tzahi/Messages')}
-          >
-            הודעות נצורות
-          </button>
-        </div>
-      );
-    }
-    return null;
   };
 
   return (
@@ -96,7 +79,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
       <div id="both-selected">
         <p className="page-title">בחרת בסד"פ הבא:</p>
         <p className="situation-description">{selectedScenario.description}</p>
-        <div className='scenerio-chose'>
+        <div className="scenerio-chose">
           <h1 className="combined-title">{selectedScenario.situation}</h1>
           <img
             className="icon-sce"
@@ -107,8 +90,6 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         <h1 className="combined-role" style={{ backgroundColor: currentRole.color }}>
           תפקיד: {currentRole.role || 'לא זוהה'}
         </h1>
-
-        {renderMessagesButton()} {/* Render the button here */}
 
         <div className="navigation-buttons">
           {hasMovedNext && (
@@ -132,6 +113,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             <p className="nav-button-text next-txt">תפקיד הבא</p>
           </div>
         </div>
+
         <div className="noted">
           <h2
             className="notes-title"
@@ -155,7 +137,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
           )}
         </div>
 
-        {Object.entries(tasks).map(([phase, phaseTasks], phaseIndex) => (
+        {Object.entries(tasksByPhases).map(([phase, phaseTasks], phaseIndex) => (
           <div key={phaseIndex} className="phase-container">
             <h2
               className={`sub-title ${areAllTasksCompleted(phase) ? 'checked-title' : ''}`}
