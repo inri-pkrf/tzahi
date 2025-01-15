@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import Messages from '../componentsJS/Messages.js'; // Import Messages component
 import '../componentsCss/Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
-  // Initialize the navigate hook
   const navigate = useNavigate();
 
-  // Determine the initial role index based on the selected role
   const initialRoleIndex = selectedScenario.roles.findIndex(
     (role) => role.role === selectedRole.role
   );
@@ -16,8 +15,8 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const [completedTasks, setCompletedTasks] = useState({});
   const [hasMovedNext, setHasMovedNext] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
+  const [showMessages, setShowMessages] = useState(false); // State for toggling Messages component
 
-  // Set up the initial tasks state when the component mounts or the role changes
   useEffect(() => {
     const currentRole = selectedScenario.roles[currentRoleIndex];
     const tasksByPhases = currentRole.tasksByPhases || {};
@@ -28,7 +27,6 @@ const Combined = ({ selectedScenario, selectedRole }) => {
     setCompletedTasks(initialTasks);
   }, [currentRoleIndex, selectedScenario]);
 
-  // Handle checkbox changes for each task
   const handleCheckboxChange = (phase, index) => {
     const phaseTasks = completedTasks[phase] || [];
     const updatedCompletedTasks = {
@@ -42,42 +40,45 @@ const Combined = ({ selectedScenario, selectedRole }) => {
     setCompletedTasks(updatedCompletedTasks);
   };
 
-  // Check if all tasks in a phase are completed
   const areAllTasksCompleted = (phase) => {
     return completedTasks[phase] && completedTasks[phase].every((task) => task);
   };
 
-  // Move to the next role
   const handleNextRole = () => {
     setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % selectedScenario.roles.length);
     setHasMovedNext(true);
   };
 
-  // Move to the previous role
   const handlePreviousRole = () => {
     setCurrentRoleIndex(
       (prevIndex) => (prevIndex - 1 + selectedScenario.roles.length) % selectedScenario.roles.length
     );
   };
 
-  // Trigger a custom event to go back to the emergency selection
   const handleBackClick = () => {
     const event = new CustomEvent("emergencyback");
     window.dispatchEvent(event);
   };
 
-  const currentRole = selectedScenario.roles[currentRoleIndex];
-  const tasksByPhases = currentRole.tasksByPhases || {};
-
-  // Toggle the visibility of the notes
   const toggleNotes = () => {
     setShowNotes((prevShowNotes) => !prevShowNotes);
   };
 
+  const toggleMessages = () => {
+    setShowMessages((prevShowMessages) => !prevShowMessages);
+  };
+
+  const currentRole = selectedScenario.roles[currentRoleIndex];
+  const tasksByPhases = currentRole.tasksByPhases || {};
+
+  if (showMessages) {
+    return <Messages selectedScenario={selectedScenario} currentRole={currentRole} />;
+  }
+
   return (
     <div id="combined-container">
       <div id="both-selected">
-        <p className="page-title">בחרת בסד"פ הבא:</p>
+        <p className="page-title">בחרת בסד\"פ הבא:</p>
         <p className="situation-description">{selectedScenario.description}</p>
         <div className="scenerio-chose">
           <h1 className="combined-title">{selectedScenario.situation}</h1>
@@ -90,6 +91,12 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         <h1 className="combined-role" style={{ backgroundColor: currentRole.color }}>
           תפקיד: {currentRole.role || 'לא זוהה'}
         </h1>
+
+        {currentRole.role === "מידע לציבור" && currentRole.messages && (
+          <button className="messages-button" onClick={toggleMessages}>
+            הודעות נצורות
+          </button>
+        )}
 
         <div className="navigation-buttons">
           {hasMovedNext && (
