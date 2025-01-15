@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import '../componentsCss/Messages.css';
 
-const Messages = ({ selectedScenario, currentRole }) => {
-  const navigate = useNavigate(); // Initialize useNavigate
+const Messages = ({ selectedScenario, currentRole, setShowMessages }) => {
+  const navigate = useNavigate(); 
   const [messages, setMessages] = useState(currentRole.messages || []);
   const [activeMessageIndex, setActiveMessageIndex] = useState(null);
   const [editedMessage, setEditedMessage] = useState("");
+
+  // פונקציה לחיתוך חמש המילים הראשונות
+  const getPreview = (message) => {
+    const words = message.split(" ");
+    const preview = words.slice(0, 5).join(" ");
+    return preview.length < message.length ? `${preview}...` : preview;
+  };
 
   const handleEditMessage = (index) => {
     setActiveMessageIndex(index);
@@ -37,14 +44,17 @@ const Messages = ({ selectedScenario, currentRole }) => {
   };
 
   const handleClose = () => {
-    navigate(-1); // Go back to the previous page
+    setShowMessages(false); // עדכון הסטייט שגורם לסגירת ההודעות
   };
 
   return (
     <div className="messages-container">
       <h1 className="messages-title">הודעות נצורות - {selectedScenario.situation}</h1>
       <button className="close-button" onClick={handleClose}>
-        סגור
+      <img
+             className="closeImg" src={`${process.env.PUBLIC_URL}/assets/media/closeBlack.png`}
+             
+            />
       </button>
 
       {messages.length === 0 ? (
@@ -57,7 +67,7 @@ const Messages = ({ selectedScenario, currentRole }) => {
               className="message-button"
               onClick={() => handleEditMessage(index)}
             >
-              הודעה {index + 1}
+              {getPreview(message)}
             </button>
           ))}
         </div>
@@ -73,10 +83,10 @@ const Messages = ({ selectedScenario, currentRole }) => {
           />
           <div className="editor-actions">
             <button className="save-button" onClick={handleSaveMessage}>
-              שמור
+             שמירה 
             </button>
             <button className="send-button" onClick={handleSendMessage}>
-              העתק ושלח
+              העתקה ושליחה
             </button>
           </div>
         </div>

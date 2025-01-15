@@ -72,7 +72,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const tasksByPhases = currentRole.tasksByPhases || {};
 
   if (showMessages) {
-    return <Messages selectedScenario={selectedScenario} currentRole={currentRole} />;
+    return <Messages selectedScenario={selectedScenario} currentRole={currentRole} setShowMessages={setShowMessages} />;
   }
 
   return (

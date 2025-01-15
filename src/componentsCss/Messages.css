@@ -16,11 +16,11 @@
   }
   
   .message-button {
-    background-color: #007bff;
+    background-color: #3398e0;
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
   }
   
@@ -38,11 +38,14 @@
   }
   
   .message-textarea {
-    width: 100%;
+    width: 90%;
     height: 100px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-family:"Heebo";
+    direction: rtl;
+    font-size: 1em;
   }
   
   .editor-actions {
@@ -52,12 +55,15 @@
   }
   
   .save-button,
-  .send-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.send-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 90vw;
+  flex-grow: 1; /* גורם לכפתורים להתפשט ולהתפשט ביחס לרוחב */
+}
+
   
   .save-button {
     background-color: #28a745;
@@ -81,6 +87,20 @@
     font-size: 16px;
     color: gray;
   }
+  .closeImg{
+    height:5vh;
+    width:auto
+  }
+  .close-button{
+    border: none;
+    background-color: transparent;
+    left :2vw;
+    position: absolute;
+    top:2vh;
+  }
+  .close-button:hover{
+    cursor: pointer;
+  }
   
   /* Responsive Styles */
   
@@ -101,9 +121,9 @@
     }
   
     .messages-title {
-      font-size: 2em;
-      text-align: center;
-      font-family: "Karantina";
+        font-size: 2.1em;
+        text-align: center;
+        font-family: "Karantina";
     }
   
     .messages-list {
@@ -112,8 +132,9 @@
     }
   
     .message-button {
-      font-size: 14px;
-      padding: 8px 12px;
+        font-size: 1.2em;
+        padding: 8px 12px;
+        direction: rtl;
     }
   
     .message-editor {
@@ -125,9 +146,21 @@
     }
   
     .editor-actions {
-      flex-direction: column;
-      gap: 8px;
-    }
+        display: flex;
+        gap: 10px; /* רווח בין הכפתורים */
+        margin-top: 10px;
+        flex-direction: row; /* כפתורים ליד אחד השני */
+        justify-content: center; /* ממרכז את הכפתורים */
+      }
+      
+  .save-button {
+    font-family: "Heebo";
+    font-size:1em
+  }
+  .send-button {
+    font-family: "Heebo";
+    font-size:1em
+  }
   }
   
   /* For medium screens (769px to 1024px) */

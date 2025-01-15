@@ -206,7 +206,8 @@
 
  }
  .navigation-buttons {
-  display: flex;
+  display: flex
+;
   justify-content: space-between;
   margin-top: 32vh;
   z-index: 1000;
@@ -304,6 +305,20 @@ position: absolute;
 .checked-title{
   color: rgb(34, 181, 115);
 }
+
+.messages-button {
+  width: 25vw;
+  height: 35vw;
+  border: none;
+  border-radius: 0% 0% 60% 0; /* עיצוב של רבע עיגול */
+  margin-top: 0vh;
+  left: 0vw;
+  position: absolute;
+  background-color: aliceblue;
+  font-family: "Heebo";
+  font-size: 1.2em;
+}
+
 }
 
 
