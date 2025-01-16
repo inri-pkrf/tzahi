@@ -235,7 +235,7 @@ ul {
     }
     
     .checkbox-text {
-        margin-left: 10px;
+        margin-right: 5vw;
         font-size: 1.3em;; /* רווח קל בין הצ'ק בוקס לטקסט */
     }
     
@@ -282,8 +282,7 @@ ul {
         margin: 0; /* הסרת רווח חיצוני */
     }
     .tooltips-container {
-        margin-left: 20px; /* המרחק שניתן להוסיף כאן */
-        right: 5px;
+        left: 5vw;
     }
     
     .title-checked::before{

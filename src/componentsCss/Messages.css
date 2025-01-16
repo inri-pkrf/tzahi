@@ -60,7 +60,7 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 90vw;
+  width: 10vw;
   flex-grow: 1; /* גורם לכפתורים להתפשט ולהתפשט ביחס לרוחב */
 }
 
@@ -71,7 +71,7 @@
   }
   
   .save-button:hover {
-    background-color: #218838;
+    background-color:rgb(215, 108, 69);
   }
   
   .send-button {
@@ -80,17 +80,14 @@
   }
   
   .send-button:hover {
-    background-color: #e0a800;
+    background-color:rgb(0, 161, 215);
   }
   
   .no-messages {
     font-size: 16px;
     color: gray;
   }
-  .closeImg{
-    height:5vh;
-    width:auto
-  }
+  
   .close-button{
     border: none;
     background-color: transparent;
@@ -194,6 +191,10 @@
     .editor-actions {
       gap: 12px;
     }
+    .closeImg{
+      height:5vh;
+      width:auto
+    }
   }
   
   /* For large screens (1025px and up) */
@@ -218,12 +219,22 @@
     font-family: "Karantina";
 }
   
-    .messages-list {
-      position: absolute;
-      width: 110vw;
-      left:5%;
-      gap: 4vw;
-    }
+.messages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ממרכז את הפריטים בשורה */
+  gap: 2vw;
+  width: 88vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.message-button {
+  flex: 0 0 22%; /* כל כפתור יקח 22% מהרוחב, כלומר 4 כפתורים בשורה */
+  margin-bottom: 20px; /* מרווח בין השורות */
+}
+
   
     .message-button {
       height:9vh;
@@ -233,7 +244,8 @@
     }
   
     .message-editor {
-      margin-top: 20vh;
+      position: relative;
+      margin-top: 15vh;
       font-size: 1.5em;
     }
   
@@ -242,16 +254,43 @@
     }
   
     .editor-actions {
-      gap: 15px;
+      gap: 2vw;
     }
         
   .save-button {
     font-family: "Heebo";
-    font-size:1em
+    font-size:1em;
+    color: white;
+    width:2vw;
+    background-color: coral;
   }
   .send-button {
     font-family: "Heebo";
-    font-size:1em
+    font-size:1em;
+    width:2vw;
+    color: white;
+    background-color:deepskyblue;
+
+
   }
+  .close-button{
+    border: none;
+    background-color: transparent;
+    left :5vw;
+    position: absolute;
+    top:5vh;
+  }
+  .close-button:hover{
+    cursor: pointer;
+  }
+  .closeImg{
+    height:8vh;
+    width:auto
+  }
+  .closeImg:hover{
+    cursor: pointer;
+
+  }
+
   }
   

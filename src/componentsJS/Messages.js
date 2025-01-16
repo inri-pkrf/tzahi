@@ -49,6 +49,8 @@ const Messages = ({ selectedScenario, currentRole, setShowMessages }) => {
 
   return (
     <div className="messages-container">
+      <img className='messages-icon'  src={`${process.env.PUBLIC_URL}/assets/iconsGrey/icon${selectedScenario.id}.svg`}  />
+
       <h1 className="messages-title">הודעות נצורות - {selectedScenario.situation}</h1>
       <button className="close-button" onClick={handleClose}>
       <img
