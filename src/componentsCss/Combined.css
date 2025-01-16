@@ -665,7 +665,36 @@ position: absolute;
   cursor: pointer;
   right:-20vw;
 }
+.messages-button {
+  width: 15vw;
+  height: 15vw;
+  border: none;
+  border-radius: 0% 0% 60% 0; /* עיצוב של רבע עיגול */
+  margin-top: 0vh;
+  left: 0vw;
+  position: absolute;
+  background-color: rgb(156, 234, 255);
+  font-family: "Heebo";
+  font-size: 2.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* שמירה על מרכזיות הטקסט */
+}
 
+.rotated-text {
+  transform: rotate(-45deg); /* סיבוב הטקסט בלבד */
+  display: inline-block; /* מבטיח שהסיבוב יעבוד כראוי */
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.messages-button:hover {
+  cursor: pointer;
+  background-color: rgb(159, 214, 255);
+
+
+}
 
 
 

@@ -93,9 +93,10 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         </h1>
 
         {currentRole.role === "מידע לציבור" && currentRole.messages && (
-          <button className="messages-button" onClick={toggleMessages}>
-            הודעות נצורות
-          </button>
+        <button onClick={toggleMessages} class="messages-button">
+        <span class="rotated-text">הודעות נצורות </span>
+      </button>
+      
         )}
 
         <div className="navigation-buttons">

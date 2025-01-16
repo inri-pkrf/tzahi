@@ -199,25 +199,42 @@
   /* For large screens (1025px and up) */
   @media screen and (min-width: 1025px) {
     .messages-container {
-      padding: 25px;
-      border-radius: 10px;
-    }
-  
-    .messages-title {
-      font-size: 26px;
-    }
+      position: absolute;
+      z-index: 2000;
+      text-align: center;
+      top: 18.5%;
+      left: 0%;
+      overflow: hidden;
+      background-color: #e6e2e2;
+      width: 84vw;
+      min-height: 230vh;
+
+  }
+    
+  .messages-title {
+    font-size:5em;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Karantina";
+}
   
     .messages-list {
-      gap: 20px;
+      position: absolute;
+      width: 110vw;
+      left:5%;
+      gap: 4vw;
     }
   
     .message-button {
+      height:9vh;
+      direction: rtl;
       font-size: 18px;
       padding: 12px 18px;
     }
   
     .message-editor {
-      margin-top: 25px;
+      margin-top: 20vh;
+      font-size: 1.5em;
     }
   
     .message-textarea {
@@ -227,5 +244,14 @@
     .editor-actions {
       gap: 15px;
     }
+        
+  .save-button {
+    font-family: "Heebo";
+    font-size:1em
+  }
+  .send-button {
+    font-family: "Heebo";
+    font-size:1em
+  }
   }
   
