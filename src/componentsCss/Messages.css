@@ -158,6 +158,10 @@
     font-family: "Heebo";
     font-size:1em
   }
+  .closeImg{
+    height:5vh;
+    width:auto
+  }
   }
   
   /* For medium screens (769px to 1024px) */
