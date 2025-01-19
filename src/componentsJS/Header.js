@@ -14,6 +14,7 @@ function Header() {
         className="App-logo"
         alt="logo"
       />
+      <p className='menu-dis'>תפריט</p>
       
       <button
         className="back-homeNav"

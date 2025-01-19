@@ -46,6 +46,17 @@
     height: auto;
     z-index: -1; 
   }
+  .menu-dis{
+    color:white;
+    position: fixed; 
+    top: -1.3vh;
+    left: 6vw;
+    font-weight: bold;
+    font-size:0.8em; 
+    height: auto;
+    z-index:20; 
+    
+  }
 
  }
  @media screen and (min-width: 769px) and (max-width: 1024px)  {
@@ -85,6 +96,10 @@
     width: 20vw; 
     height: auto;
     z-index: -100; 
+  }
+  .menu-dis{
+    color:white;
+
   }
  }
 
@@ -126,5 +141,16 @@
       width: 18vw; 
       height: auto;
       z-index: -100; 
+    }
+    .menu-dis{
+      color:white;
+      position: fixed; 
+      top: -1.3vh;
+      left: 5vw;
+      font-weight: bold;
+      font-size:1.2em; 
+      height: auto;
+      z-index:20; 
+      
     }
   }
