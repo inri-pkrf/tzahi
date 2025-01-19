@@ -57,7 +57,8 @@ function Hamburger() {
             <ul className="menu-list">
               <li onClick={() => navigate('/tzahi/home')}>עמוד הבית</li>
               <div className='lineMenu'></div>
-              <li onClick={() => navigate('/tzahi/EmergencyRolls')}>בחירת סד"פ</li>
+              <li onClick={() => navigate('/tzahi/EmergencyRolls')}>בחירת סדר פעולות
+              </li>
               <div className='lineMenu'></div>
               <li onClick={() => window.open('https://sites.google.com/view/inri-tzahi/home', '_blank')}>
                 שיעור דיגיטלי לצח"י

@@ -1,6 +1,6 @@
 {
-  "short_name": "MyApp",
-  "name": "My Application",
+ "short_name": "עזר דיגיטלי סדר פעולות לצח״י",
+  "name": "עזר דיגיטלי סדר פעולות לצח״י",
   "icons": [
     {
       "src": "favicon.ico",

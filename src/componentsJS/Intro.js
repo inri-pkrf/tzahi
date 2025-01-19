@@ -86,9 +86,9 @@ const Intro = () => {
             className="move-to-center" 
           />
           <h1 id="welcome-text-intro">צח"י</h1>
-          <h1 id="sub-title">סד"פ לשעת חירום</h1>
+          <h1 id="sub-title">סדר פעולות לשעת חירום</h1>
           <p id="introduction-sub">
-            ברוכים הבאים והבאות לעזר הצח"י שמרכז עבורך סדרי פעולות למצבי חירום שונים ובחלוקה לפי משימות התפקידים בצוות
+            ברוכים הבאים והבאות סדר פעולות לשעת חירום לצח"י שמרכז עבורך סדרי פעולות למצבי חירום שונים ובחלוקה לפי משימות התפקידים בצוות
           </p>
           <img
             src={`${process.env.PUBLIC_URL}/assets/media/whiteNextBtn.png`}
