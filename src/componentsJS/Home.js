@@ -17,7 +17,8 @@ const Home = () => {
   };
   return (
     <div className="homepage-container">
-      <h1 className='home-title'>  ברוכים הבאים והבאות   <br></br> לסדר פעולות לשעת חירום לצח"י
+      <h1 className='home-title'> סדר פעולות
+      <br></br> לשעת חירום לצח"י 
 
  </h1>
  <p className="info1">

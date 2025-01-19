@@ -85,8 +85,7 @@ const Intro = () => {
             id="logo-white" 
             className="move-to-center" 
           />
-          <h1 id="welcome-text-intro">צח"י</h1>
-          <h1 id="sub-title">סדר פעולות לשעת חירום</h1>
+          <h1 id="sub-title">סדר פעולות     <br></br>   לשעת חירום לצח"י</h1>
           <p id="introduction-sub">
             ברוכים הבאים והבאות סדר פעולות לשעת חירום לצח"י שמרכז עבורך סדרי פעולות למצבי חירום שונים ובחלוקה לפי משימות התפקידים בצוות
           </p>
