@@ -1,19 +1,19 @@
 @media screen and (max-width: 768px) {
 #both-selected {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: absolute;
-    z-index: 2000;
-    text-align: center;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: #e6e2e2;
-    width: 100vw;
-    min-height: 110vh; /* גובה מינימלי */
-    direction: rtl;
-    height: auto; /* הגובה מתאים לתוכן */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 2000;
+  text-align: center;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #e6e2e2;
+  width: 100vw;
+  min-height: 133vh;
+  direction: rtl;
+  height: auto;
 }
 
 
@@ -173,6 +173,35 @@
     padding: 5vh;
 
  }
+ .pdf-go-emergency{
+  background-color: transparent;
+  border: none;
+  border-radius: 55px;
+  width: 75vw;
+  height: 8vh;
+  position: absolute;
+  font-size: 1.3em;
+  font-family: "Heebo";
+  color: #000000;
+  padding: 1.5vw;
+  font-weight: bold;
+  right: 50%;
+  transform: translateX(50%);
+ 
+  margin-top: 5vh;
+  text-decoration: underline;
+  padding-bottom: 5vh;
+
+
+} 
+.download-icon-em{
+position: absolute;
+height:4vh;
+right: 10vw;
+top:1vh;
+width: auto;
+
+}
 
  .sub-title{
   font-family: "Heebo";
@@ -318,6 +347,7 @@ position: absolute;
   font-family: "Heebo";
   font-size: 1.2em;
 }
+
 
 }
 
@@ -692,10 +722,11 @@ position: absolute;
 .messages-button:hover {
   cursor: pointer;
   background-color: rgb(159, 214, 255);
-
-
 }
 
+.pdf-emergency{
+
+}
 
 
 }

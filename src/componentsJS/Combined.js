@@ -148,9 +148,14 @@ const Combined = ({ selectedScenario, selectedRole }) => {
           <a className="back-emergency" onClick={handleBackClick}>
             חזרה לבחירת מצב חירום
           </a>
-          <a className="pdf-emergency" onClick={() => navigate("/tzahi/PdfFiles")}>
-            ייצוא PDF
-          </a>
+          <button className="pdf-go-emergency" onClick={() => navigate("/tzahi/PdfFiles")}>
+            עזרים מודפסים
+            <img 
+              className="download-icon-em" 
+              src={`${process.env.PUBLIC_URL}/assets/media/download.png`} 
+              alt="Download Icon" 
+            />
+            </button>
         </div>
       </div>
     </div>
