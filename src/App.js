@@ -6,6 +6,7 @@ import Header from './componentsJS/Header';
 import Intro from './componentsJS/Intro';
 import Credits from './componentsJS/Credits';
 import EmergencyRolls from './componentsJS/EmergencyRolls';
+import PdfFiles from './componentsJS/PdfFiles';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/tzahi/home" element={<Home className="home" />} />
                 <Route path="/tzahi/EmergencyRolls" element={<EmergencyRolls />} />
                 <Route path="/tzahi/Credits" element={<Credits />} />
+                <Route path="/tzahi/PdfFiles" element={<PdfFiles />} />
                 <Route path="/tzahi/EmergencyRolls/:scenarioId" element={<EmergencyRolls />} />
             </Routes>
         </div>

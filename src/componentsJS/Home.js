@@ -17,10 +17,18 @@ const Home = () => {
   };
   return (
     <div className="homepage-container">
-      <h1 className='home-title'> סדר פעולות
+      <h1 className='home-title'> לסדר פעולות
       <br></br> לשעת חירום לצח"י 
-
  </h1>
+ <button className="pdf-go" onClick={() => navigate("/tzahi/PdfFiles")}>
+  עזרים מודפסים
+  <img 
+    className="download-icon" 
+    src={`${process.env.PUBLIC_URL}/assets/media/download.png`} 
+    alt="Download Icon" 
+  />
+</button>
+
  <p className="info1">
  לתחילת עבודה יש לבחור את מצב החירום ולאחר מכן את התפקיד בצוות, כדי לצפות בסד"פ המתאים
  </p>

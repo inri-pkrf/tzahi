@@ -52,8 +52,8 @@ position: fixed;
     padding: 1.5vw;
     right: 50%;
     transform: translateX(50%);
-    margin-top: 58vh;
-    box-shadow: 9px 10px 20px #323030, -3px -3px 5px rgba(255, 255, 255, 0.2);
+    margin-top: 54vh;
+    box-shadow: 9px 10px 20px #505050, -3px -3px 5px rgba(255, 255, 255, 0.2);
 }
 
 
@@ -252,7 +252,6 @@ hr.dotted-line2{
     transform: translateX(50%);
     margin-top: 18vh;
     background-color: rgb(56 179 140);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 
 }
 
@@ -302,6 +301,30 @@ hr.dotted-line2{
 
     z-index: 100;
 }
+.pdf-go{
+    background-color: transparent;
+    border: none;
+    border-radius: 55px;
+    width: 75vw;
+    height: 8vh;
+    position: absolute;
+    font-size: 1.5em;
+    font-family: "Heebo";
+    color: #000000;
+    padding: 1.5vw;
+    right: 50%;
+    transform: translateX(45%);
+    margin-top: 71vh;
+    text-decoration: underline;
+
+} 
+.download-icon{
+position: absolute;
+height:5vh;
+width: auto;
+
+}
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px)  {
@@ -605,6 +628,9 @@ hr.dotted-line2{
         cursor: pointer;
         color: #1e1e69;
     
+    }
+    .pdf-go{
+        
     }
 }
 
@@ -915,5 +941,8 @@ hr.dotted-line2{
         background-color: rgb(170, 188, 205);
 
     
+    }
+    .pdf-go{
+
     }
 }

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Messages from '../componentsJS/Messages.js'; // Import Messages component
+import Messages from '../componentsJS/Messages.js';
 import '../componentsCss/Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
@@ -9,13 +9,13 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   const initialRoleIndex = selectedScenario.roles.findIndex(
     (role) => role.role === selectedRole.role
   );
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(
-    initialRoleIndex >= 0 ? initialRoleIndex : 0
-  );
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(initialRoleIndex >= 0 ? initialRoleIndex : 0);
   const [completedTasks, setCompletedTasks] = useState({});
-  const [hasMovedNext, setHasMovedNext] = useState(false);
-  const [showNotes, setShowNotes] = useState(false);
-  const [showMessages, setShowMessages] = useState(false); // State for toggling Messages component
+  const [viewState, setViewState] = useState({
+    hasMovedNext: false,
+    showNotes: false,
+    showMessages: false,
+  });
 
   useEffect(() => {
     const currentRole = selectedScenario.roles[currentRoleIndex];
@@ -27,58 +27,44 @@ const Combined = ({ selectedScenario, selectedRole }) => {
     setCompletedTasks(initialTasks);
   }, [currentRoleIndex, selectedScenario]);
 
-  const handleCheckboxChange = (phase, index) => {
-    const phaseTasks = completedTasks[phase] || [];
-    const updatedCompletedTasks = {
-      ...completedTasks,
+  const handleCheckboxChange = useCallback((phase, index) => {
+    setCompletedTasks((prevTasks) => ({
+      ...prevTasks,
       [phase]: [
-        ...phaseTasks.slice(0, index),
-        !phaseTasks[index],
-        ...phaseTasks.slice(index + 1),
+        ...prevTasks[phase].slice(0, index),
+        !prevTasks[phase][index],
+        ...prevTasks[phase].slice(index + 1),
       ],
-    };
-    setCompletedTasks(updatedCompletedTasks);
-  };
+    }));
+  }, []);
 
-  const areAllTasksCompleted = (phase) => {
-    return completedTasks[phase] && completedTasks[phase].every((task) => task);
-  };
+  const areAllTasksCompleted = (phase) =>
+    completedTasks[phase]?.every((task) => task);
 
-  const handleNextRole = () => {
-    setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % selectedScenario.roles.length);
-    setHasMovedNext(true);
-  };
-
-  const handlePreviousRole = () => {
-    setCurrentRoleIndex(
-      (prevIndex) => (prevIndex - 1 + selectedScenario.roles.length) % selectedScenario.roles.length
-    );
+  const handleRoleChange = (step) => {
+    setCurrentRoleIndex((prevIndex) => (prevIndex + step + selectedScenario.roles.length) % selectedScenario.roles.length);
+    setViewState((prevState) => ({ ...prevState, hasMovedNext: true }));
   };
 
   const handleBackClick = () => {
-    const event = new CustomEvent("emergencyback");
-    window.dispatchEvent(event);
+    window.dispatchEvent(new CustomEvent("emergencyback"));
   };
 
-  const toggleNotes = () => {
-    setShowNotes((prevShowNotes) => !prevShowNotes);
-  };
-
-  const toggleMessages = () => {
-    setShowMessages((prevShowMessages) => !prevShowMessages);
+  const toggleViewState = (key) => {
+    setViewState((prevState) => ({ ...prevState, [key]: !prevState[key] }));
   };
 
   const currentRole = selectedScenario.roles[currentRoleIndex];
   const tasksByPhases = currentRole.tasksByPhases || {};
 
-  if (showMessages) {
-    return <Messages selectedScenario={selectedScenario} currentRole={currentRole} setShowMessages={setShowMessages} />;
+  if (viewState.showMessages) {
+    return <Messages selectedScenario={selectedScenario} currentRole={currentRole} setShowMessages={() => toggleViewState('showMessages')} />;
   }
 
   return (
     <div id="combined-container">
       <div id="both-selected">
-        <p className="page-title">בחרת בסד\"פ הבא:</p>
+        <p className="page-title">בחרת בסד"פ הבא:</p>
         <p className="situation-description">{selectedScenario.description}</p>
         <div className="scenerio-chose">
           <h1 className="combined-title">{selectedScenario.situation}</h1>
@@ -93,19 +79,18 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         </h1>
 
         {currentRole.role === "מידע לציבור" && currentRole.messages && (
-        <button onClick={toggleMessages} className="messages-button">
-        <span className="rotated-text">הודעות נצורות </span>
-      </button>
-      
+          <button onClick={() => toggleViewState('showMessages')} className="messages-button">
+            <span className="rotated-text">הודעות נצורות</span>
+          </button>
         )}
 
         <div className="navigation-buttons">
-          {hasMovedNext && (
+          {viewState.hasMovedNext && (
             <div className="nav-button-container">
               <img
                 className="navBtn back"
                 src={`${process.env.PUBLIC_URL}/assets/media/next.png`}
-                onClick={handlePreviousRole}
+                onClick={() => handleRoleChange(-1)}
                 alt="Previous Role"
               />
               <p className="nav-button-text back-txt">תפקיד קודם</p>
@@ -115,7 +100,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             <img
               className="navBtn next"
               src={`${process.env.PUBLIC_URL}/assets/media/next.png`}
-              onClick={handleNextRole}
+              onClick={() => handleRoleChange(1)}
               alt="Next Role"
             />
             <p className="nav-button-text next-txt">תפקיד הבא</p>
@@ -123,23 +108,18 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         </div>
 
         <div className="noted">
-          <h2
-            className="notes-title"
-            onClick={toggleNotes}
-            style={{ cursor: 'pointer' }}
-          >
+          <h2 className="notes-title" onClick={() => toggleViewState('showNotes')}>
             דגשים
             <img
               src={`${process.env.PUBLIC_URL}/assets/media/nextBlack.png`}
-              className={`arrow ${showNotes ? 'down next-black' : 'right next-black'}`}
+              className={`arrow ${viewState.showNotes ? 'down next-black' : 'right next-black'}`}
+              alt="Toggle Notes"
             />
           </h2>
-          {showNotes && (
+          {viewState.showNotes && (
             <ul className="notes-list">
               {selectedScenario.notes.map((note, index) => (
-                <li key={index} className="note-item">
-                  {note}
-                </li>
+                <li key={index} className="note-item">{note}</li>
               ))}
             </ul>
           )}
@@ -147,18 +127,14 @@ const Combined = ({ selectedScenario, selectedRole }) => {
 
         {Object.entries(tasksByPhases).map(([phase, phaseTasks], phaseIndex) => (
           <div key={phaseIndex} className="phase-container">
-            <h2
-              className={`sub-title ${areAllTasksCompleted(phase) ? 'checked-title' : ''}`}
-            >
-              {phase}:
-            </h2>
+            <h2 className={`sub-title ${areAllTasksCompleted(phase) ? 'checked-title' : ''}`}>{phase}:</h2>
             <ul className="tasks-list">
               {phaseTasks.map((task, index) => (
                 <li key={index} className="task-item">
                   <input
                     className="mine-checkbox"
                     type="checkbox"
-                    checked={completedTasks[phase] ? completedTasks[phase][index] || false : false}
+                    checked={completedTasks[phase]?.[index] || false}
                     onChange={() => handleCheckboxChange(phase, index)}
                   />
                   <span className="task-text">{task}</span>
@@ -171,6 +147,9 @@ const Combined = ({ selectedScenario, selectedRole }) => {
         <div className="buffer">
           <a className="back-emergency" onClick={handleBackClick}>
             חזרה לבחירת מצב חירום
+          </a>
+          <a className="pdf-emergency" onClick={() => navigate("/tzahi/PdfFiles")}>
+            ייצוא PDF
           </a>
         </div>
       </div>
