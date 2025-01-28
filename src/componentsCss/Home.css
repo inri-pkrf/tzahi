@@ -34,7 +34,7 @@ position: fixed;
     right: 50%;
     transform: translateX(50%);
     width: 90vw;
-    margin-top: 36vh;
+    margin-top: 32vh;
     text-align: center;
 
 }
@@ -45,14 +45,14 @@ position: fixed;
     width: 75vw;
     height: 10vh;
     position: absolute;
-    font-size: 2em;
-    font-family: "Karantina";
+    font-size: 1.4em;
+    font-family: "Heebo";
     font-weight: bold;
     color: #ffffff;
     padding: 1.5vw;
     right: 50%;
     transform: translateX(50%);
-    margin-top: 54vh;
+    margin-top: 52vh;
     box-shadow: 9px 10px 20px #505050, -3px -3px 5px rgba(255, 255, 255, 0.2);
 }
 
@@ -262,21 +262,21 @@ hr.dotted-line2{
     z-index: 100;
 }
 .pdf-go{
-    background-color: transparent;
+    background-color:#f2903f;
     border: none;
     border-radius: 55px;
     width: 75vw;
-    height: 8vh;
+    height: 10vh;
     position: absolute;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-family: "Heebo";
-    color: #000000;
+    font-weight: bold;
+    color: #ffffff;
     padding: 1.5vw;
     right: 50%;
-    transform: translateX(45%);
-    margin-top: 71vh;
-    text-decoration: underline;
-
+    transform: translateX(50%);
+    margin-top: 66vh;
+    box-shadow: 9px 10px 20px #505050, -3px -3px 5px rgba(255, 255, 255, 0.2);
 } 
 .download-icon{
 position: absolute;
@@ -316,17 +316,17 @@ width: auto;
         background-color: #18a8c8;
         border: none;
         border-radius: 55px;
-        width: 35vw;
+        width: 25vw;
         height: 10vh;
         position: absolute;
-        font-size: 2.4em;
-        font-family: "Karantina";
+        font-size: 2.1em;
+        font-family: "Heebo";
         font-weight: bold;
         color: #ffffff;
         padding: 1.5vw;
-        right: 50%;
-        transform: translateX(50%);
-        margin-top: 63vh;
+        right: 18%;
+        /* transform: translateX(50%); */
+        margin-top: 65vh;
         box-shadow: 9px 10px 20px #323030, -3px -3px 5px rgba(255, 255, 255, 0.2);
     }
     .home-button:hover {
@@ -356,7 +356,7 @@ width: auto;
         font-size: 2em;
         font-family: 'HEEBO';
         text-align: center;
-        margin-top: 5vh;
+        margin-top: 10vh;
     }
     
     .tzahi-text{
@@ -372,9 +372,9 @@ width: auto;
     
     .socity-logo{
         position: absolute;
-        height:8vh;
+        height: 8vh;
         width: auto;
-        right:15vw;
+        right: 15vw;
         margin-top: 43vh;
     }
     
@@ -413,7 +413,7 @@ width: auto;
     .white-div{
         position: absolute;
         width: 100vw;
-        height: 30vh;
+        height: 10vh;
         background-color: rgba(255, 255, 255, 0.925);
         z-index: 7;
         margin-top: 43vh;
@@ -428,7 +428,7 @@ width: auto;
         transform: translateX(50%);
         width: 80vw;
         font-size: 1.7em;
-        margin-top: 72vh;
+        margin-top: 65vh;
         text-align: center;
     }
     
@@ -437,67 +437,30 @@ width: auto;
         width: 100vw;
         height: 30vh;
         background-color: rgb(238, 238, 238);
-        margin-top: 185vh;
+        margin-top: 162vh;
         right: 50%;
         transform: translateX(50%);
         direction: rtl;
         font-family: "Heebo";
     }
-    .bold-text{
-        position: absolute;
-        text-align: right;
-        right: 16vw;
-        font-weight: bold;
-        color: rgb(86, 85, 85);
-        font-size: 1.5em;
-    }
     
+
     .regular-text{
         position: absolute;
         text-align: center;
-        right: 42.5vw;
-        font-size: 1.5em;
-        color: rgb(86, 85, 85);
-    
-    
-    
-    }
-    
-    .regular-text2{
-        position: absolute;
-        text-align: right;
-        right: 50vw;
-        font-size: 1.5em;
-        color: rgb(86, 85, 85);
-    
-    }
-    .regular-text3{
-        position: absolute;
-        text-align: center;
-        padding-top: 6vh;
-        font-size: 1.5em;
         right: 50%;
         transform: translateX(50%);
-        width: 100vw;
+        font-size: 2em;
+        width: 80vw;
         color: rgb(86, 85, 85);
     
-    
     }
-    
-    .underLine-text{
-        position: absolute;
-        text-align:center;
-        right: 64vw;
-        font-size: 1.5em;
-        color: rgb(86, 85, 85);
-    
-    
-    }
+   
     
     hr.dotted-line{
         border-top: 4px dotted #6d6d6d;
         position: absolute;
-        margin-top: 1vh;
+        margin-top: 8vh;
         right: 50%;
         transform: translateX(50%);
         width: 84vw;
@@ -506,7 +469,7 @@ width: auto;
     hr.dotted-line2{
         border-top: 4px dotted #6d6d6d;
         position: absolute;
-        margin-top: 95vh;
+        margin-top: 82vh;
         right: 50%;
         transform: translateX(50%);
         width: 84vw;
@@ -516,10 +479,10 @@ width: auto;
     .tzahi-button {
         border: none;
         border-radius: 30px;
-        width: 30vw;
+        width: 25vw;
         height: 8vh;
         position: absolute;
-        font-size: 2em;
+        font-size: 2.3em;
         font-family: "Heebo";
         font-weight: bold;
         color: rgb(255, 255, 255);
@@ -540,16 +503,14 @@ width: auto;
         right: 50%;
         transform: translateX(50%);
         color: rgb(86, 85, 85);
-        margin-top: 219vh;
+        margin-top: 192vh;
         margin-bottom: 20vh;
         width: 93vw;
         font-size: 1.5em;
         text-align: center;
     } 
-    #linkMenuGrey:hover{
-        color: rgb(36, 36, 36);
-       cursor: pointer;
-    }  
+ 
+    
     
     .footer{
         position: absolute;
@@ -558,7 +519,7 @@ width: auto;
         transform: translateX(50%);
         background-color: rgba(86, 85, 85, 0);
         font-weight: bold;
-        margin-top: 238vh;
+        margin-top: 202vh;
         margin-bottom: 22vh;
         width: 90vw;
         font-size: 1.3em;
@@ -568,30 +529,57 @@ width: auto;
     #linkMenuGrey{
         color:rgb(86, 85, 85);
     }
+    #linkMenuGrey:hover{
+        color: rgb(39, 51, 129);
+        cursor: pointer;
+        font-weight: bold;
+
+    } 
     
-    .linkCredits {
+    .linkCredits{
         position: absolute;
-        margin-top: 240vh;
+        margin-top: 203vh;
         text-decoration: underline;
         font-family: "Heebo";
         right: 50%;
         transform: translateX(50%);
-        font-size: 1.5em;
+        font-size: 1.6em;
         text-align: center;
         color: #525253;
         direction: rtl;
         width: 100vw;
-        background-color: aliceblue;
         z-index: 100;
     }
     .linkCredits:hover{
         cursor: pointer;
         color: #1e1e69;
+        background-color: rgb(170, 188, 205);
+
     
     }
     .pdf-go{
-        
+        background-color:#f2903f;
+        border: none;
+        border-radius: 55px;
+        width: 25vw;
+        height: 10vh;
+        position: absolute;
+        font-size: 2.2em;
+        font-family: "Heebo";
+        font-weight: bold;
+        color: #ffffff;
+        padding: 1.5vw;
+        right: 58%;
+        /* transform: translateX(50%); */
+        margin-top: 65vh;
+        box-shadow: 9px 10px 20px #323030, -3px -3px 5px rgba(255, 255, 255, 0.2);
+    } 
+    .pdf-go:hover{
+        background-color:#bb631b;
+        cursor: pointer;
+
     }
+    
 }
 
 @media screen and (min-width: 1025px) {
