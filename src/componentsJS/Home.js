@@ -17,7 +17,7 @@ const Home = () => {
   };
   return (
     <div className="homepage-container">
-      <h1 className='home-title'> סדר פעולות
+      <h1 className='home-title'> עזר דיגיטלי
       <br></br> לשעת חירום לצח"י 
  </h1>
  <button className="pdf-go" onClick={() => navigate("/tzahi/PdfFiles")}>

@@ -729,17 +729,17 @@ position: absolute;
   background-color: transparent;
   border: none;
   font-family: "Heebo";
-  font-size: 2em; /* גודל פונט */
-  text-align: center; /* יישור טקסט במרכז */
+  font-size: 2em;
+  text-align: center;
   font-weight: bold;
-  margin-top: -65vh; /* רווח עליון */
-  position: relative; /* שימוש במיקום יחסי */
-  display: block; /* שינוי לאלמנט בלוק כדי להבטיח שהוא יתפוס שורה שלמה */
-  margin-left: auto; /* מרכז עם Auto */
-  margin-right: auto; /* מרכז עם Auto */
-  width: fit-content; /* התאמת רוחב לטקסט */
+  margin-top: 11vh;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
   cursor: pointer;
-  left:-40vw;
+  left: 7vw;
 
 
 } 

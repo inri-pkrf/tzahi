@@ -106,6 +106,14 @@ const Combined = ({ selectedScenario, selectedRole }) => {
             <p className="nav-button-text next-txt">תפקיד הבא</p>
           </div>
         </div>
+        <button className="pdf-go-emergency" onClick={() => navigate("/tzahi/PdfFiles")}>
+            עזרים מודפסים
+            <img 
+              className="download-icon-em" 
+              src={`${process.env.PUBLIC_URL}/assets/media/download.png`} 
+              alt="Download Icon" 
+            />
+            </button>
 
         <div className="noted">
           <h2 className="notes-title" onClick={() => toggleViewState('showNotes')}>
@@ -148,14 +156,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
           <a className="back-emergency" onClick={handleBackClick}>
             חזרה לבחירת מצב חירום
           </a>
-          <button className="pdf-go-emergency" onClick={() => navigate("/tzahi/PdfFiles")}>
-            עזרים מודפסים
-            <img 
-              className="download-icon-em" 
-              src={`${process.env.PUBLIC_URL}/assets/media/download.png`} 
-              alt="Download Icon" 
-            />
-            </button>
+         
         </div>
       </div>
     </div>
