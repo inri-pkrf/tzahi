@@ -732,14 +732,14 @@ position: absolute;
   font-size: 2em;
   text-align: center;
   font-weight: bold;
-  margin-top: -63vh;
+  margin-top: 5vh;
   position: absolute;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
   cursor: pointer;
-  left: 4vw;
+  right: 7vw;
 
 
 } 
