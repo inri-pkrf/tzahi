@@ -17,20 +17,15 @@ const Home = () => {
   };
   return (
     <div className="homepage-container">
-      <h1 className='home-title'> לסדר פעולות
+      <h1 className='home-title'> סדר פעולות
       <br></br> לשעת חירום לצח"י 
  </h1>
  <button className="pdf-go" onClick={() => navigate("/tzahi/PdfFiles")}>
   עזרים מודפסים
-  <img 
-    className="download-icon" 
-    src={`${process.env.PUBLIC_URL}/assets/media/download.png`} 
-    alt="Download Icon" 
-  />
 </button>
 
  <p className="info1">
- לתחילת עבודה יש לבחור את מצב החירום ולאחר מכן את התפקיד בצוות, כדי לצפות בסד"פ המתאים
+ לתחילת עבודה יש לבחור את מצב החירום ולאחר מכן את התפקיד בצוות, כדי לצפות בסד"פ המתאים לרשותכם/ן גם עזרים מודפסים
  </p>
  <button className='home-button' onClick={goToEmergency}>לבחירת מצב חירום ותפקיד</button>
 
@@ -73,18 +68,9 @@ className='collage-logo'
 
  </div>
 
-   
-   
-   
-   
    <div className='tzahi-div'>
-   <div><p className='bold-text'>חדשים או חדשות בצח"י? </p><p className='regular-text'>זקוקים </p> 
-    
-    <p className='regular-text2'>לרענון? הכנסו</p>
-    <p className='underLine-text'> לשיעור הדיגיטלי לצח"י 
-    </p>
-    <p className='regular-text3'>    ללמידה על המשימות והתפקידים
-    </p>
+   <div>
+    <p className='regular-text'> <strong>חדשים או חדשות בצח"י?</strong> זקוקים לרענון? הכנסו לשיעור הדיגיטלי לצח"י ללמידה על המשימות והתפקידים.</p>
     </div>
     <button 
   className="tzahi-button"

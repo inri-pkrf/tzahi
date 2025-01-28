@@ -724,9 +724,30 @@ position: absolute;
   background-color: rgb(159, 214, 255);
 }
 
-.pdf-emergency{
+.pdf-go-emergency{
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  font-family: "Heebo";
+  font-size: 2em; /* גודל פונט */
+  text-align: center; /* יישור טקסט במרכז */
+  font-weight: bold;
+  margin-top: -65vh; /* רווח עליון */
+  position: relative; /* שימוש במיקום יחסי */
+  display: block; /* שינוי לאלמנט בלוק כדי להבטיח שהוא יתפוס שורה שלמה */
+  margin-left: auto; /* מרכז עם Auto */
+  margin-right: auto; /* מרכז עם Auto */
+  width: fit-content; /* התאמת רוחב לטקסט */
+  cursor: pointer;
+  left:-40vw;
 
-}
 
+} 
+.download-icon-em{
+  position: absolute;
+  height:4vh;
+  width: auto;
+  
+  }
 
 }

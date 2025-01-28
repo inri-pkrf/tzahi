@@ -64,7 +64,7 @@ function Hamburger() {
                 שיעור דיגיטלי לצח"י
               </li>
               <div className='lineMenu'></div>
-              <li onClick={() => window.open('https://sites.google.com/view/inri-tzahi/home', '_blank')}>
+              <li onClick={() => navigate('/tzahi/PdfFiles')}>
                 עזרים מודפסים
               </li>
               <div className='lineMenu'></div>
