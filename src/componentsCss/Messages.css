@@ -6,15 +6,10 @@
   
   .messages-title {
     font-size: 24px;
-    margin-top: 2vh;
-    color: rgb(89,89,89);
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
+    margin-bottom: 16px;
   }
   
   .messages-list {
-    margin-top: 20vh;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -51,8 +46,6 @@
     font-family:"Heebo";
     direction: rtl;
     font-size: 1em;
-    margin-top: 20vh;
-
   }
   
   .editor-actions {
@@ -73,7 +66,7 @@
 
   
   .save-button {
-    background-color: #28a745;
+    background-color: coral;    
     color: white;
   }
   
@@ -82,8 +75,8 @@
   }
   
   .send-button {
-    background-color: #ffc107;
-    color: black;
+    color: white;
+    background-color:deepskyblue;
   }
   
   .send-button:hover {
@@ -169,9 +162,15 @@
     height:5vh;
     width:auto
   }
-  .messages-icon{
-    height:8vh;
-    width: auto;
+  .save-button{
+    font-size:1.2em;
+    font-family: "Heebo";
+    font-weight: bold;
+  }
+  .send-button{
+    font-size:1.2em;
+    font-family: "Heebo";
+    font-weight: bold;
   }
   }
   
@@ -210,6 +209,8 @@
       height:5vh;
       width:auto
     }
+   
+  
   }
   
   /* For large screens (1025px and up) */
@@ -305,10 +306,6 @@
   .closeImg:hover{
     cursor: pointer;
 
-  }
-  .messages-icon{
-    height:15vh;
-    width: auto;
   }
 
   }
