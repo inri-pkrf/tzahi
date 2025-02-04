@@ -93,29 +93,47 @@
     }
     
     @media screen and (min-width: 1025px) {
-        .pdf-list {
-            display: flex;
-            flex-direction: column;
-            right: 50%;
-            transform: translateX(50%);
-            gap: 20px;
-          }
-          
-          .pdf-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-          
-          .pdf-link {
-            text-decoration: none;
-            color: #000;
-            font-size: 18px;
-          }
-          
-          .pdf-icon {
-            width: 30px;
-            height: 30px;
-          }
+      .pdf-title {
+        font-family: "karantina";
+        font-size: 10em;
+        font-weight: 400;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%); /* שינוי פה */
+        width: 90vw;
+        margin-top: 13vh;
+        text-align: center;
+      }
+      .pdf-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* מרכז את הפריטים */
+        gap: 5vw;
+        width: 100vw;
+        margin-top: 33vh;
+        align-items: center; /* מוודא שהאייקונים והטקסט ממורכזים */
+      }
+      
+      .pdf-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        justify-content: center; /* ממקם את האלמנטים במרכז גם בציר האנכי */
+      }
+      
+      
+      .pdf-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+      }
+      
+      .pdf-icon {
+        width: 6vw;
+        height: auto;
+      }
+      
+      
           
     }

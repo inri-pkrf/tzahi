@@ -50,18 +50,17 @@
   
   .editor-actions {
     display: flex;
-    gap: 10px;
+    gap: 100px;
     margin-top: 10px;
   }
   
   .save-button,
 .send-button {
-  padding: 10px 15px;
+  padding: 10px 35px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 10vw;
-  flex-grow: 1; /* גורם לכפתורים להתפשט ולהתפשט ביחס לרוחב */
+  width: 25vw;
 }
 
   
@@ -143,34 +142,33 @@
     }
   
     .editor-actions {
-        display: flex;
-        gap: 10px; /* רווח בין הכפתורים */
-        margin-top: 10px;
-        flex-direction: row; /* כפתורים ליד אחד השני */
-        justify-content: center; /* ממרכז את הכפתורים */
-      }
-      
-  .save-button {
-    font-family: "Heebo";
-    font-size:1em
-  }
-  .send-button {
-    font-family: "Heebo";
-    font-size:1em
-  }
+      display: flex;
+      gap: 7vw;
+      margin-top: 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* מרכז גם בציר ה-X */
+    }
+    
   .closeImg{
     height:5vh;
     width:auto
   }
   .save-button{
-    font-size:1.2em;
+    font-size: 1.1em;
     font-family: "Heebo";
     font-weight: bold;
+    width: 55vw;
   }
   .send-button{
-    font-size:1.2em;
+    font-size: 1.1em;
     font-family: "Heebo";
     font-weight: bold;
+    width: 55vw;
+  }
+  .messages-icon{
+    height:8vh;
+    width:auto;
   }
   }
   
@@ -206,7 +204,7 @@
       gap: 12px;
     }
     .closeImg{
-      height:5vh;
+      height:10vh;
       width:auto
     }
    
@@ -244,6 +242,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 20px; /* מגדיל את המרווח בתחתית ה- .messages-list */
+
 }
 
 .message-button {
@@ -255,14 +255,15 @@
     .message-button {
       height:9vh;
       direction: rtl;
-      font-size: 18px;
+      font-size: 1.5em;
       padding: 12px 18px;
     }
   
     .message-editor {
       position: relative;
-      margin-top: 15vh;
+      margin-top: 20vh; /* מרווח בין ה- .messages-list ל- .message-editor */
       font-size: 1.5em;
+      direction: rtl;
     }
   
     .message-textarea {
@@ -270,20 +271,21 @@
     }
   
     .editor-actions {
-      gap: 2vw;
+     transform: translateX(-10%);
+      gap: 10vw;
     }
         
   .save-button {
     font-family: "Heebo";
     font-size:1em;
     color: white;
-    width:2vw;
+    width:30vw;
     background-color: coral;
   }
   .send-button {
     font-family: "Heebo";
     font-size:1em;
-    width:2vw;
+    width:30vw;
     color: white;
     background-color:deepskyblue;
 
@@ -300,12 +302,21 @@
     cursor: pointer;
   }
   .closeImg{
-    height:8vh;
-    width:auto
+    height:10vh;
+    width:auto;
+    z-index: 10000;
   }
   .closeImg:hover{
     cursor: pointer;
 
+  }
+  .editor-title{
+    font-family: "Heebo";
+    font-size: 1.2em;
+  }
+  .messages-icon{
+    height:10vh;
+    width:auto;
   }
 
   }

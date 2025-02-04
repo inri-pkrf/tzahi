@@ -226,7 +226,7 @@
   position: absolute;
   transform: translateX(50%);
   right: 50%;
-  margin-top: -22vh;
+  margin-top: -18vh;
   width: 90vw;
 }
 
@@ -258,7 +258,7 @@
 .skip {
   position: absolute;
   top: 10%;
-  left: 2%;
+  left: 10%;
   background-color: transparent;
   font-family: 'Assistant', sans-serif;
   font-size: 3em;
