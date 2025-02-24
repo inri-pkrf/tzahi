@@ -1,7 +1,7 @@
 const emergencyScenarios = [
     {
         id: 1,
-        color:"#ffa133",
+        color:"#30ba8e",
         situation: `שגרה`,
         description: "מצב של הכנה למלחמה או איומים ביטחוניים.",
         notes: [
