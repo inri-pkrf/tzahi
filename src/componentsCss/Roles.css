@@ -15,12 +15,12 @@
 }
 #buttons-container {
   position: relative;
-  margin-top: 1vh;
-  /* top: -4vh; */
+  margin-top: 7vh;
   width: 100vw;
   height: 37vh;
   border-radius: 50%;
-  display: flex;
+  display: flex
+;
   justify-content: center;
   align-items: center;
   right: 50%;
@@ -74,7 +74,13 @@
   
   /* Sixth button centered below all */
   .role-button:nth-child(6) {
-    top: 112%; /* Bottom alignment */
+    top: 113%; /* Bottom alignment */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .role-button:nth-child(7) {
+    top: 66%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -84,46 +90,34 @@
 
   .selected-icon{
     height: 6vh;
-    right: 50%;
-    position: absolute;
     transform: translateX(50%);
+    right: 50%;
+    margin-top: 4vh;
+    position: absolute;
   }
 
   .selected-name{
-    font-family: "Heebo";
-    color: #727272;
-    font-size: 1.3em;
+    font-family: "Karantina";
+    color: #595959;
+    font-size: 2em;
     position: absolute;
     right: 50%;
-    width: 33vw;
+    width: 50vw;
     transform: translateX(50%);
     text-align: center;
-    margin-top: 6vh;
+    margin-top: 0vh;
     font-weight: bold;
   }
-  .evacution-dis{
-    font-family: "Heebo";
-    font-size: 1.2em;
-    color: #323030;
-  }
+ 
 
   .scen-selected{
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    margin-top: 28vh;
+    margin-top: 3vh;
   }
 
-  #evacuation{
-    position: relative;
-    top: -4vh;
-    width: 100vw;
-    height: 37vh;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
 
   .next-btnev{
     background-color: #1bbfe5;
