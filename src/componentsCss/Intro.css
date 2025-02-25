@@ -34,7 +34,7 @@
   direction: rtl;
   POSITION: absolute;
   margin-top: -8vh;
-  width: 100vw;
+  width: 90vw;
 }
 
 #introduction-sub {
@@ -51,7 +51,7 @@
 
 #sub-title{
   font-family: 'Karantina', Arial;
-  font-size: 4em;
+  font-size: 3em;
   color: white;
   margin-bottom: -5vw;
   position: absolute;
@@ -109,7 +109,7 @@
   }
   #sub-title{
     font-family: 'Karantina', Arial;
-    font-size: 4em;
+    font-size: 3em;
     color: white;
     margin-bottom: -5vw;
     position: absolute;
@@ -221,7 +221,7 @@
 
 #sub-title{
   font-family: 'Karantina', Arial;
-  font-size: 8em;
+  font-size: 7em;
   color: white;
   position: absolute;
   transform: translateX(50%);

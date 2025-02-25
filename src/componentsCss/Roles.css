@@ -183,11 +183,13 @@
 }
 #buttons-container {
   position: relative;
+  right: 7vw;
   margin-top: 22vh;
   width: 80vw;
   height: 37vh;
   border-radius: 50%;
-  display: flex;
+  display: flex
+;
   justify-content: center;
   align-items: center;
 
@@ -208,40 +210,44 @@
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* צורת משושה */
 }
 
-  .role-button:nth-child(1) {
-    top: 9%; /* Positioning the first button towards the top */
-    left: 48%;
-  }
+.role-button:nth-child(1) {
+  top: -9%;
+  left: 67%;
+}   
   
   /* Second button to the left of the center */
   .role-button:nth-child(2) {
-    top: 55%; /* Positioning the button below the center one */
-    left:32%;
-  }
+    top: 70%;
+    left: 37%;
+}
   
   /* Third button to the right of the center */
   .role-button:nth-child(3) {
-    top: 55%; /* Same height as the second button */
-    right: 16%; /* Move it towards the right side */
-  }
-  
+    top: 68%;
+    right: 14%;
+}
   /* Fourth button below the second */
   .role-button:nth-child(4) {
-    top: 55%;
-    left: 1%;
-  }
+    top: 31%;
+    left: 22%;
+}
   
   /* Fifth button below the third */
   .role-button:nth-child(5) {
-    top: 9%; /* Same height as the fourth button */
-    right: -1%; /* Right alignment */
-  }
+    top: 30%;
+    right: -1%;
+}
   
   /* Sixth button centered below all */
   .role-button:nth-child(6) {
-    top: 9%;
-    left: 17%;
-  }
+    top: -8%;
+    left: 37%;
+}
+  
+.role-button:nth-child(7) {
+  top: 29%;
+  left: 52%;
+} 
   
   .role-button:hover {
     cursor: pointer;
@@ -252,7 +258,7 @@
   .selected-icon{
     position: absolute;
     height: 8vh;
-    right: 50%;
+    right: 5%;
     transform: translateX(50%);
     margin-top: -1vh;
     position: absolute;
@@ -260,14 +266,14 @@
 
   .selected-name{
     font-family: "Karantina";
-    color: #727272;
-    font-size: 7em;
+    color: #6a6f77;
+    font-size: 6em;
     position: absolute;
     width: 70vw;
     right: 50%;
     transform: translateX(50%);
     text-align: center;
-    margin-top: 5vh;
+    margin-top: -4vh;
   }
   .evacution-dis{
     font-family: "Heebo";

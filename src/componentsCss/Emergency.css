@@ -103,17 +103,17 @@
     }
     
     .button {
-        width: 100%; /* מתאים לרוחב העמודה */
+        width: 100%;
         height: 9vh;
         padding: 10px;
-        font-size: 2em;
+        font-size: 1.6em;
         font-family: "Heebo";
         font-weight: 600;
         color: white;
         border-radius: 30px;
         border: none;
         cursor: pointer;
-        position: relative; /* מאפשר מיקום יחסי עבור האייקון */
+        position: relative;
     }
     .button:hover {
         cursor: pointer;
@@ -127,15 +127,7 @@
         transform: translateY(-50%); /* מוודא שהאייקון במרכז האנכי */
     }
     
-    /* עיצוב הכפתור האחרון */
-    .button:last-child {
-        grid-column: 1; /* הכפתור יהיה בעמודה הראשונה */
-        justify-self: center; /* ממורכז בתוך העמודה */
-        right: 0%;
-        transform: translateX(50%); /* מוודא שהאייקון במרכז האנכי */
-
-    }
-    
+   
     
     
     

@@ -390,7 +390,7 @@ position: absolute;
   font-size: 5em;
   padding: 1vh;
   font-weight: 500;
-  margin-top: 30vh;
+  margin-top: 32vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -435,6 +435,7 @@ position: absolute;
 
 .navBtn{
   height: 6vh;
+  margin-top: 1vh;
   width: auto;
  }
  .navBtn:hover{
