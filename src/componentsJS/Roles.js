@@ -27,6 +27,17 @@ const Roles = ({ selectedScenario, onRoleSelect }) => {
           </button>
         ))}
       </div>
+      {selectedScenario.roles[7] && (
+        <button
+          className='specialRole-button'
+          style={{ backgroundColor: selectedScenario.roles[7].color }}
+          onClick={() => onRoleSelect(selectedScenario.roles[7])} // Call function on role button click
+        > 
+          צוות מיוחד&nbsp;{selectedScenario.roles[7].role}
+
+        </button>
+      )}
+
     </div>
   );
 };
