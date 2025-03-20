@@ -33,7 +33,7 @@ const Roles = ({ selectedScenario, onRoleSelect }) => {
           style={{ backgroundColor: selectedScenario.roles[7].color }}
           onClick={() => onRoleSelect(selectedScenario.roles[7])} // Call function on role button click
         > 
-          צוות מיוחד&nbsp;{selectedScenario.roles[7].role}
+          <b>צוות מיוחד</b> <br/>{selectedScenario.roles[7].role}
 
         </button>
       )}

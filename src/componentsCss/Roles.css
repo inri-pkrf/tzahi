@@ -165,15 +165,15 @@
   }
 
   .specialRole-button{
-    width: 25vw;
-  height: 35vw;
+    width: 35vw;
+  height: 32vw;
   border: none;
-  border-radius: 0% 0% 60% 0;
-  margin-top: -45vh;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* צורת משושה */
+  margin-top: -42vh;
   left: 0vw;
   position: absolute;
   font-family: "Heebo";
-  font-size: 1em;
+  font-size: 1.2em;
   color: white;
   }
 }

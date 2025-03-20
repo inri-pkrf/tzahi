@@ -64,8 +64,6 @@ const Combined = ({ selectedScenario, selectedRole }) => {
   return (
     <div id="combined-container">
       <div id="both-selected">
-        <p className="page-title">בחרת בסד"פ הבא:</p>
-        <p className="situation-description">{selectedScenario.description}</p>
         <div className="scenerio-chose">
           <h1 className="combined-title">{selectedScenario.situation}</h1>
           <img
@@ -80,6 +78,11 @@ const Combined = ({ selectedScenario, selectedRole }) => {
 
         {currentRole.role === "מידע לציבור" && currentRole.messages && (
           <button onClick={() => toggleViewState('showMessages')} className="messages-button">
+               <img
+                className="mail-icon"
+                src={`${process.env.PUBLIC_URL}/assets/media/mail.png`}
+        
+              />
             <span className="rotated-text">הודעות נצורות</span>
           </button>
         )}

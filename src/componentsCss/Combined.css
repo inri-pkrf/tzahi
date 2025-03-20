@@ -22,7 +22,7 @@
   color: #6a6f77;
   font-size: 3.2em;
   font-weight: 500;
-  margin-top: 15vh;
+  margin-top: 11vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -35,7 +35,7 @@
   font-size: 2.5em;
   padding: 1vh;
   font-weight: 500;
-  margin-top: 31vh;
+  margin-top: 21vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -139,6 +139,7 @@
   overflow-wrap: break-word;
   margin-right: 5vw;
   font-size: 1.2em;
+  font-family: 'HEEBO';
  }
 
  .tasks-title{
@@ -226,20 +227,23 @@ width: auto;
  .back{
   position: absolute;
   right: 6vw;
+  margin-top: 1vh;
+
  }
 
  .next{
   rotate: 180deg;
   left: 4vw;
   position: absolute;
+  margin-top: 1vh;
 
  }
  .navigation-buttons {
-  display: flex
-;
+  display: flex;
   justify-content: space-between;
-  margin-top: 32vh;
+  margin-top: 22vh;
   z-index: 1000;
+  
 }
 
 .nav-button-container {
@@ -263,12 +267,12 @@ position: absolute;
 
  .icon-sce{
   position: absolute;
-  margin-top: 10.5vh;
-  height: 5vh;
+  margin-top: 11.5vh;
+  height: 7vh;
   width: auto;
   transform: translateX(50%);
-  right: 50%;
-  padding-left: 5vw;
+  right: 36%;
+  padding-left: 11vw;
 }
  
 #evacution-selected {
@@ -322,7 +326,7 @@ position: absolute;
 }
 
 .next-black{
-  height: 4vh;
+  height: 3vh;
   padding: 2vw;
   width: auto;
 }
@@ -336,16 +340,22 @@ position: absolute;
 }
 
 .messages-button {
-  width: 25vw;
+  width: 60vw;
   height: 25vw;
   border: none;
-  border-radius: 0% 0% 60% 0;
   margin-top: 0vh;
-  left: 0vw;
+  text-decoration: underline;
+  right: 2vw;
   position: absolute;
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0);
   font-family: "Heebo";
-  font-size: 1.2em;
+  font-size: 1.3em;
+}
+.mail-icon{
+  position: absolute;
+  height: 10vw;
+  right:2vw;
+ 
 }
 
 
