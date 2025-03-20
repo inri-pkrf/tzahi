@@ -141,10 +141,11 @@
 .stateTitle{
     font-family: "Heebo";
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: center;
     color: rgb(88 88 88);;
-    margin-top: 8.5vh;
+    margin-top: 10vh;
+    line-height: 1.2;
 }
 
 

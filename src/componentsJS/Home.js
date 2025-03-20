@@ -21,7 +21,8 @@ const Home = () => {
       <br></br> לשעת חירום לצח"י 
  </h1>
  <button className="pdf-go" onClick={() => navigate("/tzahi/PdfFiles")}>
-  עזרים מודפסים
+  <img className='download-icon'  src={`${process.env.PUBLIC_URL}/assets/media/download.png`}/>
+  הורדת עזרים להדפסה
 </button>
 
  <p className="info1">
@@ -60,11 +61,10 @@ src={`${process.env.PUBLIC_URL}/assets/media/comunityLogo.svg`}
 className='comunity-logo'
  />
 <img
-src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.png`}
+src={`${process.env.PUBLIC_URL}/assets/media/collegeLogo.jpg`}
 className='collage-logo'
  />
  <p className='credits'>התוכן מתבסס על תיק צוות חירום וחוסן יישובי (צח"י) שהתפרסם על-ידי השירות לעבודה קהילתית במשרד העבודה הרווחה והשירותים החברתיים (2018) כתיבה ועריכה: משה ברנדר ואבי סנדר</p>
- <hr className="dotted-line2" />
 
  </div>
 
@@ -79,17 +79,20 @@ className='collage-logo'
   לשיעור הדיגיטלי
 </button>
    </div>
-   <p className='feedback' >
-    <br /> יש הערות? תוספות? שינוים?נשמח לשמוע איף אפשר להשתפר דברו איתנו
-          <br /> 
-          <a 
-            id='linkMenuGrey' 
-            href="https://docs.google.com/forms/d/e/1FAIpQLScrH0xIU_TVN4wRSC5Cq8LkvU8dzyWMbqCc4Uduv3ygyYEWMw/viewform?usp=sf_link" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            בקישור הבא
-          </a>
+   <p className='feedback'>
+  יש הערות? תוספות? שינויים?  
+  <br />
+  נשמח לשמוע איך אפשר להשתפר.  
+  <br  />
+  דברו איתנו  &nbsp;
+  <a 
+    id='linkMenuGrey' 
+    href="https://docs.google.com/forms/d/e/1FAIpQLScrH0xIU_TVN4wRSC5Cq8LkvU8dzyWMbqCc4Uduv3ygyYEWMw/viewform?usp=sf_link" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    בקישור הבא
+  </a>.
 </p>
   <a className="linkCredits" onClick={goToCredits}>
   @קרדיטים

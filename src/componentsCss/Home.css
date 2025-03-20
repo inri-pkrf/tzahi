@@ -55,6 +55,30 @@ position: fixed;
     margin-top: 52vh;
     box-shadow: 9px 10px 20px #505050, -3px -3px 5px rgba(255, 255, 255, 0.2);
 }
+.pdf-go{
+    background-color: transparent;
+    border: none;
+    border-radius: 55px;
+    width: 75vw;
+    height: 10vh;
+    position: absolute;
+    font-size: 1.3em;
+    font-family: "Heebo";
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000000;
+    padding: 1.5vw;
+    right: 55%;
+    transform: translateX(50%);
+    margin-top: 66vh;
+} 
+.download-icon{
+    position: absolute;
+    height: 5vh;
+    right: 3%;
+    padding-left: 5vw;
+    width: auto;
+}
 
 
 
@@ -84,7 +108,7 @@ position: fixed;
     position: absolute;
     height: 15vh;
     width: auto;
-    margin-top: 21vh;
+    margin-top: 34vh;
     right: 50%;
     transform: translateX(50%);
 }
@@ -93,51 +117,50 @@ position: fixed;
 
 .socity-logo{
     position: absolute;
-    height:5vh;
+    height: 6.5vh;
     width: auto;
-    right:7vw;
-    margin-top: 40vh;
+    right: 1vw;
+    margin-top: 20vh;
 }
 
 .pakar-logo{
     position: absolute;
-    height: 5vh;
+    height: 7vh;
     width: auto;
-    right: 49vw;
-    margin-top: 40vh;
+    right: 46vw;
+    margin-top: 20vh;
 }
 .pakar-grey{
     position: absolute;
-    height:5vh;
+    height:7vh;
     width: auto;
-    right:63vw;
-    margin-top: 40vh;
+    right:74vw;
+    margin-top: 20vh;
 }
 
 .comunity-logo{
     position: absolute;
-    height:5vh;
+    height: 7vh;
     width: auto;
-    right:76vw;
-    margin-top: 40vh;
+    right: 86vw;
+    margin-top: 20vh;
 }
 
 .collage-logo{
     position: absolute;
-    height: 15vh;
+    height: 7vh;
     width: auto;
-    margin-top: 50vh;
-    right: 50%;
-    transform: translateX(50%);
+    margin-top: 20vh;
+    right: 61%;
 }
 
 .white-div{
     position: absolute;
     width: 100vw;
-    height: 30vh;
+    height: 11vh;
     background-color: rgba(255, 255, 255, 0.925);
     z-index: 7;
-    margin-top: 40vh;
+    margin-top: 20vh;
     opacity: 0.7;
 }
 
@@ -149,7 +172,7 @@ position: fixed;
     transform: translateX(50%);
     width: 90vw;
     font-size: 1em;
-    margin-top: 70vh;
+    margin-top: 55vh;
     text-align: center;
 }
 
@@ -158,7 +181,7 @@ position: fixed;
     width: 100vw;
     height: 30vh;
     background-color: rgb(238, 238, 238);
-    margin-top: 185vh;
+    margin-top: 155vh;
     right: 50%;
     transform: translateX(50%);
     direction: rtl;
@@ -217,14 +240,13 @@ hr.dotted-line2{
 
 .feedback{
     position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    color: rgb(86, 85, 85);
-    margin-top: 219vh;
-    margin-bottom: 20vh;
-    width: 93vw;
-    font-size: 1.3em;
-    text-align: center;
+        right: 50%;
+        transform: translateX(50%);
+        color: rgb(86, 85, 85);
+        margin-top: 190vh;
+        width: 93vw;
+        font-size: 1.3em;
+        text-align: center;
 } 
 
 .footer{
@@ -234,7 +256,7 @@ hr.dotted-line2{
     transform: translateX(50%);
     background-color: rgba(86, 85, 85, 0);
     font-weight: bold;
-    margin-top: 238vh;
+    margin-top: 213vh;
     margin-bottom: 22vh;
     width: 90vw;
     font-size: 1.1em;
@@ -247,7 +269,7 @@ hr.dotted-line2{
 
 .linkCredits{
     position: absolute;
-    margin-top: 240vh;
+    margin-top: 210vh;
     text-decoration: underline;
     font-family: "Heebo";
     right: 50%;
@@ -261,29 +283,7 @@ hr.dotted-line2{
 
     z-index: 100;
 }
-.pdf-go{
-    background-color:#f2903f;
-    border: none;
-    border-radius: 55px;
-    width: 75vw;
-    height: 10vh;
-    position: absolute;
-    font-size: 1.6em;
-    font-family: "Heebo";
-    font-weight: bold;
-    color: #ffffff;
-    padding: 1.5vw;
-    right: 50%;
-    transform: translateX(50%);
-    margin-top: 66vh;
-    box-shadow: 9px 10px 20px #505050, -3px -3px 5px rgba(255, 255, 255, 0.2);
-} 
-.download-icon{
-position: absolute;
-height:5vh;
-width: auto;
 
-}
 
 }
 

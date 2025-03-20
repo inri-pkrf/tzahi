@@ -5,7 +5,6 @@ import "../componentsCss/Emergency.css"
 const Emergency = ({ onScenarioSelect }) => {
   return (
     <div id="emergency-container">
-      <p className="instruction">יש ללחוץ על הכפתורים על מנת לבחור מצב חירום</p>
       <div className="buttons-sec">
       {data.map((scenario) => (
         <button

@@ -49,7 +49,7 @@ const EmergencyRolls = () => {
 
   return (
     <div className='page-container'>
-      <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י בכדי לצפות בסדר פעולות המתאים</h1>
+      <h1 className='title'>יש לבחור מצב חירום ותפקיד בצח"י כדי לצפות בסדר פעולות המתאים</h1>
       <div className='states'>
         <div
           className={isEmergencyDisplayed ? 'state1-chosen' : selectedScenario ? 'state1 state-back' : 'state1 '}
@@ -64,7 +64,7 @@ const EmergencyRolls = () => {
           onClick={() => setSelectedRole(null)} // מאפיינת תפקיד
         >
           <img className='tzahiicon' src={`${process.env.PUBLIC_URL}/assets/media/tzahiGrey.svg`} alt="Tzahi icon" />
-          <p className="stateTitle titleTwo">בחירת <br /> תפקיד</p>
+          <p className="stateTitle titleTwo">בחירת <br/> תפקיד</p>
         </div>        
         <div
           className={(isCombinedDisplayed || isEvacuationDisplayed) ? 'state3-chosen' : selectedRole ? 'state3 state-back' : 'state3 fade'}
