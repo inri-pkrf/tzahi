@@ -31,6 +31,9 @@ const PdfFiles = () => {
   return (
     <div className="homepage-container">
       <h1 className="pdf-title">עזרים מודפסים</h1>
+      <p className='intro-pdf'>כאן ניתן להוריד תבניות מוכנות שיסייעו לניהול מיטבי של מצבי חירום
+        <b> הדפיסו מראש והתאמנו בשגרה</b>
+      </p>
 
       <div className="pdf-list">
         {pdfFiles.map((file, index) => (

@@ -36,7 +36,7 @@ function Header() {
       {/* לוגו נוסף שמופיע רק בדסקטופ */}
       {!isMobile && (
         <img
-          className="tzahi-white"
+          className="tzahi-white-nav"
           src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
           alt="Decorative Logo"
         />

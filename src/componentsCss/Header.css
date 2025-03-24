@@ -101,6 +101,13 @@
     color:white;
 
   }
+  .tzahi-white-nav{
+    height: 8vh;
+    width: auto;
+    position: fixed;
+    top: 3vh;
+    left: 5vw;
+  }
  }
 
   
@@ -152,5 +159,12 @@
       height: auto;
       z-index:20; 
       
+    }
+    .tzahi-white-nav{
+      height: 8vh;
+      width: auto;
+      position: fixed;
+      top: 3vh;
+      left: 5vw;
     }
   }
