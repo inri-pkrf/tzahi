@@ -27,7 +27,10 @@ function Hamburger() {
   return (
     <div>
       {/* התמונה משתנה לפי מצב ההמבורגר */}
+      {!isOpen && <p className='menu-dis'>תפריט</p>}
+
       {!isOpen ? (
+        
         <img
           className="tzahi-white"
           src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}

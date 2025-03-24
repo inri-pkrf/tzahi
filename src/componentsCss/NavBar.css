@@ -1,0 +1,79 @@
+@media screen and (min-width: 769px) and (max-width: 1024px)  {
+    
+.nav-links {
+    position: absolute;
+    right: 19vw;
+    margin-top: 5vh;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    direction: rtl;
+    font-family:"Heebo";
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    font-size: 1.5em;
+    color:rgb(102, 102, 102);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li:hover {
+    text-decoration: underline;
+  }
+  
+  /* קו מפריד */
+  .divider {
+    color: #999;
+    font-size: 18px;
+  }
+  
+  /* לינק פעיל מודגש */
+  .active-link {
+    font-weight: bold;
+ 
+  }
+}
+
+
+
+@media screen and (min-width: 1025px) {
+
+.nav-links {
+    position: absolute;
+    right: 19vw;
+    margin-top: 5vh;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    direction: rtl;
+    font-family:"Heebo";
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    font-size: 1.2em;
+    color:rgb(102, 102, 102);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li:hover {
+    text-decoration: underline;
+  }
+  
+  /* קו מפריד */
+  .divider {
+    color: #999;
+    font-size: 18px;
+  }
+  
+  /* לינק פעיל מודגש */
+  .active-link {
+    font-weight: bold;
+ 
+  }
+}

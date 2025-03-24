@@ -115,12 +115,12 @@
   
   .back-homeNav{
     height: 8vh;
-    width:35vw;
+    width: 20vw;
     top: 3vh;
     right: 5vw;
     position: fixed;
     background-color: transparent;
-    border: none; 
+    border: none;
   }
   .back-homeNav:hover{
    cursor: pointer;
