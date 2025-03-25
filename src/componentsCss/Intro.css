@@ -198,7 +198,7 @@
 #welcome-text-intro{
   color: white;
   font-family: "karantina", Arial;
-  font-size: 8em;
+  font-size: 6em;
   transform: translateX(50%);
   right: 50%;
   direction: rtl;
@@ -209,11 +209,11 @@
 
 #introduction-sub {
   font-family: 'Heebo', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
   position: absolute;
   direction: rtl;
-  margin-top: 10vh;
+  margin-top: 14vh;
   width: 70vw;
   right: 50%;
   transform: translateX(50%);
@@ -221,7 +221,7 @@
 
 #sub-title{
   font-family: 'Karantina', Arial;
-  font-size: 7em;
+  font-size: 6em;
   color: white;
   position: absolute;
   transform: translateX(50%);
@@ -243,7 +243,6 @@
 }
 .hpArrow-intro:hover {
   cursor: pointer;
-
 }
 
 .video-intro {

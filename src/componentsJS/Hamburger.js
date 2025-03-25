@@ -2,98 +2,80 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../componentsCss/Hamburger.css';
 
-function Hamburger() {
+const Hamburger = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [visitedPages, setVisitedPages] = useState(() => {
+    return JSON.parse(sessionStorage.getItem('visitedPages')) || [];
+  });
   const [isOpen, setIsOpen] = useState(false);
 
-  // Effect to control the menu open state based on the current path
+  const subjects = [
+    { name: 'עמוד הבית', path: '/tzahi/home' },
+    { name: 'בחירת סד"פ לחירום', path: '/tzahi/EmergencyRolls' },
+    { name: 'הורדת עזרים מודפסים', path: '/tzahi/PdfFiles' },
+    { name: 'שיעור דיגיטלי', path: 'https://sites.google.com/view/inri-tzahi/home', external: true },
+  ];
+
   useEffect(() => {
-    if (location.pathname === '/tzahi/hamburger') {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
+    if (!visitedPages.includes(location.pathname)) {
+      const updatedVisitedPages = [...visitedPages, location.pathname];
+      setVisitedPages(updatedVisitedPages);
+      sessionStorage.setItem('visitedPages', JSON.stringify(updatedVisitedPages));
     }
-  }, [location]);
+  }, [location.pathname]);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen); // Toggle the menu state
-  };
+  const handleClick = () => setIsOpen(!isOpen);
 
-  const handleClose = () => {
-    setIsOpen(false); // Close the menu immediately
+  const handleMenuClick = (path, external) => {
+    setIsOpen(false);
+    if (external) {
+      window.open(path, '_blank', 'noopener,noreferrer');
+    } else {
+      navigate(path);
+    }
   };
 
   return (
     <div>
-      {/* התמונה משתנה לפי מצב ההמבורגר */}
-      {!isOpen && <p className='menu-dis'>תפריט</p>}
+      {/* כפתור המבורגר */}
+      <div className="hamburger-icon" onClick={handleClick} style={{ cursor: 'pointer' }}>
+        <div className={`hamburger-line ${isOpen ? 'open' : ''}`} />
+        <div className={`hamburger-line ${isOpen ? 'open' : ''}`} />
+        <div className={`hamburger-line ${isOpen ? 'open' : ''}`} />
+      </div>
 
-      {!isOpen ? (
-        
-        <img
-          className="tzahi-white"
-          src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
-          alt="Open Menu"
-          style={{ cursor: 'pointer' }}
-          onClick={handleToggle}
-        />
-      ) : (
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/media/closeBtn.png`}
-          alt="Close"
-          className="closeBtn"
-          onClick={handleClose}
-        />
-      )}
-
-      {/* תפריט ההמבורגר */}
+      {/* תפריט נפתח */}
       <div className={`menu ${isOpen ? 'open' : ''}`}>
-        {isOpen && (
-          <>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`}
-              alt="Decorative"
-              className="whiteLogoHam"
-            />
-            <h1 className="menu-title">עזר סד"פ לצח"י</h1>
-            <ul className="menu-list">
-              <li onClick={() => navigate('/tzahi/home')}>עמוד הבית</li>
-              <div className='lineMenu'></div>
-              <li onClick={() => navigate('/tzahi/EmergencyRolls')}>בחירת סדר פעולות
+        <img src={`${process.env.PUBLIC_URL}/assets/media/whileLogo.svg`} alt="Decorative" className="whiteLogoHam" />
+        <h1 className="menu-title">סד"פ לצח"י</h1>
+        <ul className="menu-list">
+          {subjects.map((subject, index) => (
+            <React.Fragment key={index}>
+              <li
+                onClick={() => handleMenuClick(subject.path, subject.external)}
+                className={`menu-item ${visitedPages.includes(subject.path) ? 'active' : ''}`}
+              >
+                {subject.name}
               </li>
-              <div className='lineMenu'></div>
-              <li onClick={() => window.open('https://sites.google.com/view/inri-tzahi/home', '_blank')}>
-                שיעור דיגיטלי לצח"י
-              </li>
-              <div className='lineMenu'></div>
-              <li onClick={() => navigate('/tzahi/PdfFiles')}>
-                עזרים מודפסים
-              </li>
-              <div className='lineMenu'></div>
-            </ul>
-            <div className='mashov-menu'>
-              <div className='mashovTextMenu'>
-                <br /> יש הערות על הממשק? יש מחמאות? מלאו את השאלון וצרו איתנו קשר
-                <br />
-                <a
-                  id='linkMenu'
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScrH0xIU_TVN4wRSC5Cq8LkvU8dzyWMbqCc4Uduv3ygyYEWMw/viewform?usp=sf_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  בקישור הבא
-                </a>
-                <a className="linkCreditsWhite" onClick={() => navigate('/tzahi/Credits')}>
-                  @קרדיטים
-                </a>
-              </div>
-            </div>
-          </>
-        )}
+              {index < subjects.length - 1 && <div className="lineMenu"></div>}
+            </React.Fragment>
+          ))}
+        </ul>
+        
+        {/* משוב */}
+        <div className="mashov-menu">
+          <div className="mashovTextMenu">
+            <br /> יש הערות על הממשק? יש מחמאות? מלאו את השאלון וצרו איתנו קשר
+            <br />
+            <a id="linkMenu" href="https://docs.google.com/forms/d/1poHLEiW0JkLQNmY9hKIfEqI4srthrLgwr2sHugtZea0/edit" target="_blank" rel="noopener noreferrer">
+              בקישור הבא
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Hamburger;

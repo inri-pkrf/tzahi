@@ -589,26 +589,27 @@ hr.dotted-line2{
 @media screen and (min-width: 1025px) {
     .home-title{
         font-family: "karantina";
-        font-size: 8em;
+        font-size: 7em;
         font-weight: 400;
         position: absolute;
         right: 50%;
         transform: translateX(50%);
         width: 90vw;
-        margin-top: 13vh;
+        margin-top: 10vh;
         text-align: center;
     
     }
     
     .info1{
         font-family: "Heebo";
-        font-size: 2em;
+        font-size: 1.8em;
         position: absolute;
         right: 50%;
         transform: translateX(50%);
         width: 80vw;
-        margin-top: 48vh;
+        margin-top: 45vh;
         text-align: center;
+        direction: rtl;
     
     }
     .home-button {
@@ -618,7 +619,7 @@ hr.dotted-line2{
         width: 30vw;
         height: 10vh;
         position: absolute;
-        font-size: 1.9em;
+        font-size: 1.5em;
         font-family: "Heebo";
         font-weight: bold;
         color: #ffffff;
@@ -626,7 +627,7 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         /* transform: translateX(50%); */
-        margin-top: 65vh;
+        margin-top: 68vh;
         box-shadow: 9px 10px 20px #323030, -3px -3px 5px rgba(255, 255, 255, 0.2);
     }
     .home-button:hover {
@@ -634,27 +635,30 @@ hr.dotted-line2{
         cursor: pointer;
        
     }
-    .pdf-go{
+    .pdf-go {
         background-color: transparent;
+        position: absolute;
         border: none;
         border-radius: 55px;
         width: 75vw;
         height: 10vh;
-        position: absolute;
-        font-size: 2.3em;
+        font-size: 2em;
         font-family: "Heebo";
         font-weight: bold;
         text-decoration: underline;
         color: #000000;
-        padding: 1.5vw;
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        gap: 10px; 
+        flex-direction: row-reverse; /* הופך את הסדר כך שהאייקון מימין */
+        margin-top: 80vh;
         right: 50%;
         transform: translateX(50%);
-        margin-top: 78vh;
-    } 
-    .download-icon{
-        position: absolute;
-        height: 7vh;
-        right: 26%;
+    }
+    
+    .download-icon {
+        height: 1.2em; /* התאמת גודל האייקון יחסית לטקסט */
         width: auto;
     }
     
@@ -678,7 +682,7 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         width: 90vw;
-        font-size: 2em;
+        font-size: 1.8em;
         font-family: 'HEEBO';
         text-align: center;
         margin-top: 21vh;
@@ -753,8 +757,8 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         width: 80vw;
-        font-size: 1.7em;
-        margin-top: 83vh;
+        font-size: 1.3em;
+        margin-top: 78vh;
         text-align: center;
     }
     
@@ -763,7 +767,7 @@ hr.dotted-line2{
         width: 100vw;
         height: 30vh;
         background-color: rgb(238, 238, 238);
-        margin-top: 180vh;
+        margin-top: 170vh;
         right: 50%;
         transform: translateX(50%);
         direction: rtl;
@@ -808,14 +812,13 @@ hr.dotted-line2{
         width: 25vw;
         height: 8vh;
         position: absolute;
-        font-size: 2.3em;
+        font-size: 2em;
         font-family: "Heebo";
         font-weight: bold;
         color: rgb(255, 255, 255);
-        padding: 0.8vw;
         right: 50%;
         transform: translateX(50%);
-        margin-top: 18vh;
+        margin-top: 20vh;
         background-color: rgb(56 179 140);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
     }
@@ -829,7 +832,7 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         color: rgb(86, 85, 85);
-        margin-top: 213vh;
+        margin-top: 223vh;
         margin-bottom: 20vh;
         width: 96vw;
         direction: rtl;
@@ -865,7 +868,7 @@ hr.dotted-line2{
     
     .linkCredits{
         position: absolute;
-        margin-top: 236vh;
+        margin-top: 246vh;
         text-decoration: underline;
         font-family: "Heebo";
         right: 50%;
