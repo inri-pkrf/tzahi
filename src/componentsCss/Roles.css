@@ -476,7 +476,7 @@
   line-height: 10vh; /* ממרכז את הטקסט בגובה */
   font-family: "Heebo";
   font-weight: 600;
-  font-size: 1.4em; /* גודל גופן גדול יותר */
+  font-size: 1.2em; /* גודל גופן גדול יותר */
   border: none;
   cursor: pointer;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* צורת משושה */
