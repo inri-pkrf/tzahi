@@ -110,7 +110,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
           </div>
         </div>
      
-
+{/* 
         <div className="noted">
           <h2 className="notes-title" onClick={() => toggleViewState('showNotes')}>
             דגשים
@@ -127,7 +127,7 @@ const Combined = ({ selectedScenario, selectedRole }) => {
               ))}
             </ul>
           )}
-        </div>
+        </div> */}
 
         {Object.entries(tasksByPhases).map(([phase, phaseTasks], phaseIndex) => (
           <div key={phaseIndex} className="phase-container">

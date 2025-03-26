@@ -17,17 +17,32 @@
 }
 
 
-.combined-title{
+.scenerio-chose {
+  position: absolute;
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+  width: 100vw;
+  right: 50%;
+  transform: translateX(50%);
+
+}
+
+.combined-title {
   font-family: "Karantina";
   color: #6a6f77;
   font-size: 3.2em;
   font-weight: 500;
-  margin-top: 11vh;
-  position: absolute;
-  width: 100vw;
   text-align: center;
-  right: 50%;
-  transform: translateX(50%);
+  white-space: nowrap;
+}
+
+.icon-sce {
+  height: 7vh;
+  width: auto;
+  margin-left: 1vw; /* רווח קטן בין הכותרת לאייקון */
 }
 .combined-role{
   font-family: "Karantina";
@@ -35,7 +50,7 @@
   font-size: 2.5em;
   padding: 1vh;
   font-weight: 500;
-  margin-top: 21vh;
+  margin-top: 18vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -43,21 +58,6 @@
   height: 7vh;
   transform: translateX(50%);
 }
-
-.page-title{
-       margin-top: 5vh;
-    position: absolute;
-    font-family: "Heebo";
-    direction: rtl;
-    font-size: 1.2em;
-    color: #595959;
-    font-weight: 700;
-    width: 100vw;
-    margin-bottom: 4vh;
-
-}
-
-
 
 .situation-discription{
     font-family: "Heebo";
@@ -67,10 +67,62 @@
     color:black
 }
 
+.navBtn{
+  height: 4vh;
+  width: auto;
+ }
+
+ .back{
+  position: absolute;
+  right: 6vw;
+  margin-top: 1vh;
+
+ }
+
+ .next{
+  rotate: 180deg;
+  left: 4vw;
+  position: absolute;
+  margin-top: 1vh;
+
+ }
+ .navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18vh;
+  z-index: 1000;
+  
+}
+
+.nav-button-container {
+  text-align: center; /* Center the text under the button */
+}
+
+.nav-button-text {
+position: absolute; 
+ margin-top:5vh; 
+ color: white;
+  font-size:0.7em; 
+}
+.next-txt{
+  position: absolute; 
+  left: 2vw;
+}
+.back-txt{
+  position: absolute; 
+  right: 2vw;
+}
+
+
+.phase-container{
+  position:relative;
+  top:11vh;
+
+}
 .tasks-list {
   list-style-type: none; /* מסיר את הסימונים המובנים של רשימה */
   padding: 0; /* מסיר ריפוד */
-  margin: 0; /* מסיר רווחים */
+  margin-top: 0; /* מסיר רווחים */
   text-align: right; /* ממקם את כל התוכן לימין */
 }
 
@@ -214,66 +266,18 @@ width: auto;
  }
 
  .buffer{
-    width: 100vw;
-    height: 10vh;
-    background-color: #00000000;
- }
-
- .navBtn{
-  height: 4vh;
-  width: auto;
- }
-
- .back{
-  position: absolute;
-  right: 6vw;
-  margin-top: 1vh;
+  width: 100vw;
+  height: 14vh;
+  background-color: #e6e2e2;
+  position: relative;
+  top: 18vh;
+  margin-bottom: 5vh;
 
  }
 
- .next{
-  rotate: 180deg;
-  left: 4vw;
-  position: absolute;
-  margin-top: 1vh;
+ 
 
- }
- .navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 22vh;
-  z-index: 1000;
-  
-}
 
-.nav-button-container {
-  text-align: center; /* Center the text under the button */
-}
-
-.nav-button-text {
-position: absolute; 
- margin-top:5vh; 
- color: white;
-  font-size:0.7em; 
-}
-.next-txt{
-  position: absolute; 
-  left: 2vw;
-}
-.back-txt{
-  position: absolute; 
-  right: 2vw;
-}
-
- .icon-sce{
-  position: absolute;
-  margin-top: 11.5vh;
-  height: 7vh;
-  width: auto;
-  transform: translateX(50%);
-  right: 36%;
-  padding-left: 11vw;
-}
  
 #evacution-selected {
   display: flex;
@@ -343,7 +347,7 @@ position: absolute;
   width: 60vw;
   height: 25vw;
   border: none;
-  margin-top: 0vh;
+  margin-top: -2vh;
   text-decoration: underline;
   right: 2vw;
   position: absolute;
@@ -827,8 +831,8 @@ position: absolute;
 
 .icon-sce{
   position: absolute;
-  margin-top: 1vh;
-  height: 7vh;
+  margin-top: -2vh;
+  height: 10vh;
   width: auto;
   transform: translateX(50%);
   right: 50%;
@@ -884,6 +888,11 @@ position: absolute;
   right: 9vw;
 }
 
+.phase-container{
+  position:relative;
+  top:9vh;
+
+}
 
  
 
@@ -962,12 +971,12 @@ position: absolute;
   margin-right: 5vw;
   text-align: right;
   direction: rtl;
-  font-size: 1.5em;
+  font-size: 1.2em;
  }
 
  .tasks-title{
   font-family: "Heebo";
-  font-size: 2em;
+  font-size: 1.8em;
   color: black;
   margin-top: 10vh;
   direction: rtl;
@@ -992,7 +1001,7 @@ position: absolute;
 
 .sub-title {
   font-family: "Heebo";
-  font-size: 2em;
+  font-size: 1.8em;
   color: black;
   margin-top: 4vh;
   text-align: right;
@@ -1000,10 +1009,15 @@ position: absolute;
   padding-right: 5%;
 }
 
- .buffer{
-    width: 100vw;
-    height: 10vh;
-    background-color: #00000000;
+ 
+.buffer{
+  width: 100vw;
+  height: 14vh;
+  background-color: #e6e2e2;
+  position: relative;
+  top: 18vh;
+  margin-bottom: 5vh;
+
  }
 
 #evacution-selected {
@@ -1068,7 +1082,7 @@ position: absolute;
   margin-top: 2vh; /* רווח קטן בין הכותרת לרשימה */
   padding-left: 20px;
   text-align: right;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: "Heebo";
 }
 
@@ -1146,7 +1160,7 @@ position: absolute;
   margin-right: auto;
   width: fit-content;
   cursor: pointer;
-  right: 60vw;
+  right: 70vw;
 
 
 } 
@@ -1157,5 +1171,6 @@ position: absolute;
   margin-left: 1vw;
   
   }
+
 
 }

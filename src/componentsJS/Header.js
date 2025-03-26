@@ -26,14 +26,26 @@ function Header() {
         className="App-logo"
         alt="logo"
       />
+      {isMobile &&(
+        <div>
+        <span className="divider-header">|</span>
 
-      {/* לחצן חזרה לעמוד הבית */}
+        <img
+        src={`${process.env.PUBLIC_URL}/assets/media/tzahiLogo1.jpg`}
+        className="tzahi-logo"
+        alt="logo"
+        /> 
+        </div>
+
+      )}
+     
+      
+
       <button
         className="back-homeNav"
         onClick={() => navigate('/tzahi/home')} 
       ></button>
 
-      {/* לוגו נוסף שמופיע רק בדסקטופ */}
       {!isMobile && (
         <img
           className="tzahi-white-nav"
@@ -42,7 +54,6 @@ function Header() {
         />
       )}
 
-      {/* תמונה דקורטיבית */}
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/orange.png`}
         alt="Decorative"
