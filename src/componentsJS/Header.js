@@ -26,7 +26,7 @@ function Header() {
         className="App-logo"
         alt="logo"
       />
-      {isMobile &&(
+      {/* {isMobile &&(
         <div>
         <span className="divider-header">|</span>
 
@@ -38,7 +38,7 @@ function Header() {
         </div>
 
       )}
-     
+      */}
       
 
       <button
