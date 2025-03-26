@@ -29,13 +29,14 @@ position: fixed;
 
 .info1{
     font-family: "Heebo";
-    font-size: 1.3em;
+    font-size: 1.25em;
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    width: 90vw;
+    width: 92vw;
     margin-top: 32vh;
     text-align: center;
+    direction: rtl;
 
 }
 .home-button {
@@ -52,7 +53,7 @@ position: fixed;
     padding: 1.5vw;
     right: 50%;
     transform: translateX(50%);
-    margin-top: 52vh;
+    margin-top: 55vh;
     box-shadow: 9px 10px 20px #505050, -3px -3px 5px rgba(255, 255, 255, 0.2);
 }
 .pdf-go {
@@ -60,9 +61,9 @@ position: fixed;
     position: absolute;
     border: none;
     border-radius: 55px;
-    width: 75vw;
+    width: 80vw;
     height: 10vh;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-family: "Heebo";
     font-weight: bold;
     text-decoration: underline;
