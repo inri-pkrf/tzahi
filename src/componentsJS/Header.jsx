@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../componentsCss/Header.css';
-import Hamburger from '../componentsJS/Hamburger'; 
-import NavBar from '../componentsJS/NavBar'; 
+import Hamburger from './Hamburger'; 
+import NavBar from './NavBar'; 
 
 function Header() {
   const navigate = useNavigate();
