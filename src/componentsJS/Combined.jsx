@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Messages from './Messages.js';
+import Messages from './Messages.jsx';
 import '../componentsCss/Combined.css';
 
 const Combined = ({ selectedScenario, selectedRole }) => {
