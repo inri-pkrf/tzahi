@@ -594,7 +594,7 @@ hr.dotted-line2{
 @media screen and (min-width: 1025px) {
     .home-title{
         font-family: "karantina";
-        font-size: 7em;
+        font-size: 6.5em;
         font-weight: 400;
         position: absolute;
         right: 50%;
@@ -624,7 +624,7 @@ hr.dotted-line2{
         width: 40vw;
         height: 10vh;
         position: absolute;
-        font-size: 1.4em;
+        font-size: 1.6em;
         font-family: "Heebo";
         font-weight: bold;
         color: #ffffff;
@@ -656,12 +656,14 @@ hr.dotted-line2{
         justify-content: center;  
         gap: 10px; 
         flex-direction: row-reverse; /* הופך את הסדר כך שהאייקון מימין */
-        margin-top: 80vh;
+        margin-top: 85vh;
         right: 50%;
         transform: translateX(50%);
+        z-index: 10000;
     }
     .pdf-go:hover{
         cursor: pointer;
+        color: #1e1e69;
     }
     
     .download-icon {
@@ -771,10 +773,10 @@ hr.dotted-line2{
     
     .tzahi-div{
         position: absolute;
-        width: 100vw;
-        height: 30vh;
+        width: 94vw;
+        height: 35vh;
         background-color: rgb(238, 238, 238);
-        margin-top: 170vh;
+        margin-top: 172vh;
         right: 50%;
         transform: translateX(50%);
         direction: rtl;
@@ -797,10 +799,10 @@ hr.dotted-line2{
     hr.dotted-line{
         border-top: 4px dotted #6d6d6d;
         position: absolute;
-        margin-top: 15vh;
+        margin-top: 19vh;
         right: 50%;
         transform: translateX(50%);
-        width: 84vw;
+        width: 87vw;
     
     }
     hr.dotted-line2{
@@ -825,9 +827,9 @@ hr.dotted-line2{
         color: rgb(255, 255, 255);
         right: 50%;
         transform: translateX(50%);
-        margin-top: 20vh;
+        margin-top: 24vh;
         background-color: rgb(56 179 140);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     }
     .tzahi-button:hover {
         background-color: rgb(42, 135, 105);

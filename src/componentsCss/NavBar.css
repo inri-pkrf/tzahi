@@ -33,6 +33,8 @@
   /* לינק פעיל מודגש */
   .active-link {
     font-weight: bold;
+    font-size: 1.6em;
+
  
   }
 }
@@ -51,12 +53,13 @@
     gap: 10px;
     padding: 0;
     direction: rtl;
+    font-size: 1.3em;
+
     font-family:"Heebo";
   }
   
   .nav-links li {
     cursor: pointer;
-    font-size: 1.2em;
     color:rgb(102, 102, 102);
     transition: color 0.3s ease;
   }
@@ -74,6 +77,6 @@
   /* לינק פעיל מודגש */
   .active-link {
     font-weight: bold;
- 
+    font-size: 1.4em;
   }
 }
