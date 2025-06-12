@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tzahi/static/css/main.1fdade8f.css",
-    "main.js": "/tzahi/static/js/main.1a2854a2.js",
+    "main.css": "/tzahi/static/css/main.e6ff78ac.css",
+    "main.js": "/tzahi/static/js/main.c94e0132.js",
     "static/js/453.78269ee8.chunk.js": "/tzahi/static/js/453.78269ee8.chunk.js",
     "static/media/creditsBG.png": "/tzahi/static/media/creditsBG.6fc1fac8a6d8b5797fc2.png",
     "static/media/Bg1.png": "/tzahi/static/media/Bg1.ac9f9c75b406e10ae608.png",
     "index.html": "/tzahi/index.html",
-    "main.1fdade8f.css.map": "/tzahi/static/css/main.1fdade8f.css.map",
-    "main.1a2854a2.js.map": "/tzahi/static/js/main.1a2854a2.js.map",
+    "main.e6ff78ac.css.map": "/tzahi/static/css/main.e6ff78ac.css.map",
+    "main.c94e0132.js.map": "/tzahi/static/js/main.c94e0132.js.map",
     "453.78269ee8.chunk.js.map": "/tzahi/static/js/453.78269ee8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fdade8f.css",
-    "static/js/main.1a2854a2.js"
+    "static/css/main.e6ff78ac.css",
+    "static/js/main.c94e0132.js"
   ]
 }
