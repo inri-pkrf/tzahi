@@ -283,7 +283,7 @@
     right: 50%;
     transform: translateX(50%);
     font-weight: 400;
-    font-size: 4em;
+    font-size: 3vw;
     direction: rtl;
  }
 
@@ -322,7 +322,7 @@
 .stateTitle{
     font-family: "Heebo";
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.7vw;
     text-align: center;
     color: rgb(88 88 88);;
     margin-top: 14vh;
@@ -481,13 +481,13 @@
     font-family: 'karantina';
     color: black;
     position: absolute;
-    margin-top: 12vh;
+    margin-top: 10vh;
     text-align: center;
     width: 91vw;
     right: 50%;
     transform: translateX(50%);
     font-weight: 400;
-    font-size: 3em;
+    font-size: 4vw;
     direction: rtl;
  }
 
@@ -497,7 +497,7 @@
 .stateTitle{
     font-family: "Heebo";
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.7vw;
     text-align: center;
     color: rgb(88 88 88);;
     margin-top: 14vh;

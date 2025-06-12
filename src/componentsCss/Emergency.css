@@ -156,7 +156,7 @@
         width: 100%;
         height: 9vh;
         padding: 10px;
-        font-size: 1.4em;
+        font-size: 1.6vw;
         font-family: "Heebo";
         font-weight: 600;
         color: white;
@@ -176,7 +176,14 @@
         top: 50%; /* ממרכז את האייקון אנכית */
         transform: translateY(-50%); /* מוודא שהאייקון במרכז האנכי */
     }
-    
+    .button:last-child {
+        grid-column: 1;
+        justify-self: center; 
+        right: 0%;
+        transform: translateX(50%); 
+
+    }
+
    
     
     

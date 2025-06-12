@@ -412,13 +412,13 @@
   .role-button {
     position: absolute;
     width: 15vw; /* גודל רחב יותר */
-    height: 14vw; /* גובה גבוה יותר */
+    height: 28vh; /* גובה גבוה יותר */
     color: white;
     text-align: center;
     line-height: 10vh; /* ממרכז את הטקסט בגובה */
     font-family: "Heebo";
     font-weight: 600;
-    font-size: 2em; /* גודל גופן גדול יותר */
+    font-size: 2vw; /* גודל גופן גדול יותר */
     border: none;
     cursor: pointer;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* צורת משושה */
@@ -427,8 +427,8 @@
 }
 
 .role-button:nth-child(1) {
-  top: -10%;
-  right: 10%;
+  top: -22%; 
+   right: 10%;
 }   
   
   /* Second button to the left of the center */
@@ -456,27 +456,27 @@
   
   /* Sixth button centered below all */
   .role-button:nth-child(6) {
-    top: -10%;
+    top: -22%;    
     left: 32%;
 }
   
 .role-button:nth-child(7) {
-  top: 40%;
+  top: 50%;
   left: 52%;
 } 
 
 .specialRole-button{
-  top: 12%;
+  top: 10%;
   left: 41%;
   position: absolute;
   width: 15vw; /* גודל רחב יותר */
-  height: 13vw; /* גובה גבוה יותר */
+  height: 28vh; /* גובה גבוה יותר */
   color: white;
   text-align: center;
   line-height: 10vh; /* ממרכז את הטקסט בגובה */
   font-family: "Heebo";
   font-weight: 600;
-  font-size: 1.2em; /* גודל גופן גדול יותר */
+  font-size: 1.7vw; /* גודל גופן גדול יותר */
   border: none;
   cursor: pointer;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* צורת משושה */
@@ -495,17 +495,17 @@
 
   .selected-icon{
     position: absolute;
-    height: 8vh;
+    height: 12vh;
     right: 5%;
     transform: translateX(50%);
-    margin-top: -1vh;
+    margin-top: -4vh;
     position: absolute;
   }
 
   .selected-name{
     font-family: "Karantina";
     color: #6a6f77;
-    font-size: 5em;
+    font-size: 4vw;
     position: absolute;
     width: 70vw;
     right: 50%;

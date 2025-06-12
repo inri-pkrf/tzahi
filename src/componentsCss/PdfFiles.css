@@ -154,21 +154,21 @@
     @media screen and (min-width: 1025px) {
       .pdf-title {
         font-family: "karantina";
-        font-size: 8em;
+        font-size: 4vw;
         font-weight: 400;
         position: absolute;
         right: 50%;
         transform: translateX(50%); /* שינוי פה */
         width: 90vw;
-        margin-top: 10vh;
+        margin-top: 15vh;
         text-align: center;
       }
       .intro-pdf{
         font-family: "Heebo";
-        font-size: 1.5em;
+        font-size: 1.6vw;
         position: absolute;
         right: 50%;
-        transform: translateX(50%); /* שינוי פה */
+        transform: translateX(50%);
         width: 90vw;
         margin-top: 30vh;
         text-align: center;
@@ -189,7 +189,7 @@
         display: flex;
         flex-direction: column; /* מבטיח שהכותרת תהיה מתחת לאייקון */
         align-items: center;
-        gap: 10px;
+        gap: 5vw;
         justify-content: center;
         text-align: center;
       }
@@ -197,7 +197,7 @@
       .pdf-link {
         text-decoration: none;
         color: #000;
-        font-size: 18px;
+        font-size: 2vw;
         text-align: center; /* מוודא שהתוכן מיושר */
         width: 100%; /* מאפשר מיקום נכון */
       }
@@ -212,13 +212,13 @@
         position: relative;
         top: 4vh;
         right:50%;
-        transform: translateX(70%);
+        transform: translateX(80%);
         text-align: center;
-        font-size: 18px;
+        font-size: 1.3vw;
         color: #000;
-        width: 80%; /* קובע רוחב אחיד */
+        width: 70%; /* קובע רוחב אחיד */
         display: block; /* מוודא ירידת שורה */
-        overflow-wrap: break-word; /* אם מילה ארוכה מדי, היא תיחתך */
+        overflow-wrap: break-word;
     }
     
     

@@ -50,11 +50,10 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2vw;
     padding: 0;
     direction: rtl;
-    font-size: 1.3em;
-
+    font-size: 1.5vw;
     font-family:"Heebo";
   }
   
@@ -65,18 +64,19 @@
   }
   
   .nav-links li:hover {
+    color:#ff933b;
     text-decoration: underline;
+
   }
-  
   /* קו מפריד */
   .divider {
     color: #999;
-    font-size: 18px;
+    font-size: 1.5vw;
   }
   
   /* לינק פעיל מודגש */
   .active-link {
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.7vw;
   }
 }
