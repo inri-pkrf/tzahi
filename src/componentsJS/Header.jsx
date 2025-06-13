@@ -53,6 +53,7 @@ function Header() {
           alt="Decorative Logo"
         />
       )}
+      <img src={`${process.env.PUBLIC_URL}/assets/media/info.png`}  className="info-icon"  onClick={()=> navigate("/tzahi/Credits" ) } />
 
       <img
         src={`${process.env.PUBLIC_URL}/assets/media/orange.png`}

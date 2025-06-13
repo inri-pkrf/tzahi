@@ -11,8 +11,6 @@ const Home = () => {
     navigate('/tzahi/EmergencyRolls'); 
   };
   const goToCredits = () => {
-    console.log("Navigating to Credits");
-
     navigate('/tzahi/Credits'); 
   };
   return (

@@ -74,6 +74,13 @@
     margin-top: 0vw;
 
   }
+  .info-icon{
+    height: 4.5vh;
+    width: auto;
+    position: fixed;
+    top: 2vh;
+    right: 72vw;
+  }
 
  }
  @media screen and (min-width: 769px) and (max-width: 1024px)  {
@@ -124,6 +131,16 @@
     position: fixed;
     top: 3vh;
     left: 5vw;
+  }
+  .info-icon{
+    height: 7.5vh;
+    width: auto;
+    position: fixed;
+    top: 2vh;
+    right: 86vw;
+  }
+  .info-icon:hover{
+    cursor:pointer
   }
  }
 
@@ -183,5 +200,15 @@
       position: fixed;
       top: 3vh;
       left: 3vw;
+    }
+    .info-icon{
+      height: 7.5vh;
+      width: auto;
+      position: fixed;
+      top: 2vh;
+      right: 86vw;
+    }
+    .info-icon:hover{
+      cursor:pointer
     }
   }
