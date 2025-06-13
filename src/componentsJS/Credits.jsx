@@ -26,7 +26,7 @@ const Credits = () => {
         <span style={{ textDecoration: "underline" }}>צוות פל"א</span>: אביטל גמבורג,עלמה יובל
       </li>
       <li>
-        <span style={{ textDecoration: "underline" }}>יועצים:</span> תמר בוסתן,אופיר גבסו
+        <span style={{ textDecoration: "underline" }}>יועצים:</span> תמר בוסתן,אופיר גבסו,טל שמיר
       </li> 
       <li>
         <span style={{ textDecoration: "underline" }}>עריכת וידיאו:</span> ליעוז רוזנר

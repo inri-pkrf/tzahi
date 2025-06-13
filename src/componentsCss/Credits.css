@@ -166,6 +166,9 @@
   right: 13%;
   position: absolute;
  }
+  .closeAll:hover{
+  cursor:pointer
+ }
 }
 @media screen and (min-width: 1025px) {
 .credits-container {
@@ -242,5 +245,8 @@
   width: auto;
   right: 13%;
   position: absolute;
+ }
+ .closeAll:hover{
+  cursor:pointer
  }
 }
