@@ -2,11 +2,11 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 // import Home from './componentsJS/Home';
-import Header from './componentsJS/Header';
-import Intro from './componentsJS/Intro';
-import Credits from './componentsJS/Credits';
-import EmergencyRolls from './componentsJS/EmergencyRolls';
-import PdfFiles from './componentsJS/PdfFiles';
+// import Header from './componentsJS/Header';
+// import Intro from './componentsJS/Intro';
+// import Credits from './componentsJS/Credits';
+// import EmergencyRolls from './componentsJS/EmergencyRolls';
+// import PdfFiles from './componentsJS/PdfFiles';
 
 function App() {
     return (
