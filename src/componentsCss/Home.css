@@ -594,7 +594,7 @@ hr.dotted-line2{
 @media screen and (min-width: 1025px) {
     .home-title{
         font-family: "karantina";
-        font-size: 6.5em;
+        font-size: 7vw;
         font-weight: 400;
         position: absolute;
         right: 50%;
@@ -607,7 +607,7 @@ hr.dotted-line2{
     
     .info1{
         font-family: "Heebo";
-        font-size: 1.8em;
+        font-size: 2vw;
         position: absolute;
         right: 50%;
         transform: translateX(50%);
@@ -620,11 +620,11 @@ hr.dotted-line2{
     .home-button {
         background-color: #1bbfe5;
         border: none;
-        border-radius: 55px;
-        width: 40vw;
+        border-radius: 60px;
+        width: 30vw;
         height: 10vh;
         position: absolute;
-        font-size: 1.6em;
+        font-size: 2vw;
         font-family: "Heebo";
         font-weight: bold;
         color: #ffffff;
@@ -646,7 +646,7 @@ hr.dotted-line2{
         border-radius: 55px;
         width: 75vw;
         height: 10vh;
-        font-size: 2em;
+        font-size: 2vw;
         font-family: "Heebo";
         font-weight: bold;
         text-decoration: underline;
@@ -691,7 +691,7 @@ hr.dotted-line2{
         right: 50%;
         transform: translateX(50%);
         width: 90vw;
-        font-size: 1.8em;
+        font-size: 1.8vw;
         font-family: 'HEEBO';
         text-align: center;
         margin-top: 21vh;
@@ -765,8 +765,8 @@ hr.dotted-line2{
         margin-top: 139vh;
         right: 50%;
         transform: translateX(50%);
-        width: 80vw;
-        font-size: 1.3em;
+        width: 70vw;
+        font-size: 1.7vw;
         margin-top: 78vh;
         text-align: center;
     }
@@ -789,7 +789,7 @@ hr.dotted-line2{
         text-align: center;
         right: 50%;
         transform: translateX(50%);
-        font-size: 2em;
+        font-size: 1.7vw;
         width: 80vw;
         color: rgb(86, 85, 85);
     
@@ -821,7 +821,7 @@ hr.dotted-line2{
         width: 25vw;
         height: 8vh;
         position: absolute;
-        font-size: 2em;
+        font-size: 2vw;
         font-family: "Heebo";
         font-weight: bold;
         color: rgb(255, 255, 255);
@@ -845,7 +845,7 @@ hr.dotted-line2{
         margin-bottom: 20vh;
         width: 96vw;
         direction: rtl;
-        font-size: 2em;
+        font-size: 1.7vw ;
         text-align: center;
     } 
  

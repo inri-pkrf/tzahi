@@ -222,12 +222,12 @@
       overflow: hidden;
       background-color: #e6e2e2;
       width: 80vw;
-      min-height: 230vh;
+      min-height: 150vh;
 
   }
     
   .messages-title {
-    font-size:5em;
+    font-size:4vw;
     text-align: center;
     font-weight: 400;
     font-family: "Karantina";
@@ -256,14 +256,15 @@
     .message-button {
       height: 20vh;
       direction: rtl;
-      font-size: 1.5em;
+      font-family: "Heebo";
+      font-size: 1.7vw;
       padding: 12px 18px;
     }
   
     .message-editor {
       position: relative;
-      margin-top: 26vh; /* מרווח בין ה- .messages-list ל- .message-editor */
-      font-size: 1.5em;
+      margin-top: 49vh;
+      font-size: 1.5vw;
       direction: rtl;
       font-family: "Heebo";
     }
@@ -279,14 +280,14 @@
         
   .save-button {
     font-family: "Heebo";
-    font-size:1em;
+    font-size:1.7vw;
     color: white;
     width:24vw;
     background-color:rgb(131, 26, 65);    
   }
   .send-button {
     font-family: "Heebo";
-    font-size:1em;
+    font-size:1.7vw;
     width:24vw;
     color: white;
     background-color:rgb(102, 49, 69);    
@@ -296,9 +297,9 @@
   .close-button{
     border: none;
     background-color: transparent;
-    right :-65vw;
+    right: 73vw;
     position: absolute;
-    top:5vh;
+    top: 5vh;
   }
   .close-button:hover{
     cursor: pointer;
@@ -316,7 +317,7 @@
   }
   .editor-title{
     font-family: "Heebo";
-    font-size: 1.2em;
+    font-size: 2vw;
   }
   .messages-icon{
     height:10vh;

@@ -18,9 +18,6 @@ const Credits = () => {
     />
     <div className="text-container">
       <h1 className="credits-title">קרדיטים</h1>
-      <p className="credits-text">
-        תודה לכל מי שתרם להפקת הממשק הזה:
-      </p>
       <ul className="credits-list">
       <li>
         <span style={{ textDecoration: "underline" }}>מפתחת ראשית</span>: אביטל גמבורג
@@ -29,10 +26,13 @@ const Credits = () => {
         <span style={{ textDecoration: "underline" }}>צוות פל"א</span>: אביטל גמבורג,עלמה יובל
       </li>
       <li>
-        <span style={{ textDecoration: "underline" }}>יועצים:</span> תמר בוסתן,אופיר גבסו
+        <span style={{ textDecoration: "underline" }}>יועצים:</span> תמר בוסתן,אופיר גבסו,טל שמיר
       </li> 
       <li>
         <span style={{ textDecoration: "underline" }}>עריכת וידיאו:</span> ליעוז רוזנר
+      </li>     
+      <li>
+       <p>גרסה: <br/> ינואר 2025 </p>
       </li>     </ul>
     </div>
     </div>

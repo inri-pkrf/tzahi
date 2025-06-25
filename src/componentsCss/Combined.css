@@ -765,15 +765,15 @@ position: absolute;
 
 @media screen and (min-width: 1025px) {
   #both-selected {
-    position: absolute;
+    position: relative;
     z-index: 2000;
     text-align: center;
-    top: 18.5%;
+    top: 21vh;
     left: 0%;
     overflow: hidden;
     background-color: #e6e2e2;
     width: 84vw;
-    min-height: 230vh;
+    min-height: 200vh;
 }
 
 
@@ -781,9 +781,9 @@ position: absolute;
 .combined-title{
   font-family: "Karantina";
   color: #6a6f77;
-  font-size: 5.5em;
+  font-size: 4vw;
   font-weight: 500;
-  margin-top: 7vh;
+  margin-top: 13vh;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -793,7 +793,7 @@ position: absolute;
 .combined-role{
   font-family: "Karantina";
   color: #eeeeee;
-  font-size: 4em;
+  font-size: 3.5vw;
   padding: 1vh;
   font-weight: 500;
   margin-top: 32vh;
@@ -831,7 +831,7 @@ position: absolute;
 
 .icon-sce{
   position: absolute;
-  margin-top: -2vh;
+  margin-top: 3vh;
   height: 10vh;
   width: auto;
   transform: translateX(50%);
@@ -876,7 +876,7 @@ position: absolute;
 position: absolute; 
  margin-top:7vh; 
  color: white;
-  font-size:1em; 
+  font-size:1.4vw; 
   font-weight: bold;
 }
 .next-txt{
@@ -971,12 +971,12 @@ position: absolute;
   margin-right: 5vw;
   text-align: right;
   direction: rtl;
-  font-size: 1.2em;
+  font-size: 1.3vw;
  }
 
  .tasks-title{
   font-family: "Heebo";
-  font-size: 1.8em;
+  font-size: 2vw;
   color: black;
   margin-top: 10vh;
   direction: rtl;
@@ -1001,7 +1001,7 @@ position: absolute;
 
 .sub-title {
   font-family: "Heebo";
-  font-size: 1.8em;
+  font-size: 1.6vw;
   color: black;
   margin-top: 4vh;
   text-align: right;
@@ -1104,7 +1104,7 @@ position: absolute;
 .back-emergency {
   text-decoration: underline;
   font-family: "Heebo";
-  font-size: 1.8em; /* גודל פונט */
+  font-size: 1.7vw; /* גודל פונט */
   text-align: center; /* יישור טקסט במרכז */
   font-weight: bold;
   margin-top: 5vh; /* רווח עליון */
@@ -1127,7 +1127,7 @@ position: absolute;
   position: absolute;
   background-color: rgba(240, 248, 255, 0);
   font-family: "Heebo";
-  font-size: 2em;
+  font-size: 1.7vw; 
   font-weight: bolder;
 }
 .mail-icon{
@@ -1150,7 +1150,7 @@ position: absolute;
   background-color: transparent;
   border: none;
   font-family: "Heebo";
-  font-size: 1.8em;
+  font-size: 1.7vw; 
   text-align: center;
   font-weight: bold;
   margin-top: -7vh;
